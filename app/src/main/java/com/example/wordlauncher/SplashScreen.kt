@@ -12,6 +12,6 @@ class SplashScreen : AppCompatActivity() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
         finish()
-        Log.d("aaa","aa")
+        Log.d("aaa","aaa")
     }
 }
