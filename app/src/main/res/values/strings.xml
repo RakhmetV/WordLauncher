@@ -1,6 +1,37 @@
 <resources>
+    <string name="git_push"> git push --set-upstream origin master</string>
+
+
     <string name="app_name">WordLauncher</string>
     <string name="title_profile">Profile</string>
     <string name="title_achievements">Achievements</string>
     <string name="title_courses">Courses</string>
+
+    <string-array name="end_phrases">
+        <item>Well done!</item>
+        <item>Excellent!</item>
+        <item>Marvelous</item>
+    </string-array>
+    <string-array name="end_activity_phrases">
+        <item>Welcome back! </item>
+        <item>Glad to see you again!</item>
+        <item>Nice to see you again!</item>
+        <item>Glad you are back!</item>
+    </string-array>
+
+    <string name="morning_phrase">Good morning, </string>
+    <string name="afternoon_phrase">Good afternoon, </string>
+    <string name="evening_phrase">Good evening, </string>
+    <string name="night_phrase">Aren’t you sleeping, </string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome !"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be >5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+
+
 </resources>

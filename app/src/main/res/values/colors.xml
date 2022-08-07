@@ -7,4 +7,9 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+<!--    цвет выбора темы-->
+    <color name="choice_rectangle_color">#FAFFFE</color>
+ <!--    цвет загаловка в курсах и в активности выбора курсов-->
+    <color name="header_courses_color">#FAFFFE</color>
 </resources>

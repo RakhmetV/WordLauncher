@@ -3,14 +3,27 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/drawable/ic_choice_check_mark_24.xml" value="0.3525" />
+        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/drawable/ic_choice_rectangle.xml" value="0.3525" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/drawable/splash_screen.xml" value="0.353" />
+        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.23560910307898258" />
+        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout-w936dp/activity_login.xml" value="0.275" />
+        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/activity_choice_of_subject.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/activity_end.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/activity_splash_screen.xml" value="0.3109375" />
+        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/choice_item.xml" value="0.5" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_achievements.xml" value="0.358695652173913" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_courses.xml" value="0.358695652173913" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_home.xml" value="0.358695652173913" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_notifications.xml" value="0.358695652173913" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_profile.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/header_choice_of_subject.xml" value="0.5" />
+        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/header_courses.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/header_spinner.xml" value="0.365625" />
+        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/header_spinner_item.xml" value="0.365625" />
+        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/header_spinner_selected_item.xml" value="0.365625" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/menu/bottom_nav_menu.xml" value="0.36666666666666664" />
       </map>
     </option>

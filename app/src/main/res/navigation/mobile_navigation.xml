@@ -8,18 +8,24 @@
     <fragment
         android:id="@+id/navigation_courses"
         android:name="com.example.wordlauncher.ui.courses.CoursesFragment"
-        android:label="@string/title_courses"
-        tools:layout="@layout/fragment_courses" />
+        tools:layout="@layout/fragment_courses" >
+        <action
+            android:id="@+id/action_navigation_courses_to_choiceOfSubject2"
+            app:destination="@id/choiceOfSubject" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_achievements"
         android:name="com.example.wordlauncher.ui.achievements.AchievementsFragment"
-        android:label="@string/title_achievements"
         tools:layout="@layout/fragment_achievements" />
 
     <fragment
         android:id="@+id/navigation_profile"
         android:name="com.example.wordlauncher.ui.profile.ProfileFragment"
-        android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
+    <activity
+        android:id="@+id/choiceOfSubject"
+        android:name="com.example.wordlauncher.ChoiceOfSubject"
+        android:label="activity_choice_of_subject"
+        tools:layout="@layout/activity_choice_of_subject" />
 </navigation>
