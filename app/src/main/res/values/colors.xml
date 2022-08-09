@@ -12,4 +12,6 @@
     <color name="choice_rectangle_color">#FAFFFE</color>
  <!--    цвет загаловка в курсах и в активности выбора курсов-->
     <color name="header_courses_color">#FAFFFE</color>
+    <!--    цвет кнопок входа и т.д-->
+    <color name="btn_color_read">#D83B3B</color>
 </resources>
