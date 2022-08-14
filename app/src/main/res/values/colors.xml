@@ -14,4 +14,12 @@
     <color name="header_courses_color">#FAFFFE</color>
     <!--    цвет кнопок входа и т.д-->
     <color name="btn_color_read">#D83B3B</color>
+
+    <!--    цвет item у recucler в courses-->
+    <color name="color_step_rectangle">#D3B8FFFB</color>
+
+
+
+    <color name="color_bottom_navigation">#EE186F7A</color>
+    <color name="color_bottoms_navigation">#1E2B2A</color>
 </resources>

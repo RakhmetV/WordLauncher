@@ -13,14 +13,21 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.Navigation
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.wordlauncher.ChoiceOfSubject
 import com.example.wordlauncher.R
+import com.example.wordlauncher.data.datacourses.ConstName
 import com.example.wordlauncher.data.datacourses.DataCourses
+import com.example.wordlauncher.data.firebase.User
 import com.example.wordlauncher.databinding.FragmentCoursesBinding
+import com.example.wordlauncher.handlers.MyOnClickListener
+import com.example.wordlauncher.handlers.adapter.courses.CoursesAdapter
 import com.example.wordlauncher.handlers.header.HeaderForSpinner
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.*
 
 class CoursesFragment : Fragment() {
-
 
 
     private var _binding: FragmentCoursesBinding? = null
@@ -33,8 +40,8 @@ class CoursesFragment : Fragment() {
     lateinit var flag: ImageView
     lateinit var name: TextView
     lateinit var description: TextView
-    var position: Int = 0
     lateinit var pref: SharedPreferences
+    lateinit var recycler: RecyclerView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -45,37 +52,65 @@ class CoursesFragment : Fragment() {
 
         _binding = FragmentCoursesBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        val sharedPreference =  requireContext().getSharedPreferences("PREFERENCE_NAME", Context.MODE_PRIVATE)
-        position = sharedPreference.getInt("them_position",1)
-        Log.d("aaaaaaaa", position.toString())
-        init(root, coursesViewModel, position)
+        val sharedPreference =
+            requireContext().getSharedPreferences("PREFERENCE_NAME", Context.MODE_PRIVATE)
+        var themPosition = sharedPreference.getInt("them_position", 1)
+        init(root, themPosition)
         listener(root)
-
+        getDataInFirebase(themPosition)
         return root
     }
 
-    fun init(view: View, c: CoursesViewModel, position: Int) {
+    fun init(view: View, themPosition: Int) {
         puzzle = view.findViewById(R.id.header_puzzle)
         flag = view.findViewById(R.id.header_flag)
         name = view.findViewById(R.id.header_name)
+        recycler = view.findViewById(R.id.courses_recycler)
         description = view.findViewById(R.id.header_description)
-        val textView: TextView = binding.textCourses
-        c.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
 
         var headerClassList = DataCourses.headerClassList
 
         puzzle.setImageResource(R.drawable.puzzle)
-        flag.setImageResource(headerClassList[position].imageHeader)
-        name.text = headerClassList[position].nameHeader
-        description.text = headerClassList[position].descriptionHeader
+        flag.setImageResource(headerClassList[themPosition].imageHeader)
+        name.text = headerClassList[themPosition].nameHeader
+        description.text = headerClassList[themPosition].descriptionHeader
     }
 
-    fun listener(view: View){
+    fun listener(view: View) {
         flag.setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.choiceOfSubject)
         }
+    }
+
+    fun getDataInFirebase(themPosition: Int) {
+        var mAuth = FirebaseAuth.getInstance()
+        var mDataBaseTest: DatabaseReference
+        mDataBaseTest = FirebaseDatabase
+            .getInstance("https://word-launcher-default-rtdb.europe-west1.firebasedatabase.app")
+            .getReference(ConstName().USER_NAME)
+            .child(mAuth.uid.toString())
+        mDataBaseTest.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                val user = snapshot.getValue(User::class.java)
+                if (user != null) {
+                    //setDataProfile()
+                    recycler.layoutManager = LinearLayoutManager(context)
+                    recycler.adapter = CoursesAdapter(object : MyOnClickListener {
+                        override fun OnClick(position: Int) {
+                            /*var intent = Intent(requireContext(), StepLevels::class.java)
+                            intent.putExtra("position",position)
+                            startActivity(intent)*/
+                        }
+                    }, user, themPosition, DataCourses.stepDataList(themPosition))
+                } else {
+
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+            }
+
+        })
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

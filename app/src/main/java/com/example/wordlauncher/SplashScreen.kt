@@ -24,11 +24,6 @@ class SplashScreen : AppCompatActivity() {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
             finish()
-            /*val c = Calendar.getInstance()
-            val hour = c.get(Calendar.HOUR_OF_DAY)
-            getDataFirebase(hour)
-            val img = findViewById<ImageView>(R.id.imgView)
-            img.animate().scaleX(1.0f).scaleY(1.0f).rotation(1080f).setDuration(5000).withEndAction(runnable)*/
         } else{
             intentRegistration()
         }
