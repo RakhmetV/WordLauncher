@@ -16,6 +16,7 @@
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/activity_login.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/activity_splash_screen.xml" value="0.3109375" />
+        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/activity_step.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/choice_item.xml" value="0.5" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/courses_item.xml" value="0.3" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_achievements.xml" value="0.358695652173913" />
@@ -23,7 +24,7 @@
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_home.xml" value="0.358695652173913" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_notifications.xml" value="0.358695652173913" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_profile.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_registration.xml" value="0.35260416666666666" />
+        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_registration.xml" value="0.5" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_sign_in.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/header_choice_of_subject.xml" value="0.5" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/header_courses.xml" value="0.36666666666666664" />

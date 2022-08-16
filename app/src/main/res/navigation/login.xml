@@ -21,9 +21,17 @@
         android:id="@+id/registrationFragment"
         android:name="com.example.wordlauncher.ui.login.registration.RegistrationFragment"
         android:label="fragment_registration"
-        tools:layout="@layout/fragment_registration" />
+        tools:layout="@layout/fragment_registration" >
+        <action
+            android:id="@+id/action_registrationFragment_to_splashScreen"
+            app:destination="@id/splashScreen" />
+    </fragment>
     <activity
         android:id="@+id/mainActivity"
         android:name="com.example.wordlauncher.MainActivity"
         android:label="MainActivity" />
+    <activity
+        android:id="@+id/splashScreen"
+        android:name="com.example.wordlauncher.SplashScreen"
+        android:label="SplashScreen" />
 </navigation>

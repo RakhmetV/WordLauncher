@@ -8,11 +8,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.Navigation
 import com.example.wordlauncher.R
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
+import org.w3c.dom.Text
 
 
 class SignInFragment : Fragment() {
@@ -39,6 +41,10 @@ class SignInFragment : Fragment() {
             }else{
                 signIn(view)
             }
+        }
+
+        view.findViewById<TextView>(R.id.txt_registration).setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.registrationFragment)
         }
         return view
     }

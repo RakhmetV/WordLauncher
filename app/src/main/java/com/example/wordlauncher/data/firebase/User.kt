@@ -16,8 +16,7 @@ class User() {
         age: String,
         sex: String,
         imageURI: String,
-        email: String,
-        progress: ArrayList<ArrayList<ArrayList<Int>>>
+        email: String
     ) : this() {
         this.id = id
         this.name = name
@@ -25,7 +24,32 @@ class User() {
         this.sex = sex
         this.imageURI = imageURI
         this.email = email
-        this.progress = progress
+        this.progress = arrayListOf(
+            arrayListOf(
+                arrayListOf(0, -1, -1, -1, -1, -1),
+                arrayListOf(-1, -1, -1, -1, -1, -1),
+                arrayListOf(-1, -1, -1, -1, -1, -1),
+                arrayListOf(-1, -1, -1, -1, -1, -1),
+                arrayListOf(-1, -1, -1, -1, -1, -1),
+                arrayListOf(-1, -1, -1, -1, -1, -1)
+            ),
+            arrayListOf(
+                arrayListOf(0, -1, -1, -1, -1, -1),
+                arrayListOf(-1, -1, -1, -1, -1, -1),
+                arrayListOf(-1, -1, -1, -1, -1, -1),
+                arrayListOf(-1, -1, -1, -1, -1, -1),
+                arrayListOf(-1, -1, -1, -1, -1, -1),
+                arrayListOf(-1, -1, -1, -1, -1, -1)
+            ),
+            arrayListOf(
+                arrayListOf(0, -1, -1, -1, -1, -1),
+                arrayListOf(-1, -1, -1, -1, -1, -1),
+                arrayListOf(-1, -1, -1, -1, -1, -1),
+                arrayListOf(-1, -1, -1, -1, -1, -1),
+                arrayListOf(-1, -1, -1, -1, -1, -1),
+                arrayListOf(-1, -1, -1, -1, -1, -1)
+            )
+        )
         this.vocabulary = arrayListOf(arrayListOf(""), arrayListOf(""), arrayListOf(""))
     }
 }

@@ -32,5 +32,12 @@
         <item name="android:layout_marginTop">2dp</item>
     </style>
 
+    <style name="registration_edittext_style">
+        <item name="android:layout_width">350dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
 
 </resources>
