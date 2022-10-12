@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/step_level.xml">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/step_level.xml"
+    app:startDestination="@id/stepLevelFragment">
 
+    <fragment
+        android:id="@+id/stepLevelFragment"
+        android:name="com.example.wordlauncher.ui.step.StepLevelFragment"
+        android:label="fragment_step_level"
+        tools:layout="@layout/fragment_step_level" />
 </navigation>

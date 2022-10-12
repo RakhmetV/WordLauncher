@@ -10,6 +10,7 @@ import com.example.wordlauncher.data.firebase.User
 import com.example.wordlauncher.databinding.CoursesItemBinding
 import com.example.wordlauncher.handlers.MyOnClickListener
 import com.example.wordlauncher.handlers.step.StepItem
+import java.util.*
 
 class CoursesAdapter(
     val stepListener: MyOnClickListener,

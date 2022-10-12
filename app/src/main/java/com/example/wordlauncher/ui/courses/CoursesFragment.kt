@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wordlauncher.ChoiceOfSubject
 import com.example.wordlauncher.R
+import com.example.wordlauncher.StepActivity
 import com.example.wordlauncher.data.datacourses.ConstName
 import com.example.wordlauncher.data.datacourses.DataCourses
 import com.example.wordlauncher.data.firebase.User
@@ -97,9 +98,9 @@ class CoursesFragment : Fragment() {
                     recycler.layoutManager = LinearLayoutManager(context)
                     recycler.adapter = CoursesAdapter(object : MyOnClickListener {
                         override fun OnClick(position: Int) {
-                            /*var intent = Intent(requireContext(), StepLevels::class.java)
+                            var intent = Intent(requireContext(), StepActivity::class.java)
                             intent.putExtra("position",position)
-                            startActivity(intent)*/
+                            startActivity(intent)
                         }
                     }, user, themPosition, DataCourses.stepDataList(themPosition))
                 } else {
