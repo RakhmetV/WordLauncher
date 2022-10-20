@@ -45,9 +45,10 @@ class CoursesAdapter(
             }
             holder.binding.progressBar.progress = k
         }else {
+            holder.binding.stepId.alpha=0.5F
             holder.binding.progressBar.isVisible = false
             holder.binding.stepId.isEnabled = false
-            holder.binding.stepLock.isVisible = true
+            holder.binding.stepLock.isVisible = false
         }
 
         holder.binding.stepName.text = stepItemList[position].nameStep

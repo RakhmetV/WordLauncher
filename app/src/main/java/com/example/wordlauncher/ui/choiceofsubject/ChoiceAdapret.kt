@@ -1,7 +1,9 @@
 package com.example.wordlauncher.ui.choiceofsubject
 
 import android.graphics.Color
+import android.graphics.drawable.Drawable
 import android.opengl.Visibility
+import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -40,9 +42,9 @@ class ChoiceAdapret(
         holder.binding.choiceItemDescription.text = themList[position].descriptionHeader
         if (position == pos) {
             holder.binding.choiceItemCondition.text = "Выбранная тема"
-            holder.binding.choiceItemCondition.setTextColor(Color.GREEN)
             holder.binding.choiceItemCheckMark.isVisible = true
         } else{
+            holder.binding.choiceId.alpha= 0.7F
             holder.binding.choiceItemCondition.isVisible = false
             holder.binding.choiceItemCheckMark.isVisible = false
         }
