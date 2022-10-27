@@ -10,20 +10,18 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/choice_id"
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="wrap_content"
         android:background="@drawable/ic_choice_rectangle"
         android:layout_marginTop="5dp"
         android:layout_marginBottom="5dp">
 
         <ImageView
             android:id="@+id/choice_item_image"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="116dp"
+            android:layout_height="150dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/choice_item_name" />
 
         <TextView
             android:id="@+id/choice_item_name"
@@ -32,6 +30,7 @@
             android:layout_marginTop="10dp"
             android:text="TextView"
             android:textAlignment="center"
+            android:textColor="@color/black"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -43,33 +42,34 @@
             android:id="@+id/choice_item_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="16dp"
+            android:maxWidth="250dp"
             android:text="TextView"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/choice_item_check_mark"
-            app:layout_constraintHorizontal_bias="0.023"
-            app:layout_constraintStart_toEndOf="@+id/choice_item_image"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintBottom_toTopOf="@+id/choice_item_condition"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/choice_item_name"
+            app:layout_constraintVertical_bias="0.231" />
 
         <TextView
             android:id="@+id/choice_item_condition"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
             android:text="TextView"
             android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@+id/choice_item_check_mark"
-            app:layout_constraintStart_toStartOf="@+id/choice_item_description"
-            app:layout_constraintTop_toTopOf="@+id/choice_item_check_mark" />
+            app:layout_constraintBottom_toTopOf="@+id/buttonContinue"
+            app:layout_constraintStart_toStartOf="@+id/choice_item_description" />
 
-        <ImageView
-            android:id="@+id/choice_item_check_mark"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
+        <Button
+            android:id="@+id/buttonContinue"
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="4dp"
+            android:backgroundTint="#3A68C3"
+            android:text="Continue"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.916"
-            app:srcCompat="@drawable/ic_choice_check_mark_24" />
+            app:layout_constraintStart_toStartOf="@+id/choice_item_condition" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

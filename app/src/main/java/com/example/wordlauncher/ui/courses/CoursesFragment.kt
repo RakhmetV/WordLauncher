@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -28,6 +29,8 @@ import com.example.wordlauncher.handlers.header.HeaderForSpinner
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
+
+lateinit var userChange: User
 class CoursesFragment : Fragment() {
 
 
@@ -56,9 +59,15 @@ class CoursesFragment : Fragment() {
         val sharedPreference =
             requireContext().getSharedPreferences("PREFERENCE_NAME", Context.MODE_PRIVATE)
         var themPosition = sharedPreference.getInt("them_position", 1)
+
+        var editor = sharedPreference.edit()
+        var stepLevelList = resources.getStringArray(R.array.step_level)
+
+
+
         init(root, themPosition)
         listener(root)
-        getDataInFirebase(themPosition)
+        getDataInFirebase(themPosition, editor, stepLevelList)
         return root
     }
 
@@ -83,7 +92,7 @@ class CoursesFragment : Fragment() {
         }
     }
 
-    fun getDataInFirebase(themPosition: Int) {
+    fun getDataInFirebase(themPosition: Int, editor: SharedPreferences.Editor,list: Array<String>) {
         var mAuth = FirebaseAuth.getInstance()
         var mDataBaseTest: DatabaseReference
         mDataBaseTest = FirebaseDatabase
@@ -95,14 +104,18 @@ class CoursesFragment : Fragment() {
                 val user = snapshot.getValue(User::class.java)
                 if (user != null) {
                     //setDataProfile()
+
+                    userChange=user
                     recycler.layoutManager = LinearLayoutManager(context)
                     recycler.adapter = CoursesAdapter(object : MyOnClickListener {
                         override fun OnClick(position: Int) {
                             var intent = Intent(requireContext(), StepActivity::class.java)
-                            intent.putExtra("position",position)
+
+                            editor.putInt("step_position", position)
+                            editor.commit()
                             startActivity(intent)
                         }
-                    }, user, themPosition, DataCourses.stepDataList(themPosition))
+                    }, user, themPosition, DataCourses.stepDataList(themPosition), list)
                 } else {
 
                 }

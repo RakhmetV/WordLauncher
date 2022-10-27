@@ -1,49 +1,43 @@
 package com.example.wordlauncher.ui.achievements
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.wordlauncher.R
-import com.example.wordlauncher.databinding.FragmentAchievementsBinding
+import com.example.wordlauncher.data.dataachievements.DataAchiv
+import com.example.wordlauncher.data.dataachievements.ProfileAchievements
+import com.example.wordlauncher.handlers.adapter.achievements.AchievementsAdapter
+
 
 class AchievementsFragment : Fragment() {
+    lateinit var recycler: RecyclerView
 
-    private var _binding: FragmentAchievementsBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
 
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val achievementsViewModel =
-            ViewModelProvider(this).get(AchievementsViewModel::class.java)
-
-        _binding = FragmentAchievementsBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView: TextView = binding.textAchievements
-        achievementsViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
+        val view = inflater.inflate(R.layout.fragment_achievements, container, false)
+        recycler = view.findViewById(R.id.achivRecycler)
+        recycler.layoutManager = LinearLayoutManager(context)
+        recycler.adapter = AchievementsAdapter(ProfileAchievements.dataAchiv)
+        return view
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        // TODO: Use the ViewModel
-    }
+    companion object {
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+        @JvmStatic
+        fun newInstance(param1: String, param2: String) =
+            AchievementsFragment().apply {
+            }
     }
-
 }

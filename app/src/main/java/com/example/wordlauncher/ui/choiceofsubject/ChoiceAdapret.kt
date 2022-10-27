@@ -16,16 +16,24 @@ import com.example.wordlauncher.handlers.header.HeaderForSpinner
 
 class ChoiceAdapret(
     var stepListener: MyOnClickListener,
+    var stepListenerTwo: MyOnClickListener,
     var themList: ArrayList<HeaderForSpinner>,
     var pos: Int
 ) : RecyclerView.Adapter<ChoiceAdapret.ChoiceHolder>() {
     private val listener = stepListener
+    private val listenerTwo = stepListenerTwo
 
 
     class ChoiceHolder(item: View) : RecyclerView.ViewHolder(item) {
         val binding = ChoiceItemBinding.bind(item)
         fun bind(position: Int, listener: MyOnClickListener) {
             binding.choiceId.setOnClickListener {
+                listener.OnClick(position)
+            }
+        }
+
+        fun bindTwo(position: Int, listener: MyOnClickListener) {
+            binding.buttonContinue.setOnClickListener {
                 listener.OnClick(position)
             }
         }
@@ -42,13 +50,14 @@ class ChoiceAdapret(
         holder.binding.choiceItemDescription.text = themList[position].descriptionHeader
         if (position == pos) {
             holder.binding.choiceItemCondition.text = "Выбранная тема"
-            holder.binding.choiceItemCheckMark.isVisible = true
+            holder.binding.buttonContinue.isVisible=true
         } else{
             holder.binding.choiceId.alpha= 0.7F
-            holder.binding.choiceItemCondition.isVisible = false
-            holder.binding.choiceItemCheckMark.isVisible = false
         }
+        holder.binding.choiceItemCondition.text=themList[position].countStep
         holder.bind(position,listener)
+        holder.bindTwo(position,listenerTwo)
+
 
     }
 

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/achivId"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="90dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/achivTxtName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/black"
+        android:text="Text"
+        android:textSize="18dp"
+        app:layout_constraintStart_toEndOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/achivTxtDescrip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:maxWidth="300dp"
+        android:text="TextView"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="@+id/achivTxtName"
+        app:layout_constraintTop_toBottomOf="@+id/achivTxtName" />
+
+    <ProgressBar
+        android:id="@+id/achivProgBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="10dp"
+        android:progressDrawable="@drawable/custom_progress_achievements"
+        app:layout_constraintEnd_toStartOf="@+id/achivTxtCount"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/achivTxtDescrip"
+        app:layout_constraintTop_toBottomOf="@+id/achivTxtDescrip" />
+
+    <TextView
+        android:id="@+id/achivTxtCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="TextView"
+        android:textSize="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/achivProgBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/achivProgBar" />
+
+    <Button
+        android:id="@+id/btnAchivSend"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:text="Receive"
+        android:visibility="invisible"
+        android:backgroundTint="#2EBA0E"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/achivTxtDescrip"
+        app:layout_constraintTop_toBottomOf="@+id/achivTxtDescrip" />
+</androidx.constraintlayout.widget.ConstraintLayout>

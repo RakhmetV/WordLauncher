@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/stepLvlId"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/ic_step_level_rectangle">
+
+        <TextView
+            android:id="@+id/steplevelname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/stepleveldescrip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/steplevelname" />
+
+        <ImageView
+            android:id="@+id/cup_one"
+            android:layout_width="33dp"
+            android:layout_height="41dp"
+            android:alpha="0.5"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/cup_two"
+            app:layout_constraintStart_toEndOf="@+id/cup_two"
+            app:layout_constraintTop_toTopOf="@+id/cup_two"
+            app:srcCompat="@drawable/ic_achivemenets_gold_24" />
+
+        <ImageView
+            android:id="@+id/cup_two"
+            android:layout_width="33dp"
+            android:layout_height="41dp"
+            android:alpha="0.5"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/cup_three"
+            app:layout_constraintStart_toEndOf="@+id/cup_three"
+            app:layout_constraintTop_toTopOf="@+id/cup_three"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/ic_achivemenets_gold_24" />
+
+        <ImageView
+            android:id="@+id/cup_three"
+            android:layout_width="33dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="48dp"
+            android:alpha="0.5"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/steplevelname"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.506"
+            app:srcCompat="@drawable/ic_achivemenets_gold_24" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

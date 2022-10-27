@@ -1,5 +1,7 @@
 package com.example.wordlauncher.ui.login.signin
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.text.TextUtils
 import androidx.fragment.app.Fragment
@@ -10,8 +12,14 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.result.ActivityResultLauncher
 import androidx.navigation.Navigation
 import com.example.wordlauncher.R
+import com.google.android.gms.auth.api.identity.BeginSignInRequest
+import com.google.android.gms.auth.api.identity.Identity
+import com.google.android.gms.auth.api.identity.SignInClient
+import com.google.android.gms.auth.api.signin.GoogleSignIn
+import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
 import org.w3c.dom.Text
@@ -22,6 +30,9 @@ class SignInFragment : Fragment() {
     lateinit var mDataBase: DatabaseReference
     lateinit var email: EditText
     lateinit var password: EditText
+
+    private lateinit var oneTapClient: SignInClient
+    private lateinit var signInRequest: BeginSignInRequest
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -53,6 +64,7 @@ class SignInFragment : Fragment() {
         email = view.findViewById(R.id.authorization_email)
         password = view.findViewById(R.id.authorization_password)
         mAuth= FirebaseAuth.getInstance()
+        mAuth= FirebaseAuth.getInstance()
     }
 
     private  fun signIn(view: View){
@@ -64,6 +76,22 @@ class SignInFragment : Fragment() {
                     Toast.makeText(context,"Данного аккаунта не существует",Toast.LENGTH_SHORT).show()
                 }
             }
+    }
+
+    private fun getClient(){
+//        var currentUser = mAuth.currentUser
+//        oneTapClient = Identity.getSignInClient(requireContext())
+//        signInRequest = BeginSignInRequest.builder()
+//            .setGoogleIdTokenRequestOptions(
+//                BeginSignInRequest.GoogleIdTokenRequestOptions.builder()
+//                    .setSupported(true)
+//                    // Your server's client ID, not your Android client ID.
+//                    .setServerClientId(getString(R.string.your_web_client_id))
+//                    // Only show accounts previously used to sign in.
+//                    .setFilterByAuthorizedAccounts(true)
+//                    .build())
+//            .build()
+
     }
 
     companion object {

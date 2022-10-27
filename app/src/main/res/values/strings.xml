@@ -24,6 +24,14 @@
         <item>Female</item>
     </string-array>
 
+    <string-array name="step_level">
+        <item>Level 1</item>
+        <item>Level 2</item>
+        <item>Level 3</item>
+        <item>Level 4</item>
+    </string-array>
+
+
     <string name="morning_phrase">Good morning, </string>
     <string name="afternoon_phrase">Good afternoon, </string>
     <string name="evening_phrase">Good evening, </string>

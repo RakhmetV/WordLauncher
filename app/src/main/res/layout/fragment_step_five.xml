@@ -1,14 +1,300 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.step.five.StepFiveFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutFive"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/step_five_exit"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/ic_close_step_24" />
+
+            <ProgressBar
+                android:id="@+id/step_five_progress_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+
+                android:layout_height="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:progressDrawable="@drawable/custom_progress_step" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/step_five_en_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="36dp"
+            android:maxWidth="200dp"
+            android:text="TextView"
+            android:textSize="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+        <TextView
+            android:id="@+id/step_five_en_two"
+            style="@style/step_level_txt_word_en"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="@+id/step_five_en_one"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/step_five_en_one"
+            app:layout_constraintTop_toBottomOf="@+id/step_five_en_one" />
+
+        <TextView
+            android:id="@+id/step_five_en_three"
+            style="@style/step_level_txt_word_en"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="@+id/step_five_en_two"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/step_five_en_two"
+            app:layout_constraintTop_toBottomOf="@+id/step_five_en_two" />
+
+        <TextView
+            android:id="@+id/step_five_en_four"
+            style="@style/step_level_txt_word_en"
+            android:text="TextView"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/step_five_en_three"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/step_five_en_three"
+            app:layout_constraintTop_toBottomOf="@+id/step_five_en_three" />
+
+        <Button
+            android:id="@+id/step_five_btn_res_one"
+            style="@style/step_level_btn_res"
+            android:text="Button"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/step_five_en_one"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toTopOf="@+id/step_five_en_one" />
+
+        <Button
+            android:id="@+id/step_five_btn_res_two"
+            style="@style/step_level_btn_res"
+            android:text="Button"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/step_five_en_two"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toTopOf="@+id/step_five_en_two" />
+
+        <Button
+            android:id="@+id/step_five_btn_res_three"
+            style="@style/step_level_btn_res"
+            android:text="Button"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/step_five_en_three"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toTopOf="@+id/step_five_en_three" />
+
+        <Button
+            android:id="@+id/step_five_btn_res_four"
+            style="@style/step_level_btn_res"
+            android:text="Button"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/step_five_en_four"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toTopOf="@+id/step_five_en_four" />
+
+        <Button
+            android:id="@+id/step_five_btn_ans_one"
+            style="@style/step_level_btn_ans"
+            android:layout_marginBottom="144dp"
+            android:text="Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintHorizontal_bias="0.478"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/step_five_btn_ans_two"
+            style="@style/step_level_btn_ans"
+            android:layout_marginBottom="144dp"
+            android:text="Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline3" />
+
+        <Button
+            android:id="@+id/step_five_btn_ans_three"
+            style="@style/step_level_btn_ans"
+            android:layout_marginBottom="84dp"
+            android:text="Button"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintHorizontal_bias="0.478"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/step_five_btn_ans_four"
+            style="@style/step_level_btn_ans"
+            android:layout_marginBottom="84dp"
+            android:text="Button"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline3" />
+
+        <Button
+            android:id="@+id/step_five_btn_ans_five"
+            style="@style/step_level_btn_ans"
+            android:layout_marginBottom="16dp"
+            android:text="Button"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintHorizontal_bias="0.478"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/step_five_btn_check"
+            android:layout_width="249dp"
+            android:layout_height="56dp"
+            android:text="Check"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@+id/guideline7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Соотнесите слова с правильным переводом"
+            android:textSize="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutFive" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="203dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="586dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="651dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="429dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="522dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="365dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="307dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="227dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="163dp" />
+
+        <TextView
+            android:id="@+id/step_five_en_five"
+            style="@style/step_level_txt_word_en"
+            android:text="TextView"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/step_five_en_four"
+            app:layout_constraintStart_toStartOf="@+id/step_five_en_four"
+            app:layout_constraintTop_toBottomOf="@+id/step_five_en_four" />
+
+        <Button
+            android:id="@+id/step_five_btn_res_five"
+            style="@style/step_level_btn_res"
+            android:text="Button"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@+id/step_five_en_five"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline3"
+            app:layout_constraintTop_toTopOf="@+id/step_five_en_five" />
+
+        <Button
+            android:id="@+id/step_five_ans_six"
+            style="@style/step_level_btn_ans"
+            android:layout_marginBottom="16dp"
+            android:text="Button"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline3" />
+
+        <Button
+            android:id="@+id/step_five_ans_seven"
+            style="@style/step_level_btn_ans"
+            android:layout_marginBottom="84dp"
+            android:text="Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

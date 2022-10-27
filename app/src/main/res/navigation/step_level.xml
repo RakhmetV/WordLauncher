@@ -9,5 +9,84 @@
         android:id="@+id/stepLevelFragment"
         android:name="com.example.wordlauncher.ui.step.StepLevelFragment"
         android:label="fragment_step_level"
-        tools:layout="@layout/fragment_step_level" />
+        tools:layout="@layout/fragment_step_level" >
+        <action
+            android:id="@+id/action_stepLevelFragment_to_stepOneFragment"
+            app:destination="@id/stepOneFragment" />
+        <action
+            android:id="@+id/action_stepLevelFragment_to_stepTwoFragment"
+            app:destination="@id/stepTwoFragment" />
+        <action
+            android:id="@+id/action_stepLevelFragment_to_stepThreeFragment"
+            app:destination="@id/stepThreeFragment" />
+        <action
+            android:id="@+id/action_stepLevelFragment_to_stepFourFragment"
+            app:destination="@id/stepFourFragment" />
+        <action
+            android:id="@+id/action_stepLevelFragment_to_stepFiveFragment"
+            app:destination="@id/stepFiveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stepOneFragment"
+        android:name="com.example.wordlauncher.ui.step.one.StepOneFragment"
+        android:label="fragment_step_one"
+        tools:layout="@layout/fragment_step_one" >
+        <action
+            android:id="@+id/action_stepOneFragment_to_stepTwoFragment"
+            app:destination="@id/stepTwoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stepFiveFragment"
+        android:name="com.example.wordlauncher.ui.step.five.StepFiveFragment"
+        android:label="fragment_step_five"
+        tools:layout="@layout/fragment_step_five" >
+        <action
+            android:id="@+id/action_stepFiveFragment_to_testFinishFragment"
+            app:destination="@id/testFinishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stepFourFragment"
+        android:name="com.example.wordlauncher.ui.step.four.StepFourFragment"
+        android:label="fragment_step_four"
+        tools:layout="@layout/fragment_step_four" >
+        <action
+            android:id="@+id/action_stepFourFragment_to_testFinishFragment"
+            app:destination="@id/testFinishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stepThreeFragment"
+        android:name="com.example.wordlauncher.ui.step.three.StepThreeFragment"
+        android:label="fragment_step_three"
+        tools:layout="@layout/fragment_step_three" >
+        <action
+            android:id="@+id/action_stepThreeFragment_to_testFinishFragment"
+            app:destination="@id/testFinishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/stepTwoFragment"
+        android:name="com.example.wordlauncher.ui.step.two.StepTwoFragment"
+        android:label="fragment_step_two"
+        tools:layout="@layout/fragment_step_two" >
+        <action
+            android:id="@+id/action_stepTwoFragment_to_testFinishFragment"
+            app:destination="@id/testFinishFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/testFinishFragment"
+        android:name="com.example.wordlauncher.ui.step.finish.testFinishFragment"
+        android:label="fragment_test_finish"
+        tools:layout="@layout/fragment_test_finish" >
+        <action
+            android:id="@+id/action_testFinishFragment_to_stepThreeFragment"
+            app:destination="@id/stepThreeFragment" />
+        <action
+            android:id="@+id/action_testFinishFragment_to_stepFiveFragment"
+            app:destination="@id/stepFiveFragment" />
+        <action
+            android:id="@+id/action_testFinishFragment_to_stepFourFragment"
+            app:destination="@id/stepFourFragment" />
+        <action
+            android:id="@+id/action_testFinishFragment_to_stepLevelFragment"
+            app:destination="@id/stepLevelFragment" />
+    </fragment>
 </navigation>

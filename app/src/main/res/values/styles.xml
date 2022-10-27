@@ -2,6 +2,7 @@
 <resources>
     <style name="splash_them" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowBackground">@drawable/splash_screen</item>
+        <item name="colorButtonNormal">#f00</item>
 
     </style>
     <style name="header_courses_image">
@@ -16,6 +17,7 @@
     <style name="header">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">60dp</item>
+        <item name="android:background">@color/header_courses_color</item>
     </style>
 
     <style name="header_spinner_image">
@@ -38,6 +40,31 @@
         <item name="android:layout_marginTop">6dp</item>
         <item name="android:textSize">18dp</item>
     </style>
+
+    <style name="step_level_txt_word_en">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:maxWidth">180dp</item>
+        <item name="android:layout_marginTop">40dp</item>
+    </style>
+
+    <style name="step_level_btn_res">
+        <item name="android:layout_width">160dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14dp</item>
+        <item name="android:backgroundTint">@color/color_step_answer_button</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="step_level_btn_ans">
+        <item name="android:layout_width">180dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:backgroundTint">@color/color_step_answer_button</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
 
 
 </resources>

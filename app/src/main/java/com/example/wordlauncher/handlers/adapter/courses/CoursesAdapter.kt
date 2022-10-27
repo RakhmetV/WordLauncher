@@ -16,7 +16,8 @@ class CoursesAdapter(
     val stepListener: MyOnClickListener,
     var user: User,
     var themPosition: Int,
-    var stepItemList: ArrayList<StepItem>
+    var stepItemList: ArrayList<StepItem>,
+    var list: Array<String>
 ) : RecyclerView.Adapter<CoursesAdapter.CoursesHolder>() {
     private val listener = stepListener
 
@@ -38,21 +39,21 @@ class CoursesAdapter(
         if(user.progress[themPosition][position][0]>=0){
             holder.binding.progressBar.isVisible = true
             holder.binding.stepLock.isVisible = false
-            holder.binding.progressBar.max = 6
+            holder.binding.progressBar.max = list.size
             var k = 0
             for (i in user.progress[themPosition][position]) {
                 if (i >= 2) k++
             }
             holder.binding.progressBar.progress = k
         }else {
-            holder.binding.stepId.alpha=0.5F
+            holder.binding.stepId.alpha=0.4F
             holder.binding.progressBar.isVisible = false
             holder.binding.stepId.isEnabled = false
             holder.binding.stepLock.isVisible = false
         }
 
         holder.binding.stepName.text = stepItemList[position].nameStep
-        holder.binding.imageView3.setImageResource(stepItemList[position%3].imageStep)
+        holder.binding.imageView3.setImageResource(stepItemList[position].imageStep)
         holder.bind(position, listener)
     }
 

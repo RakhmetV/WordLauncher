@@ -26,13 +26,19 @@ class ChoiceOfSubject : AppCompatActivity() {
 
         val sharedPreference = getSharedPreferences("PREFERENCE_NAME", MODE_PRIVATE)
         var editor = sharedPreference.edit()
-
         init()
         listener()
 
         recycler.layoutManager = LinearLayoutManager(this)
         recycler.adapter = ChoiceAdapret(
             object : MyOnClickListener {
+                override fun OnClick(position: Int) {
+                    editor.putInt("them_position", position)
+                    editor.commit()
+                    val intent = Intent(applicationContext, MainActivity::class.java)
+                    startActivity(intent)
+                }
+            },object : MyOnClickListener {
                 override fun OnClick(position: Int) {
                     editor.putInt("them_position", position)
                     editor.commit()
