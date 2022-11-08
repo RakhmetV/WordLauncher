@@ -76,14 +76,12 @@ class CoursesFragment : Fragment() {
         flag = view.findViewById(R.id.header_flag)
         name = view.findViewById(R.id.header_name)
         recycler = view.findViewById(R.id.courses_recycler)
-        description = view.findViewById(R.id.header_description)
 
         var headerClassList = DataCourses.headerClassList
 
         puzzle.setImageResource(R.drawable.puzzle)
         flag.setImageResource(headerClassList[themPosition].imageHeader)
         name.text = headerClassList[themPosition].nameHeader
-        description.text = headerClassList[themPosition].descriptionHeader
     }
 
     fun listener(view: View) {

@@ -10,16 +10,16 @@ class DataCourses {
             HeaderForSpinner(
                 R.drawable.kremle,
                 "Russian Federation",
-                "Российская Федерация",
+                "Ask not what your country can do for you, ask what you can do for your country",
             "Number of steps: 6"),
             HeaderForSpinner(R.drawable.rb_icon,
                 "Bashkortostan",
-                "башкортостан",
+                "East or West, Home is Best",
             "Number of steps: 9"),
             HeaderForSpinner(
                 R.drawable.hydrocarbon_module,
-                "Hydrocarbons",
-                "Введение в нефтяную промышленность",
+                "Introduction to Petroleum Industry",
+                "My Formula for Success? Rise Early, Work Late, Strike Oil",
                 "Number of steps: 7"
             )
         )
@@ -27,29 +27,29 @@ class DataCourses {
             return when(position){
                 /*Данные на тему Российской Федерации*/
                 0->arrayListOf<StepItem>(
-                    StepItem("Russian Step 1",
+                    StepItem("Highway М5 “Ural”",
                         "Российская Федерация",
                         R.drawable.rf_1),
-                    StepItem( "Russian Step 2",
+                    StepItem( "Highway М7 “Volga”",
                         "башкортостан",
                         R.drawable.rf_2),
                     StepItem(
-                        "Russian Step 3",
+                        "Highway М29 “Kavkaz",
                         "Введение в нефтяную промышленность",
                         R.drawable.rf_3
                     ),
                     StepItem(
-                        "Russian Step 4",
+                        "Highway М6 “Kaspij”",
                         "Введение в нефтяную промышленность",
                         R.drawable.rf_4
                     ),
                     StepItem(
-                        "Russian Step 5",
+                        "Highway М4 “Don”",
                         "Введение в нефтяную промышленность",
                         R.drawable.rf_5
                     ),
                     StepItem(
-                        "Russian Step 6",
+                        "Highway М8 “Kholmogory”",
                         "Введение в нефтяную промышленность",
                         R.drawable.rf_6
                     )
@@ -57,44 +57,44 @@ class DataCourses {
 
                 /*Данные на тему Башкортостан*/
                 1->arrayListOf<StepItem>(
-                    StepItem("Bashkortostan Step 1",
+                    StepItem("Explore national park “Bashkortostan”",
                         "Российская Федерация",
                         R.drawable.rb_1),
-                    StepItem( "Bashkortostan Step 2",
+                    StepItem( "Visit Shulgan-Tash",
                         "башкортостан",
                         R.drawable.rb_2),
                     StepItem(
-                        "Bashkortostan Step 3",
+                        "Climb Iremel",
                         "Введение в нефтяную промышленность",
                         R.drawable.rb_3
                     ),
                     StepItem(
-                        "Bashkortostan Step 4",
+                        "Enjoy a sunrise in Aigir",
                         "Введение в нефтяную промышленность",
                         R.drawable.rb_4
                     ),
                     StepItem(
-                        "Bashkortostan Step 5",
+                        "Taste kumis",
                         "Введение в нефтяную промышленность",
                         R.drawable.rb_5
                     ),
                     StepItem(
-                        "Bashkortostan Step 6",
+                        "Take a glance at Yamantau",
                         "Введение в нефтяную промышленность",
                         R.drawable.rb_6
                     ),
                     StepItem(
-                        "Bashkortostan Step 7",
+                        "Experience wild-water rafting",
                         "Введение в нефтяную промышленность",
                         R.drawable.rb_7
                     ),
                     StepItem(
-                        "Bashkortostan Step 8",
+                        "Go horse riding",
                         "Введение в нефтяную промышленность",
                         R.drawable.rb_8
                     ),
                     StepItem(
-                        "Bashkortostan Step 9",
+                        "Go skiing in Abzakovo",
                         "Введение в нефтяную промышленность",
                         R.drawable.rb_9
                     )
@@ -102,30 +102,30 @@ class DataCourses {
 
                 /*Данные на тему Введение в нефтяную промышленность*/
                 2->arrayListOf<StepItem>(
-                    StepItem("ITPT Step 1",
+                    StepItem("Petroleum is older than dinosaurs",
                         "Российская Федерация",
                         R.drawable.hy_7),
-                    StepItem( "ITPT Step 2",
+                    StepItem( "Bubblegum is made from oil",
                         "башкортостан",
                         R.drawable.hy_1),
                     StepItem(
-                        "ITPT Step 3",
+                        "345 A.D. – The first oil well drilled in China",
                         "Введение в нефтяную промышленность",
                         R.drawable.hy_2
                     ),
-                    StepItem( "ITPT Step 4",
+                    StepItem( "15 km – The world’s deepest oil well drilled in Russia",
                         "башкортостан",
                         R.drawable.hy_3),
                     StepItem(
-                        "ITPT Step 5",
+                        "The first oil pipeline was made of bamboo",
                         "Введение в нефтяную промышленность",
                         R.drawable.hy_4
                     ),
-                    StepItem( "ITPT Step 6",
+                    StepItem( "Petroleum means mountain oil",
                         "башкортостан",
                         R.drawable.hy_5),
                     StepItem(
-                        "ITPT Step 7",
+                        "8900 km – the world’s longest pipeline “Druzhba”",
                         "Введение в нефтяную промышленность",
                         R.drawable.hy_6
                     )

@@ -26,6 +26,7 @@ class AchievementsAdapter(
 ) : RecyclerView.Adapter<AchievementsAdapter.AchievementsHolder>() {
     lateinit var mAuth: FirebaseAuth
     lateinit var mDataBase: DatabaseReference
+
     class AchievementsHolder(item: View) : RecyclerView.ViewHolder(item) {
         val binding = AchievementsItemBinding.bind(item)
     }
@@ -41,12 +42,12 @@ class AchievementsAdapter(
         holder.binding.imageView.setImageResource(achivList[position].imageAchivements)
         holder.binding.achivTxtName.text = achivList[position].nameAchievements
         holder.binding.achivTxtDescrip.text = achivList[position].descriptionAchievements
-        if(userChange.achievements[position]>0){
-            holder.binding.achivTxtCount.isVisible=false
-            holder.binding.achivProgBar.isVisible=false
-            holder.binding.btnAchivSend.isVisible=false
+        if (userChange.achievements[position] > 0) {
+            holder.binding.achivTxtCount.isVisible = false
+            holder.binding.achivProgBar.isVisible = false
+            holder.binding.btnAchivSend.isVisible = false
 
-        }else{
+        } else {
             holder.binding.achivTxtCount.text = achivList[position].AchievementsCount
 
         }
@@ -58,11 +59,51 @@ class AchievementsAdapter(
                 holder.binding.achivTxtCount.text = "0/1"
                 var count = 0
                 for (i in userChange.progress[0][0]) {
-                    if (i > 0) {
+                    if (i > 1) {
                         count++
                     }
                 }
-                if (count==max) {
+                if (count == max) {
+                    Log.d("aaaaa Progress 11111 = ", count.toString())
+                    Log.d("aaaaa MaxProgress 11 = ", max.toString())
+                    holder.binding.achivTxtCount.text = "1/1"
+                    holder.binding.achivProgBar.progress = count
+                }
+                checkBtn(holder, count, max, position)
+                Log.d("aaaaa Progress = ", count.toString())
+                Log.d("aaaaa MaxProgress = ", max.toString())
+
+            }
+            3 -> {
+                //прохождение первого степа второй темы
+                var max = 4
+                holder.binding.achivTxtCount.text = "0/1"
+                holder.binding.achivProgBar.max = max
+                var count = 0
+                for (i in userChange.progress[1][0]) {
+                    if (i > 1) {
+                        count++
+                    }
+                }
+                if (count == max) {
+                    holder.binding.achivTxtCount.text = "1/1"
+                    holder.binding.achivProgBar.progress = count
+                }
+                checkBtn(holder, count, max, position)
+
+            }
+            6 -> {
+                //прохождение первого степа третей темы
+                var max = 4
+                holder.binding.achivTxtCount.text = "0/1"
+                holder.binding.achivProgBar.max = max
+                var count = 0
+                for (i in userChange.progress[2][0]) {
+                    if (i > 1) {
+                        count++
+                    }
+                }
+                if (count == max) {
                     holder.binding.achivTxtCount.text = "1/1"
                     holder.binding.achivProgBar.progress = count
                 }
@@ -70,42 +111,6 @@ class AchievementsAdapter(
 
             }
             1 -> {
-                //прохождение первого степа второй темы
-                var max = 4
-                holder.binding.achivTxtCount.text = "0/1"
-                holder.binding.achivProgBar.max = max
-                var count = 0
-                for (i in userChange.progress[1][0]) {
-                    if (i > 0) {
-                        count++
-                    }
-                }
-                if (count==max) {
-                    holder.binding.achivTxtCount.text = "1/1"
-                    holder.binding.achivProgBar.progress = count
-                }
-                checkBtn(holder, count, max, position)
-
-            }
-            2 -> {
-                //прохождение первого степа третей темы
-                var max = 4
-                holder.binding.achivTxtCount.text = "0/1"
-                holder.binding.achivProgBar.max = max
-                var count = 0
-                for (i in userChange.progress[2][0]) {
-                    if (i > 0) {
-                        count++
-                    }
-                }
-                if (count==max) {
-                    holder.binding.achivTxtCount.text = "1/1"
-                    holder.binding.achivProgBar.progress = count
-                }
-                checkBtn(holder, count, max, position)
-
-            }
-            3 -> {
                 //прохождение всех степов первой темы
                 var max = 6
                 holder.binding.achivProgBar.max = max
@@ -130,10 +135,10 @@ class AchievementsAdapter(
                         holder.binding.achivProgBar.progress = count
                     }
                 }
-                holder.binding.achivTxtCount.text = "${count}/6"
+                holder.binding.achivTxtCount.text = "${count}/9"
                 checkBtn(holder, count, max, position)
             }
-            5 -> {
+            7 -> {
                 //прохождение всех степов 3 темы
                 var max = 7
                 holder.binding.achivProgBar.max = max
@@ -144,17 +149,17 @@ class AchievementsAdapter(
                         holder.binding.achivProgBar.progress = count
                     }
                 }
-                holder.binding.achivTxtCount.text = "${count}/6"
+                holder.binding.achivTxtCount.text = "${count}/7"
                 checkBtn(holder, count, max, position)
             }
-            6 -> {
+            2 -> {
                 //сбор всех кубков 1 темы
                 var max = 72
                 holder.binding.achivProgBar.max = max
                 var count = 0
                 for (i in userChange.progress[0]) {
-                    for (j in i){
-                        if (j>0){
+                    for (j in i) {
+                        if (j > 0) {
                             count += j
                         }
                     }
@@ -165,14 +170,14 @@ class AchievementsAdapter(
 
 
             }
-            7 -> {
+            5 -> {
                 //сбор всех кубков 2 темы
                 var max = 108
                 holder.binding.achivProgBar.max = max
                 var count = 0
                 for (i in userChange.progress[1]) {
-                    for (j in i){
-                        if (j>0){
+                    for (j in i) {
+                        if (j > 0) {
                             count += j
                         }
                     }
@@ -188,8 +193,8 @@ class AchievementsAdapter(
                 holder.binding.achivProgBar.max = max
                 var count = 0
                 for (i in userChange.progress[2]) {
-                    for (j in i){
-                        if (j>0){
+                    for (j in i) {
+                        if (j > 0) {
                             count += j
                         }
                     }
@@ -205,9 +210,9 @@ class AchievementsAdapter(
                 holder.binding.achivProgBar.max = max
                 var count = 0
                 for (i in userChange.progress) {
-                    for (j in i){
-                        for (k in j){
-                            if (k>0) count += k
+                    for (j in i) {
+                        for (k in j) {
+                            if (k > 0) count += k
                         }
                     }
                 }
@@ -219,14 +224,14 @@ class AchievementsAdapter(
 
         }
         holder.binding.btnAchivSend.setOnClickListener {
-            userChange.achievements[position]=1
+            userChange.achievements[position] = 1
             setDataFirebase(holder)
         }
 
     }
 
     fun checkBtn(holder: AchievementsHolder, count: Int, max: Int, position: Int) {
-        if (count == max && userChange.achievements[position]<0) {
+        if (count == max && userChange.achievements[position] < 0) {
             holder.binding.achivProgBar.isVisible = false
             holder.binding.achivTxtCount.isVisible = false
             holder.binding.btnAchivSend.isVisible = true
@@ -245,7 +250,7 @@ class AchievementsAdapter(
         mDataBase.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
-                    holder.binding.btnAchivSend.isVisible=false
+                    holder.binding.btnAchivSend.isVisible = false
 
                 } else {
                     Log.d("aaaa", "Ошибка")
