@@ -28,6 +28,8 @@ import com.example.wordlauncher.handlers.step.StepWord
 import com.example.wordlauncher.ui.courses.userChange
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
+import java.lang.Exception
+import java.lang.reflect.Executable
 import java.text.FieldPosition
 
 
@@ -64,8 +66,11 @@ class StepOneFragment : Fragment() {
         recycler.adapter = StepOneAdapter(object : MyOnClickListener {
             override fun OnClick(position: Int) {
                 Log.d("aaaaaa", position.toString())
+                try {
+                    checkAudio(WordList, position)
+                }catch (ex: Exception){
 
-                checkAudio(WordList, position)
+                }
             }
         }, WordList)
         recycler.addOnScrollListener(object : RecyclerView.OnScrollListener() {

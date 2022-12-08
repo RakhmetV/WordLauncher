@@ -1,6 +1,7 @@
 package com.example.wordlauncher.ui.step.three
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
@@ -12,9 +13,11 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.core.view.isVisible
 import androidx.navigation.Navigation
 import com.example.wordlauncher.R
+import com.example.wordlauncher.StepActivity
 import com.example.wordlauncher.checkBackState
 import com.example.wordlauncher.data.datastep.WordForStep
 
@@ -141,6 +144,21 @@ class StepThreeFragment : Fragment() {
     }
 
     fun btn_click(view: View) {
+        exit.setOnClickListener {
+            AlertDialog.Builder(requireContext()).apply {
+                setTitle("Confirmation")
+                setMessage("All progress in this test will be lost.")
+
+                setPositiveButton("Exit") { _, _ ->
+                    val intent = Intent(requireContext(), StepActivity::class.java)
+                    startActivity(intent)
+                }
+
+                setNegativeButton("Cancel"){_, _ ->
+                }
+                setCancelable(true)
+            }.create().show()
+        }
         btn_anser_one.setOnClickListener {
             if (counterAnser < maxAnser) {
 

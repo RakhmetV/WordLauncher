@@ -1,6 +1,7 @@
 package com.example.wordlauncher.ui.step.five
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
@@ -12,9 +13,11 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.core.view.isVisible
 import androidx.navigation.Navigation
 import com.example.wordlauncher.R
+import com.example.wordlauncher.StepActivity
 import com.example.wordlauncher.checkBackState
 import com.example.wordlauncher.data.datastep.WordForStep
 
@@ -153,6 +156,21 @@ class StepFiveFragment : Fragment() {
     }
 
     fun btn_click(view: View) {
+        exit.setOnClickListener {
+            AlertDialog.Builder(requireContext()).apply {
+                setTitle("Confirmation")
+                setMessage("All progress in this test will be lost.")
+
+                setPositiveButton("Exit") { _, _ ->
+                    val intent = Intent(requireContext(), StepActivity::class.java)
+                    startActivity(intent)
+                }
+
+                setNegativeButton("Cancel"){_, _ ->
+                }
+                setCancelable(true)
+            }.create().show()
+        }
         btn_anser_one.setOnClickListener {
             if (counterAnser < maxAnser) {
 
@@ -511,7 +529,7 @@ class StepFiveFragment : Fragment() {
             word_in_two.text = listWordStep[position][1].split("/:")[0]
             word_in_three.text = listWordStep[position][2].split("/:")[0]
             word_in_four.text = listWordStep[position][3].split("/:")[0]
-            word_in_five.text = listWordStep[position][3].split("/:")[0]
+            word_in_five.text = listWordStep[position][4].split("/:")[0]
             word_in_four.isVisible = true
             word_in_five.isVisible = true
             var reshafl = arrayListOf<String>()
@@ -531,7 +549,7 @@ class StepFiveFragment : Fragment() {
             btn_anser_five.isVisible = true
             btn_anser_five.text = reshafl[4].split("/:")[1]
             btn_anser_six.isVisible = true
-            btn_anser_six.text = reshafl[4].split("/:")[1]
+            btn_anser_six.text = reshafl[5].split("/:")[1]
 
             btn_anser_one.isVisible = true
             btn_anser_two.isVisible = true

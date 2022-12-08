@@ -8,6 +8,7 @@ import androidx.appcompat.app.AlertDialog
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.wordlauncher.databinding.ActivityMainBinding
 
@@ -21,14 +22,21 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-       /* val sharedPreference =  getSharedPreferences("PREFERENCE_NAME", MODE_PRIVATE)
-        var editor = sharedPreference.edit()
-        editor.putInt("them_position",2)
-        editor.commit()*/
+        val navHostFragment = (supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment)
+        val inflater = navHostFragment.navController.navInflater
+        val graph = inflater.inflate(R.navigation.mobile_navigation)
+        //graph.addArgument("argument", NavArgument)
+        if (checkBackState!="") graph.setStartDestination(R.id.navigation_courses)
+        else graph.setStartDestination(R.id.navigation_profile)
+        //or
+        //graph.setStartDestination(R.id.fragment2)
+
+        navHostFragment.navController.graph = graph
 
         val navView: BottomNavigationView = binding.navView
-        val navController = findNavController(R.id.nav_host_fragment_activity_main)
-        navView.setupWithNavController(navController)
+       // val navController = findNavController(R.id.nav_host_fragment_activity_main)
+        //navView.setupWithNavController(navController)
+        navView.setupWithNavController(  navHostFragment.navController)
     }
 
     override fun onBackPressed() {

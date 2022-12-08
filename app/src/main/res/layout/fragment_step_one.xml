@@ -57,6 +57,7 @@
                             android:layout_height="40dp"
                             android:layout_marginStart="5dp"
                             android:layout_marginEnd="5dp"
+                            android:layout_weight="0"
                             android:src="@drawable/ic_close_step_24" />
 
                         <ProgressBar
@@ -64,12 +65,24 @@
                             style="?android:attr/progressBarStyleHorizontal"
                             android:layout_width="match_parent"
                             android:visibility="invisible"
-
+                            android:layout_weight="1"
                             android:layout_height="10dp"
                             android:layout_marginStart="5dp"
                             android:layout_marginEnd="10dp"
                             android:progressDrawable="@drawable/custom_progress_step" />
 
+                        <Button
+                            android:id="@+id/btn_next_level"
+                            android:layout_width="50dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0"
+                            android:backgroundTint="@color/btn_color_read"
+                            android:background="@drawable/ic_baseline_arrow_right_alt_24"
+                            android:textSize="18dp"
+                            android:visibility="invisible"
+                            tools:layout_editor_absoluteX="152dp"
+                            tools:layout_editor_absoluteY="287dp" />
                 </LinearLayout>
 
                 <View
@@ -87,23 +100,11 @@
                     android:layout_height="0dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.51"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-                <Button
-                    android:id="@+id/btn_next_level"
-                    android:layout_width="260dp"
-                    android:layout_height="65dp"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="24dp"
-                    android:backgroundTint="@color/btn_color_read"
-                    android:text="Next level"
-                    android:textSize="18dp"
-                    android:visibility="invisible"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.497"
-                    app:layout_constraintStart_toStartOf="parent" />
+
 
                 <!--<TextView
                     android:id="@+id/en_word"

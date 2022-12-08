@@ -38,7 +38,6 @@ class CoursesAdapter(
     override fun onBindViewHolder(holder: CoursesHolder, position: Int) {
         if(user.progress[themPosition][position][0]>=0){
             holder.binding.progressBar.isVisible = true
-            holder.binding.stepLock.isVisible = false
             holder.binding.progressBar.max = list.size
             var k = 0
             for (i in user.progress[themPosition][position]) {
@@ -49,7 +48,6 @@ class CoursesAdapter(
             holder.binding.stepId.alpha=0.4F
             holder.binding.progressBar.isVisible = false
             holder.binding.stepId.isEnabled = false
-            holder.binding.stepLock.isVisible = false
         }
 
         holder.binding.stepName.text = stepItemList[position].nameStep

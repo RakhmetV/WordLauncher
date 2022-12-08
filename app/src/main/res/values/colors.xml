@@ -9,23 +9,39 @@
     <color name="white">#FFFFFFFF</color>
 
 <!--    цвет выбора темы-->
-    <color name="choice_rectangle_color">#FAFFFE</color>
- <!--    цвет загаловка в курсах и в активности выбора курсов-->
+    <color name="choice_rectangle_color">#FFFFFF</color>
 
+
+ <!--    цвет загаловка в курсах и в активности выбора курсов-->
     <color name="header_courses_color">#FFFCFC</color>
     <!--    цвет кнопок входа и т.д-->
     <color name="btn_color_read">#D83B3B</color>
 
-    <!--    цвет item у recucler в courses-->
-    <color name="color_step_rectangle">#D3B8FFFB</color>
+    <!--    цвет item у recycler в level-->
+    <color name="color_step_rectangle">#FCBBD4EA</color>
+
+    <!--    цвет item у recycler в courses-->
+    <color name="color_step_rectangle_courses">#B0E1DE</color>
+
+    <!--    цвет main activity-->
+    <color name="color_main_activity">#F5FFFFFF</color>
+
+    <color name="color_step_answer_button">#F8F8F8</color>
+
+
+    <!--    цвет панели управления кнопокриложения-->
+    <color name="color_bottom_navigation">#FFFFFF</color>
+
+    <!--    цвет панели управления кнопок телефона-->
+    <color name="color_navigation_bar">#E6E6E6</color>
+
+    <!--    цвет нажатой кнопки-->
+    <color name="color_bottom_navigation_selected">#F8B5607B</color>
+
+    <!--    цвет верхней панели(время, уведомления и т.д)-->
+    <color name="color_holder_phone">#EE020202</color>
 
 
 
-
-    <color name="color_step_answer_button">#E4E4E4</color>
-
-
-
-    <color name="color_bottom_navigation">#EE186F7A</color>
     <color name="color_bottoms_navigation">#1E2B2A</color>
 </resources>

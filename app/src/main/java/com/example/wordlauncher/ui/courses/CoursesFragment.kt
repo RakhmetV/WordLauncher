@@ -58,7 +58,7 @@ class CoursesFragment : Fragment() {
         val root: View = binding.root
         val sharedPreference =
             requireContext().getSharedPreferences("PREFERENCE_NAME", Context.MODE_PRIVATE)
-        var themPosition = sharedPreference.getInt("them_position", 1)
+        var themPosition = sharedPreference.getInt("them_position", 0)
 
         var editor = sharedPreference.edit()
         var stepLevelList = resources.getStringArray(R.array.step_level)

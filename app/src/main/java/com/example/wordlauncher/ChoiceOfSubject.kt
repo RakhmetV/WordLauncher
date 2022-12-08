@@ -23,7 +23,7 @@ class ChoiceOfSubject : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_choice_of_subject)
-
+        checkBackState="ChoiseOfSub"
         val sharedPreference = getSharedPreferences("PREFERENCE_NAME", MODE_PRIVATE)
         var editor = sharedPreference.edit()
         init()
@@ -49,8 +49,6 @@ class ChoiceOfSubject : AppCompatActivity() {
             DataCourses.headerClassList,
             sharedPreference.getInt("them_position", 0)
         )
-
-
 
 
     }

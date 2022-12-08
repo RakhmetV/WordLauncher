@@ -44,11 +44,11 @@
             android:id="@+id/step_three_en_one"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="52dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="50dp"
             android:maxWidth="200dp"
             android:text="TextView"
-            android:textSize="20dp"
+            android:textSize="24dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView13" />
 
@@ -174,11 +174,12 @@
 
         <Button
             android:id="@+id/step_three_btn_check"
-            android:layout_width="249dp"
-            android:layout_height="56dp"
+            android:layout_width="260dp"
+            android:layout_height="70dp"
             android:text="Check"
+            android:textSize="20dp"
             android:visibility="invisible"
-            app:layout_constraintBottom_toTopOf="@+id/guideline7"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/guideline6" />
@@ -187,10 +188,11 @@
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="72dp"
             android:text="Соотнесите слова с правильным переводом"
-            android:textSize="16dp"
+            android:textSize="18dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.575"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
@@ -220,7 +222,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="406dp" />
+            app:layout_constraintGuide_begin="451dp" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline7"
@@ -234,28 +236,28 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="335dp" />
+            app:layout_constraintGuide_begin="379dp" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="268dp" />
+            app:layout_constraintGuide_begin="302dp" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="203dp" />
+            app:layout_constraintGuide_begin="236dp" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="131dp" />
+            app:layout_constraintGuide_begin="153dp" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

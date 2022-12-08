@@ -126,15 +126,7 @@ class RegistrationFragment : Fragment() {
             .getReference(ConstName().USER_NAME)
             .child(idUser.toString())
         Log.d("aaaaaaaaaa", idUser.toString())
-        var newUser = User(/*
-            idUser.toString(),
-            name.text.toString(),
-            age.text.toString(),
-            sex,
-            if (sex == "Male") "https://firebasestorage.googleapis.com/v0/b/word-launcher.appspot.com/o/default%2Fman.png?alt=media&token=9f07728a-c16b-4d9d-b940-a730aac6ac94"
-            else "https://firebasestorage.googleapis.com/v0/b/word-launcher.appspot.com/o/default%2Fwoman.png?alt=media&token=c6a1201d-25ab-4787-bbe6-00ca2f79fb7a",
-            email.text.toString()*/
-        )
+        var newUser = User()
         mDataBase.setValue(newUser)
         mDataBase.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
