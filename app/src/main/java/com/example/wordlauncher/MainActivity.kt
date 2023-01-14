@@ -22,23 +22,23 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //навигация между основными фрагментами
         val navHostFragment = (supportFragmentManager.findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment)
         val inflater = navHostFragment.navController.navInflater
         val graph = inflater.inflate(R.navigation.mobile_navigation)
-        //graph.addArgument("argument", NavArgument)
+
+        //открытие профиля либо курса
         if (checkBackState!="") graph.setStartDestination(R.id.navigation_courses)
         else graph.setStartDestination(R.id.navigation_profile)
-        //or
-        //graph.setStartDestination(R.id.fragment2)
 
         navHostFragment.navController.graph = graph
 
+        //настройка навигаций между кнопками
         val navView: BottomNavigationView = binding.navView
-       // val navController = findNavController(R.id.nav_host_fragment_activity_main)
-        //navView.setupWithNavController(navController)
         navView.setupWithNavController(  navHostFragment.navController)
     }
 
+    //всплывающее окно при выходе с главной активности
     override fun onBackPressed() {
         AlertDialog.Builder(this).apply {
             setTitle("Confirmation")
