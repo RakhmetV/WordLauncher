@@ -4,38 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#F0F4F4"
     tools:context=".ui.step.one.StepOneFragment">
 
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:orientation="vertical">-->
-
-<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="60dp">-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/choice_of_sub_back"-->
-<!--                android:layout_width="40dp"-->
-<!--                android:layout_height="34dp"-->
-<!--                android:layout_marginStart="16dp"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent"-->
-<!--                app:srcCompat="@drawable/ic_back_24" />-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/textView9"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Level 1"-->
-<!--                android:textSize="18dp"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent" />-->
-<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -44,21 +15,21 @@
 
                 <LinearLayout
                     android:id="@+id/linearLayout"
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    style="@style/header"
                     android:gravity="center"
                     android:orientation="horizontal"
+                    android:background="#FFFFFF"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
                         <ImageView
                             android:id="@+id/step_one_exit"
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:layout_marginStart="5dp"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="10dp"
                             android:layout_marginEnd="5dp"
                             android:layout_weight="0"
-                            android:src="@drawable/ic_close_step_24" />
+                            android:src="@drawable/ic_baseline_arrow_back_24" />
 
                         <ProgressBar
                             android:id="@+id/step_one_progress_bar"
@@ -70,25 +41,24 @@
                             android:layout_marginStart="5dp"
                             android:layout_marginEnd="10dp"
                             android:progressDrawable="@drawable/custom_progress_step" />
-
-                        <Button
+                        <TextView
                             android:id="@+id/btn_next_level"
-                            android:layout_width="50dp"
-                            android:layout_height="40dp"
-                            android:layout_gravity="center"
-                            android:layout_weight="0"
-                            android:backgroundTint="@color/btn_color_read"
-                            android:background="@drawable/ic_baseline_arrow_right_alt_24"
-                            android:textSize="18dp"
-                            android:visibility="invisible"
-                            tools:layout_editor_absoluteX="152dp"
-                            tools:layout_editor_absoluteY="287dp" />
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:text="Next level"
+                            android:gravity="center"
+                            android:textColor="#272626"
+                            android:textSize="20dp"
+                            android:layout_marginEnd="15dp"
+
+                            />
+
                 </LinearLayout>
 
                 <View
                     android:id="@+id/divider"
                     android:layout_width="match_parent"
-                    android:layout_height="1dp"
+                    android:layout_height="2dp"
                     android:background="?android:attr/listDivider"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -102,55 +72,9 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.51"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-
-
-                <!--<TextView
-                    android:id="@+id/en_word"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="148dp"
-                    android:text="TextView"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.498"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-                <TextView
-                    android:id="@+id/transcription"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="40dp"
-                    android:text="TextView"
-                    app:layout_constraintEnd_toEndOf="@+id/en_word"
-                    app:layout_constraintHorizontal_bias="0.0"
-                    app:layout_constraintStart_toStartOf="@+id/en_word"
-                    app:layout_constraintTop_toBottomOf="@+id/en_word" />
-
-                <Button
-                    android:id="@+id/btn_next"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/black"
-                    android:text="NEXT"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-                <ImageView
-                    android:id="@+id/img_btn_voice"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="44dp"
-                    android:src="@drawable/ic_baseline_volume_up_24"
-                    app:layout_constraintEnd_toEndOf="@+id/transcription"
-                    app:layout_constraintStart_toStartOf="@+id/transcription"
-                    app:layout_constraintTop_toBottomOf="@+id/transcription" />-->
-
+                    app:layout_constraintTop_toBottomOf="@+id/divider" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-        <!--    </LinearLayout>-->
 
 
 </FrameLayout>

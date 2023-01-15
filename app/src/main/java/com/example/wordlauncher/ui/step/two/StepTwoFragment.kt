@@ -85,9 +85,6 @@ class StepTwoFragment : Fragment() {
                     mistake++
                     btn_anser_one.setBackgroundColor(Color.RED)
 
-//                    MaxProgress++
-//                    progressBar.max = MaxProgress
-
                     listWord.add(listWord[item])
                     listWord.removeAt(item)
                     item--
@@ -99,7 +96,7 @@ class StepTwoFragment : Fragment() {
                             item++
                             step_two_work(listWord)
                         }else{
-                            val endTime = System.currentTimeMillis()
+                           // val endTime = System.currentTimeMillis()
                             btn_next.text="Finish"
                             val bundle = Bundle()
                             bundle.putInt("mistake",mistake)
@@ -117,7 +114,7 @@ class StepTwoFragment : Fragment() {
                         item++
                         step_two_work(listWord)
                     }else{
-                        val endTime = System.currentTimeMillis()
+                       // val endTime = System.currentTimeMillis()
                         btn_next.text="Finish"
                         val bundle = Bundle()
                         bundle.putInt("mistake",mistake)
@@ -136,8 +133,8 @@ class StepTwoFragment : Fragment() {
         }
 
         btn_anser_two.setOnClickListener {
-            val handler = android.os.Handler()
             if (item < listWord.size && !checkClick) {
+                val handler = android.os.Handler()
                 checkClick = true
                 if (btn_anser_two.text.toString() == listWord[item].split("/:")[1]) {
                     btn_anser_two.setBackgroundColor(Color.GREEN)
@@ -150,16 +147,31 @@ class StepTwoFragment : Fragment() {
                     listWord.removeAt(item)
                     item--
                 }
-                //+-btn_next.isVisible = true
-            }
-            try {
-                handler.postDelayed({
+                try {
+                    handler.postDelayed({
+                        if (item < (listWord.size - 1)) {
+                            checkClick = false
+                            item++
+                            step_two_work(listWord)
+                        }else{
+                            //val endTime = System.currentTimeMillis()
+                            btn_next.text="Finish"
+                            val bundle = Bundle()
+                            bundle.putInt("mistake",mistake)
+                            bundle.putLong("time",startTime)
+                            bundle.putInt("levels",1)
+                            bundle.putInt("list_size",listWord.size)
+                            Navigation.findNavController(view).navigate(R.id.testFinishFragment,bundle)
+
+                        }
+                    }, 500)
+                }catch (e: Exception){
                     if (item < (listWord.size - 1)) {
                         checkClick = false
                         item++
                         step_two_work(listWord)
                     }else{
-                        val endTime = System.currentTimeMillis()
+                        //val endTime = System.currentTimeMillis()
                         btn_next.text="Finish"
                         val bundle = Bundle()
                         bundle.putInt("mistake",mistake)
@@ -169,24 +181,9 @@ class StepTwoFragment : Fragment() {
                         Navigation.findNavController(view).navigate(R.id.testFinishFragment,bundle)
 
                     }
-                }, 500)
-            }catch (e: Exception){
-                if (item < (listWord.size - 1)) {
-                    checkClick = false
-                    item++
-                    step_two_work(listWord)
-                }else{
-                    val endTime = System.currentTimeMillis()
-                    btn_next.text="Finish"
-                    val bundle = Bundle()
-                    bundle.putInt("mistake",mistake)
-                    bundle.putLong("time",startTime)
-                    bundle.putInt("levels",1)
-                    bundle.putInt("list_size",listWord.size)
-                    Navigation.findNavController(view).navigate(R.id.testFinishFragment,bundle)
-
                 }
             }
+
 
 
 
@@ -229,13 +226,18 @@ class StepTwoFragment : Fragment() {
             }.create().show()
         }
         voice.setOnClickListener {
-            for (i in WordList){
-                if (i.word_en == listWord[item].split("/:")[0]){
+            try {
+                for (i in WordList){
+                    if (i.word_en == listWord[item].split("/:")[0]){
 
-                    checkAudio(i.sound)
-                    break
+                        checkAudio(i.sound)
+                        break
+                    }
                 }
+            }catch (ex: Exception){
+
             }
+
         }
 
         return view

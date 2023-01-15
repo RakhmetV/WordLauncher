@@ -26,12 +26,10 @@ import java.util.*
 class testFinishFragment : Fragment() {
     lateinit var btn_exit: ImageView
     lateinit var btn_next_lvl: Button
-    lateinit var cup_one: ImageView
-    lateinit var cup_two: ImageView
-    lateinit var cup_three: ImageView
     lateinit var txt_time: TextView
     lateinit var txt_points: TextView
     lateinit var txt_marvelous: TextView
+    lateinit var txt_rating: TextView
 
     lateinit var mAuth: FirebaseAuth
     lateinit var mDataBase: DatabaseReference
@@ -69,24 +67,17 @@ class testFinishFragment : Fragment() {
         val phrases = resources.getStringArray(R.array.end_phrases)
         val random = (0..phrases.size - 1).random()
         txt_marvelous.text = phrases[random]
-        txt_time.text = "My time: ${format.format(cal.time)}"
+        txt_time.text = "${format.format(cal.time)}"
         var point = ((listSize!!).toDouble() / (listSize!! + mistake!!).toDouble()) * 100
-        txt_points.text = "My points: ${point.toInt()}"
-        if (point < 40) {
-            cup_one.alpha = 0.3F
-            cup_two.alpha = 0.3F
-            cup_three.alpha = 0.3F
-        } else if (point < 60) {
-            points_user = 1
-            cup_one.alpha = 1F
-            cup_two.alpha = 0.3F
-            cup_three.alpha = 0.3F
-        } else if (point < 80) {
-            points_user = 2
-            cup_one.alpha = 1F
-            cup_two.alpha = 0.3F
-            cup_three.alpha = 1F
-        } else points_user = 3
+        txt_points.text = "${point.toInt()}"
+
+        if (point<60){
+            txt_rating.text = "1"
+        }else if(point<85){
+            txt_rating.text = "2"
+        }else{
+            txt_rating.text = "3"
+        }
 
         val step_lvl_size = resources.getStringArray(R.array.step_level)
         if (levels == (step_lvl_size.size - 1)) {
@@ -158,12 +149,10 @@ class testFinishFragment : Fragment() {
     fun init(view: View) {
         btn_exit = view.findViewById(R.id.test_finish_exit)
         btn_next_lvl = view.findViewById(R.id.test_finish_btn_next)
-        cup_one = view.findViewById(R.id.test_finish_cup_one)
-        cup_two = view.findViewById(R.id.test_finish_cup_two)
-        cup_three = view.findViewById(R.id.test_finish_cup_three)
         txt_time = view.findViewById(R.id.test_finish_time)
         txt_points = view.findViewById(R.id.test_finish_points)
         txt_marvelous = view.findViewById(R.id.test_finish_marvelous)
+        txt_rating = view.findViewById(R.id.test_finish_rating)
 
     }
 

@@ -17,7 +17,7 @@ class PuzzleData {
                     R.drawable.puzzle_ru3,
                     R.drawable.puzzle_ru4
                 )
-                /*1 -> arrayListOf(
+                1 -> arrayListOf(
                     R.drawable.puzzle_bush1,
                     R.drawable.puzzle_bush2,
                     R.drawable.puzzle_bush3,
@@ -27,7 +27,7 @@ class PuzzleData {
                     R.drawable.puzzle_bush7,
                     R.drawable.puzzle_bush8,
                     R.drawable.puzzle_bush9
-                )*/
+                )
                 2 -> arrayListOf(
                     R.drawable.puzzle_hydro8,
                     R.drawable.puzzle_hydro9,

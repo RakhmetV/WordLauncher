@@ -17,7 +17,7 @@
     <style name="header">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">60dp</item>
-        <item name="android:background">@color/header_courses_color</item>
+        <item name="android:background">#FFFFFF</item>
     </style>
 
     <style name="header_spinner_image">
@@ -72,7 +72,7 @@
         <item name="android:visibility">invisible</item>
     </style>
     <style name="custom_puzzle_img">
-        <item name="android:layout_width">90dp</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">90dp</item>
         <item name="android:scaleType">fitXY</item>
     </style>

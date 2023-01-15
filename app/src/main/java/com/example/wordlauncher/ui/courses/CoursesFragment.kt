@@ -19,6 +19,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
 import androidx.navigation.Navigation
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wordlauncher.ChoiceOfSubject
@@ -31,6 +32,8 @@ import com.example.wordlauncher.data.profile.PuzzleData
 import com.example.wordlauncher.databinding.FragmentCoursesBinding
 import com.example.wordlauncher.handlers.MyOnClickListener
 import com.example.wordlauncher.handlers.adapter.courses.CoursesAdapter
+import com.example.wordlauncher.handlers.adapter.courses.puzzle.CoursesPuzzleAdapret
+import com.example.wordlauncher.handlers.adapter.profile.puzzle.PuzzleAdapter
 import com.example.wordlauncher.handlers.header.HeaderForSpinner
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
@@ -107,75 +110,17 @@ class CoursesFragment : Fragment() {
             dialog.window?.setBackgroundDrawableResource(android.R.color.transparent)
             var listImg = PuzzleData.puzzleImgList(themPosition)
             var count = 0
+            var fullCount = 0
             for (j in userChange.progress[themPosition]) {
+                fullCount++
                 if (j[3] > 1) {
                     count++
                 }
             }
-            for (i in 0..count){
-                when(i){
-                    0->{
-                        Log.d("aaaaaaaa","0")
-                        //holder.binding.imgPuzzle1.setImageResource(listImg[i])
-                    }
-                    1->{
-                        Log.d("aaaaaaaa","1")
-                        var a = view1.findViewById<ImageView>(R.id.custom_puzzle1)
-                        a.isVisible=true
-                        a.setImageResource(listImg[i-1])
-                    }
-                    2->{
-                        Log.d("aaaaaaaa","2")
-                        var a = view1.findViewById<ImageView>(R.id.custom_puzzle2)
-                        a.isVisible=true
-                        a.setImageResource(listImg[i-1])
-                    }
-                    3->{
-                        Log.d("aaaaaaaa","3")
-                        var a = view1.findViewById<ImageView>(R.id.custom_puzzle3)
-                        a.isVisible=true
-                        a.setImageResource(listImg[i-1])
-                    }
-                    4->{
-                        Log.d("aaaaaaaa","4")
-                        var a = view1.findViewById<ImageView>(R.id.custom_puzzle4)
-                        a.isVisible=true
-                        a.setImageResource(listImg[i-1])
-                    }
-                    5->{
-                        Log.d("aaaaaaaa","5")
-                        var a = view1.findViewById<ImageView>(R.id.custom_puzzle5)
-                        a.isVisible=true
-                        a.setImageResource(listImg[i-1])
-                    }
-                    6->{
-                        Log.d("aaaaaaaa","6")
-                        var a = view1.findViewById<ImageView>(R.id.custom_puzzle6)
-                        a.isVisible=true
-                        a.setImageResource(listImg[i-1])
-                    }
-                    7->{
-                        Log.d("aaaaaaaa","7")
-                        var a = view1.findViewById<ImageView>(R.id.custom_puzzle7)
-                        a.isVisible=true
-                        a.setImageResource(listImg[i-1])
-                    }
-                    8->{
-                        Log.d("aaaaaaaa","8")
-                        var a = view1.findViewById<ImageView>(R.id.custom_puzzle8)
-                        a.isVisible=true
-                        a.setImageResource(listImg[i-1])
-                    }
-                    9->{
-                        Log.d("aaaaaaaa","9")
-                        var a = view1.findViewById<ImageView>(R.id.custom_puzzle9)
-                        a.isVisible=true
-                        a.setImageResource(listImg[i-1])
-                    }
-                }
-            }
-
-
+            val customRecycler = view1.findViewById<RecyclerView>(R.id.custom_puzzle_recycler)
+            customRecycler.layoutManager =
+                GridLayoutManager(context, 3)
+            customRecycler.adapter = CoursesPuzzleAdapret(count,fullCount, listImg)
 
         }
     }

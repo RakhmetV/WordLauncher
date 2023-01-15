@@ -11,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.navigation.Navigation
@@ -35,7 +36,7 @@ import java.text.FieldPosition
 
 class StepOneFragment : Fragment() {
     lateinit var recycler: RecyclerView
-    lateinit var btn_next: Button
+    lateinit var btn_next: TextView
     lateinit var btn_exit: ImageView
     lateinit var mAuth: FirebaseAuth
     lateinit var mDataBase: DatabaseReference
@@ -73,13 +74,14 @@ class StepOneFragment : Fragment() {
                 }
             }
         }, WordList)
-        recycler.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
-                super.onScrollStateChanged(recyclerView, newState)
-                btn_next.isVisible = !recyclerView.canScrollVertically(1)
-            }
-
-        })
+//        //скрол списка до самого низа
+//        recycler.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+//            override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+//                super.onScrollStateChanged(recyclerView, newState)
+//                btn_next.isVisible = !recyclerView.canScrollVertically(1)
+//            }
+//
+//        })
 
         btn_next.setOnClickListener {
             if (userChange.progress[themPosition][stepPosition][0] == 0) {

@@ -65,11 +65,15 @@ class ProfileFragment : Fragment() {
                 AchevList.add(ProfileAchievements.dataAchiv[i.index].imageAchivements)
             }
         }
+
+        //Recycler для достицений
         recycler.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         recycler.adapter = ProfileAchievementsAdapter(AchevList)
         var puzzleArray = arrayListOf<Int>()
         var puzzleArrayCheck = arrayListOf<Int>()
         var count1 = 0
+
+        //Посчет статистики
         for (i in userChange.progress[0]) {
             if (i[3] > 1) {
                 count1++
@@ -104,7 +108,9 @@ class ProfileFragment : Fragment() {
             puzzleArray.add(count3)
             puzzleArrayCheck.add(2)
         }
-        view.findViewById<TextView>(R.id.profiletxtxstathy).text = "Hydrocarbons: ${count3}/7"
+        view.findViewById<TextView>(R.id.profiletxtxstathy).text = "Introduction to Petroleum Industry: ${count3}/7"
+
+        //Пазлы в профиле
         recyclerPuzzle.layoutManager = LinearLayoutManager(context)
         recyclerPuzzle.adapter = ProfilePuzzleAdapter(puzzleArray, puzzleArrayCheck)
         ProfileAchievements.dataAchiv
