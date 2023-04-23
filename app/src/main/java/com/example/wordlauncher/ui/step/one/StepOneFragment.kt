@@ -58,9 +58,16 @@ class StepOneFragment : Fragment() {
         val sharedPreference =
             requireContext().getSharedPreferences("PREFERENCE_NAME", Context.MODE_PRIVATE)
 
-        var themPosition = sharedPreference.getInt("them_position", 1)
-        var stepPosition = sharedPreference.getInt("step_position", 1)
+        var themPosition = sharedPreference.getInt("them_position", 0)
+        var stepPosition = sharedPreference.getInt("step_position", 0)
         init(view)
+        if (userChange.progress[themPosition][stepPosition][0] == 0) {
+            userChange.progress[themPosition][stepPosition][0] = 3
+            userChange.progress[themPosition][stepPosition][1] = 0
+            setDataInFirebase(view)
+        }else{
+            //btn_next.isVisible=true
+        }
 
         var WordList = WordForStep.WordStepList(themPosition, stepPosition)
         recycler.layoutManager = LinearLayoutManager(context)
@@ -84,14 +91,7 @@ class StepOneFragment : Fragment() {
 //        })
 
         btn_next.setOnClickListener {
-            if (userChange.progress[themPosition][stepPosition][0] == 0) {
-                userChange.progress[themPosition][stepPosition][0] = 3
-                userChange.progress[themPosition][stepPosition][1] = 0
-                setDataInFirebase(view)
-            } else {
                 Navigation.findNavController(view).navigate(R.id.stepTwoFragment)
-            }
-
         }
 
         btn_exit.setOnClickListener {
@@ -132,7 +132,8 @@ class StepOneFragment : Fragment() {
         mDataBase.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
-                    Navigation.findNavController(view).navigate(R.id.stepTwoFragment)
+                   // btn_next.isVisible=true
+                    //Navigation.findNavController(view).navigate(R.id.stepTwoFragment)
                 } else {
                     Toast.makeText(
                         requireContext(),

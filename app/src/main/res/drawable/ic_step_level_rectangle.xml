@@ -3,6 +3,6 @@
     <size
         android:width="430dp"
         android:height="120dp" />
-    <solid android:color="@color/color_step_rectangle" />
+    <solid android:color="@color/color_step_level_item_fone" />
     <corners android:radius="15dp" />
 </shape>

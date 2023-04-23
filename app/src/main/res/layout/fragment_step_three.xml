@@ -6,260 +6,208 @@
     android:layout_height="match_parent"
     tools:context=".ui.step.three.StepThreeFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/step_three_exit"
-                android:layout_width="35dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="5dp"
-                android:src="@drawable/ic_close_step_24" />
-
-            <ProgressBar
-                android:id="@+id/step_three_progress_bar"
-                style="?android:attr/progressBarStyleHorizontal"
+            <LinearLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-                android:layout_height="10dp"
-                android:layout_marginStart="5dp"
-                android:layout_marginEnd="10dp"
-                android:progressDrawable="@drawable/custom_progress_step" />
+                <ImageView
+                    android:id="@+id/step_three_exit"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:src="@drawable/ic_baseline_arrow_back_24" />
 
-        </LinearLayout>
+                <ProgressBar
+                    android:id="@+id/step_three_progress_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
 
-        <TextView
-            android:id="@+id/step_three_en_one"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:layout_marginTop="50dp"
-            android:maxWidth="200dp"
-            android:text="TextView"
-            android:textSize="24dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+                    android:layout_height="6dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:progressDrawable="@drawable/custom_progress_step" />
 
-        <TextView
-            android:id="@+id/step_three_en_two"
-            style="@style/step_level_txt_word_en"
-            android:text="TextView"
-            app:layout_constraintEnd_toEndOf="@+id/step_three_en_one"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/step_three_en_one"
-            app:layout_constraintTop_toBottomOf="@+id/step_three_en_one" />
-
-        <TextView
-            android:id="@+id/step_three_en_three"
-            style="@style/step_level_txt_word_en"
-            android:text="TextView"
-            android:visibility="invisible"
-            app:layout_constraintEnd_toEndOf="@+id/step_three_en_two"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/step_three_en_two"
-            app:layout_constraintTop_toBottomOf="@+id/step_three_en_two" />
-
-        <TextView
-            android:id="@+id/step_three_en_four"
-            style="@style/step_level_txt_word_en"
-            android:text="TextView"
-            android:visibility="invisible"
-            app:layout_constraintEnd_toEndOf="@+id/step_three_en_three"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@+id/step_three_en_three"
-            app:layout_constraintTop_toBottomOf="@+id/step_three_en_three" />
-
-        <Button
-            android:id="@+id/step_three_btn_res_one"
-            style="@style/step_level_btn_res"
-            android:text="Button"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="@+id/step_three_en_one"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline3"
-            app:layout_constraintTop_toTopOf="@+id/step_three_en_one" />
-
-        <Button
-            android:id="@+id/step_three_btn_res_two"
-            style="@style/step_level_btn_res"
-            android:text="Button"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="@+id/step_three_en_two"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline3"
-            app:layout_constraintTop_toTopOf="@+id/step_three_en_two" />
-
-        <Button
-            android:id="@+id/step_three_btn_res_three"
-            style="@style/step_level_btn_res"
-            android:text="Button"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="@+id/step_three_en_three"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline3"
-            app:layout_constraintTop_toTopOf="@+id/step_three_en_three" />
-
-        <Button
-            android:id="@+id/step_three_btn_res_four"
-            style="@style/step_level_btn_res"
-            android:text="Button"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="@+id/step_three_en_four"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline3"
-            app:layout_constraintTop_toTopOf="@+id/step_three_en_four" />
-
-        <Button
-            android:id="@+id/step_three_btn_ans_one"
-            style="@style/step_level_btn_ans"
-            android:layout_marginBottom="152dp"
-            android:text="Button"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/guideline3"
-            app:layout_constraintHorizontal_bias="0.478"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/step_three_btn_ans_two"
-            style="@style/step_level_btn_ans"
-            android:layout_marginBottom="152dp"
-            android:text="Button"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline3" />
-
-        <Button
-            android:id="@+id/step_three_btn_ans_three"
-            style="@style/step_level_btn_ans"
-            android:layout_marginBottom="84dp"
-            android:text="Button"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/step_three_btn_ans_four"
-            style="@style/step_level_btn_ans"
-            android:layout_marginBottom="16dp"
-            android:text="Button"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/guideline3"
-            app:layout_constraintHorizontal_bias="0.478"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/step_three_btn_ans_five"
-            style="@style/step_level_btn_ans"
-            android:layout_marginBottom="16dp"
-            android:text="Button"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@+id/guideline3" />
-
-        <Button
-            android:id="@+id/step_three_btn_check"
-            android:layout_width="260dp"
-            android:layout_height="70dp"
-            android:text="Check"
-            android:textSize="20dp"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/guideline6" />
-
-        <TextView
-            android:id="@+id/textView13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="72dp"
-            android:text="Соотнесите слова с правильным переводом"
-            android:textSize="18dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.575"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            app:layout_constraintGuide_begin="203dp" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_begin="586dp" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_begin="668dp" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_begin="451dp" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_begin="521dp" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_begin="379dp" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_begin="302dp" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_begin="236dp" />
-
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_begin="153dp" />
+            </LinearLayout>
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/step_three_btn_check"
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="50dp"
+                android:text="Check"
+                android:textSize="18dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.442"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/step_three_en_four" />
+
+            <TextView
+                android:id="@+id/step_three_en_one"
+                style="@style/step_level_txt_word_en"
+                android:layout_column="0"
+                android:layout_marginTop="30dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toStartOf="@+id/step_three_btn_res_one"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+            <Button
+                android:id="@+id/step_three_btn_res_one"
+                style="@style/step_level_btn_res"
+                android:layout_width="0dp"
+                android:alpha="0"
+                android:text="Button"
+                app:layout_constraintBottom_toBottomOf="@+id/step_three_en_one"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/step_three_en_one"
+                app:layout_constraintTop_toTopOf="@+id/step_three_en_one" />
+
+            <TextView
+                android:id="@+id/step_three_en_two"
+                style="@style/step_level_txt_word_en"
+                android:layout_marginTop="35dp"
+                android:text="TextView"
+                app:layout_constraintEnd_toStartOf="@+id/step_three_btn_res_two"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/step_three_en_one" />
+
+            <Button
+                android:id="@+id/step_three_btn_res_two"
+                style="@style/step_level_btn_res"
+                android:layout_width="0dp"
+                android:alpha="0"
+                android:text="Button"
+                app:layout_constraintBottom_toBottomOf="@+id/step_three_en_two"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/step_three_en_two"
+                app:layout_constraintTop_toTopOf="@+id/step_three_en_two" />
+
+            <TextView
+                android:id="@+id/step_three_en_three"
+                style="@style/step_level_txt_word_en"
+                android:layout_marginTop="35dp"
+                android:alpha="0"
+                android:text="TextView"
+                app:layout_constraintEnd_toStartOf="@+id/step_three_btn_res_three"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/step_three_en_two" />
+
+            <Button
+                android:id="@+id/step_three_btn_res_three"
+                style="@style/step_level_btn_res"
+                android:layout_width="0dp"
+                android:alpha="0"
+                android:text="Button"
+                app:layout_constraintBottom_toBottomOf="@+id/step_three_en_three"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/step_three_en_three"
+                app:layout_constraintTop_toTopOf="@+id/step_three_en_three" />
+
+            <TextView
+                android:id="@+id/step_three_en_four"
+                style="@style/step_level_txt_word_en"
+                android:layout_marginTop="35dp"
+                android:alpha="0"
+                android:text="TextView"
+                app:layout_constraintEnd_toStartOf="@+id/step_three_btn_res_four"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/step_three_en_three" />
+
+
+            <Button
+                android:id="@+id/step_three_btn_res_four"
+                style="@style/step_level_btn_res"
+                android:layout_width="0dp"
+                android:alpha="0"
+                android:text="Button"
+                app:layout_constraintBottom_toBottomOf="@+id/step_three_en_four"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/step_three_en_four"
+                app:layout_constraintTop_toTopOf="@+id/step_three_en_four" />
+
+            <TableLayout
+                android:id="@+id/tableLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+                android:stretchColumns="1,2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/step_three_en_four">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/step_three_btn_ans_one"
+                        style="@style/step_level_btn_ans"
+                        android:text="Button" />
+
+                    <Button
+                        android:id="@+id/step_three_btn_ans_two"
+                        style="@style/step_level_btn_ans"
+                        android:text="Button" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/step_three_btn_ans_three"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:alpha="0"
+                        android:backgroundTint="@color/color_step_answer_button"
+                        android:text="Button"
+                        android:textColor="#000000"
+                        android:textSize="12dp" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp">
+
+                    <Button
+                        android:id="@+id/step_three_btn_ans_four"
+                        style="@style/step_level_btn_ans"
+                        android:alpha="0"
+                        android:text="Button" />
+
+                    <Button
+                        android:id="@+id/step_three_btn_ans_five"
+                        style="@style/step_level_btn_ans"
+                        android:alpha="0"
+                        android:text="Button" />
+                </TableRow>
+
+            </TableLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
 
 </FrameLayout>

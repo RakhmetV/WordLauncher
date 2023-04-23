@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.wordlauncher.R
 import com.example.wordlauncher.databinding.ProfilePuzzleItemBinding
 
-class PuzzleAdapter(var listPosition: Int, var listImg: ArrayList<Int>) :
+class PuzzleAdapter(var listPosition: Int, var listImg: ArrayList<Int>, var max: Int) :
     RecyclerView.Adapter<PuzzleAdapter.PuzzleHolder>() {
     class PuzzleHolder(item: View) : RecyclerView.ViewHolder(item) {
         val binding = ProfilePuzzleItemBinding.bind(item)
@@ -22,8 +22,8 @@ class PuzzleAdapter(var listPosition: Int, var listImg: ArrayList<Int>) :
     override fun onBindViewHolder(holder: PuzzleAdapter.PuzzleHolder, position: Int) {
         if (position < listPosition) {
             holder.binding.puzzleItemImage.setImageResource(listImg[position])
-        } else {
-
+        } else if (listPosition==(max)){
+            holder.binding.puzzleItemImage.setImageResource(listImg[position])
         }
 
     }

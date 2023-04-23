@@ -10,10 +10,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.ProgressBar
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.isVisible
 import androidx.navigation.Navigation
@@ -37,12 +34,15 @@ class StepTwoFragment : Fragment() {
     private var MaxProgress = 9
     lateinit var progressBar: ProgressBar
 
-    lateinit var btn_anser_one: Button
-    lateinit var btn_anser_two: Button
-    lateinit var btn_next: Button
     lateinit var word_in: TextView
     lateinit var voice: ImageView
     lateinit var exit: ImageView
+    lateinit var optionIconOne: ImageView
+    lateinit var optionIconTwo: ImageView
+    lateinit var layoutAnserOne: RelativeLayout
+    lateinit var layoutAnserTwo: RelativeLayout
+    lateinit var txtLayoutOne: TextView
+    lateinit var txtLayoutTwo: TextView
     var item = 0
     var mistake = 0
     var itemPast = -1
@@ -63,152 +63,21 @@ class StepTwoFragment : Fragment() {
         val sharedPreference =
             requireContext().getSharedPreferences("PREFERENCE_NAME", Context.MODE_PRIVATE)
 
-        var themPosition = sharedPreference.getInt("them_position", 1)
+        var themPosition = sharedPreference.getInt("them_position", 0)
 
-        var stepPosition = sharedPreference.getInt("step_position", 1)
+        var stepPosition = sharedPreference.getInt("step_position", 0)
         init(view)
         var WordList = WordForStep.WordStepList(themPosition, stepPosition)
         for (list in WordList) {
             listWord.add(list.word_en + "/:" + list.word_ru)
         }
         listWord.shuffle()
-        step_two_work(listWord)
-        btn_anser_one.setOnClickListener {
-            if (item < listWord.size && !checkClick) {
-                val handler = android.os.Handler()
-                checkClick = true
-                if (btn_anser_one.text.toString() == listWord[item].split("/:")[1]) {
-                    btn_anser_one.setBackgroundColor(Color.GREEN)
-                    CurrentProgress++
-                    progressBar.setProgress(CurrentProgress)
-                } else {
-                    mistake++
-                    btn_anser_one.setBackgroundColor(Color.RED)
 
-                    listWord.add(listWord[item])
-                    listWord.removeAt(item)
-                    item--
-                }
-                try {
-                    handler.postDelayed({
-                        if (item < (listWord.size - 1)) {
-                            checkClick = false
-                            item++
-                            step_two_work(listWord)
-                        }else{
-                           // val endTime = System.currentTimeMillis()
-                            btn_next.text="Finish"
-                            val bundle = Bundle()
-                            bundle.putInt("mistake",mistake)
-                            bundle.putLong("time",startTime)
-                            bundle.putInt("levels",1)
-                            bundle.putInt("list_size",listWord.size)
-                            Navigation.findNavController(view).navigate(R.id.testFinishFragment,bundle)
+        //-------------------------
+        step_two_work_layout(listWord)
+        listerLayout(view, startTime)
+        //-----------------------------
 
-                        }
-
-                    }, 500)
-                }catch (e: Exception){
-                    if (item < (listWord.size - 1)) {
-                        checkClick = false
-                        item++
-                        step_two_work(listWord)
-                    }else{
-                       // val endTime = System.currentTimeMillis()
-                        btn_next.text="Finish"
-                        val bundle = Bundle()
-                        bundle.putInt("mistake",mistake)
-                        bundle.putLong("time",startTime)
-                        bundle.putInt("levels",1)
-                        bundle.putInt("list_size",listWord.size)
-                        Navigation.findNavController(view).navigate(R.id.testFinishFragment,bundle)
-
-                    }
-                }
-
-
-            }
-
-
-        }
-
-        btn_anser_two.setOnClickListener {
-            if (item < listWord.size && !checkClick) {
-                val handler = android.os.Handler()
-                checkClick = true
-                if (btn_anser_two.text.toString() == listWord[item].split("/:")[1]) {
-                    btn_anser_two.setBackgroundColor(Color.GREEN)
-                    CurrentProgress++
-                    progressBar.setProgress(CurrentProgress)
-                } else {
-                    mistake++
-                    btn_anser_two.setBackgroundColor(Color.RED)
-                    listWord.add(listWord[item])
-                    listWord.removeAt(item)
-                    item--
-                }
-                try {
-                    handler.postDelayed({
-                        if (item < (listWord.size - 1)) {
-                            checkClick = false
-                            item++
-                            step_two_work(listWord)
-                        }else{
-                            //val endTime = System.currentTimeMillis()
-                            btn_next.text="Finish"
-                            val bundle = Bundle()
-                            bundle.putInt("mistake",mistake)
-                            bundle.putLong("time",startTime)
-                            bundle.putInt("levels",1)
-                            bundle.putInt("list_size",listWord.size)
-                            Navigation.findNavController(view).navigate(R.id.testFinishFragment,bundle)
-
-                        }
-                    }, 500)
-                }catch (e: Exception){
-                    if (item < (listWord.size - 1)) {
-                        checkClick = false
-                        item++
-                        step_two_work(listWord)
-                    }else{
-                        //val endTime = System.currentTimeMillis()
-                        btn_next.text="Finish"
-                        val bundle = Bundle()
-                        bundle.putInt("mistake",mistake)
-                        bundle.putLong("time",startTime)
-                        bundle.putInt("levels",1)
-                        bundle.putInt("list_size",listWord.size)
-                        Navigation.findNavController(view).navigate(R.id.testFinishFragment,bundle)
-
-                    }
-                }
-            }
-
-
-
-
-
-
-        }
-
-        btn_next.setOnClickListener {
-            if (item < (listWord.size - 1)) {
-                checkClick = false
-                item++
-                step_two_work(listWord)
-            }else{
-                val endTime = System.currentTimeMillis()
-                btn_next.text="Finish"
-                val bundle = Bundle()
-                bundle.putInt("mistake",mistake)
-                bundle.putLong("time",startTime)
-                bundle.putInt("levels",1)
-                bundle.putInt("list_size",listWord.size)
-                Navigation.findNavController(view).navigate(R.id.testFinishFragment,bundle)
-
-            }
-            btn_next.isVisible = false
-        }
 
         exit.setOnClickListener {
             AlertDialog.Builder(requireContext()).apply {
@@ -255,11 +124,125 @@ class StepTwoFragment : Fragment() {
         return true
     }
 
-    private fun step_two_work(list: ArrayList<String>) {
+    private fun listerLayout(view: View, startTime:Long){
+        layoutAnserOne.setOnClickListener {
+            if (item < listWord.size && !checkClick) {
+                val handler = android.os.Handler()
+                checkClick = true
+                if (txtLayoutOne.text.toString() == listWord[item].split("/:")[1]) {
+                    //btn_anser_one.setBackgroundColor(Color.GREEN)
+                    layoutAnserOne.setBackgroundResource(R.drawable.round_back_button_true)
+                    optionIconOne.setImageResource(R.drawable.check_icon)
+                    CurrentProgress++
+                    progressBar.setProgress(CurrentProgress)
+                } else {
+                    mistake++
+                    //btn_anser_one.setBackgroundColor(Color.RED)
+                    layoutAnserOne.setBackgroundResource(R.drawable.round_back_button_false)
+                    optionIconOne.setImageResource(R.drawable.false_icon)
+                    listWord.add(listWord[item])
+                    listWord.removeAt(item)
+                    item--
+                }
+                try {
+                    handler.postDelayed({
+                        if (item < (listWord.size - 1)) {
+                            checkClick = false
+                            item++
+                            step_two_work_layout(listWord)
+                        }else{
+                            // val endTime = System.currentTimeMillis()
+                            val bundle = Bundle()
+                            bundle.putInt("mistake",mistake)
+                            bundle.putLong("time",startTime)
+                            bundle.putInt("levels",1)
+                            bundle.putInt("list_size",listWord.size)
+                            Navigation.findNavController(view).navigate(R.id.testFinishFragment,bundle)
+
+                        }
+
+                    }, 500)
+                }catch (e: Exception){
+                    if (item < (listWord.size - 1)) {
+                        checkClick = false
+                        item++
+                        step_two_work_layout(listWord)
+                    }else{
+                        // val endTime = System.currentTimeMillis()
+                        val bundle = Bundle()
+                        bundle.putInt("mistake",mistake)
+                        bundle.putLong("time",startTime)
+                        bundle.putInt("levels",1)
+                        bundle.putInt("list_size",listWord.size)
+                        Navigation.findNavController(view).navigate(R.id.testFinishFragment,bundle)
+
+                    }
+                }
+
+            }
+
+        }
+
+        layoutAnserTwo.setOnClickListener {
+            if (item < listWord.size && !checkClick) {
+                val handler = android.os.Handler()
+                checkClick = true
+                if (txtLayoutTwo.text.toString() == listWord[item].split("/:")[1]) {
+                    //btn_anser_two.setBackgroundColor(Color.GREEN)
+                    layoutAnserTwo.setBackgroundResource(R.drawable.round_back_button_true)
+                    optionIconTwo.setImageResource(R.drawable.check_icon)
+                    CurrentProgress++
+                    progressBar.setProgress(CurrentProgress)
+                } else {
+                    mistake++
+                    //btn_anser_two.setBackgroundColor(Color.RED)
+                    layoutAnserTwo.setBackgroundResource(R.drawable.round_back_button_false)
+                    optionIconTwo.setImageResource(R.drawable.false_icon)
+                    listWord.add(listWord[item])
+                    listWord.removeAt(item)
+                    item--
+                }
+                try {
+                    handler.postDelayed({
+                        if (item < (listWord.size - 1)) {
+                            checkClick = false
+                            item++
+                            step_two_work_layout(listWord)
+                        }else{
+                            //val endTime = System.currentTimeMillis()
+                            val bundle = Bundle()
+                            bundle.putInt("mistake",mistake)
+                            bundle.putLong("time",startTime)
+                            bundle.putInt("levels",1)
+                            bundle.putInt("list_size",listWord.size)
+                            Navigation.findNavController(view).navigate(R.id.testFinishFragment,bundle)
+
+                        }
+                    }, 500)
+                }catch (e: Exception){
+                    if (item < (listWord.size - 1)) {
+                        checkClick = false
+                        item++
+                        step_two_work_layout(listWord)
+                    }else{
+                        //val endTime = System.currentTimeMillis()
+                        val bundle = Bundle()
+                        bundle.putInt("mistake",mistake)
+                        bundle.putLong("time",startTime)
+                        bundle.putInt("levels",1)
+                        bundle.putInt("list_size",listWord.size)
+                        Navigation.findNavController(view).navigate(R.id.testFinishFragment,bundle)
+
+                    }
+                }
+            }
+
+        }
+    }
+    private fun step_two_work_layout(list: ArrayList<String>) {
 //        Log.d("aaaaaa", item.toString())
 //        Log.d("aaaaaab", list.size.toString())
-        btn_anser_one.setBackgroundColor(resources.getColor(R.color.color_step_answer_button))
-        btn_anser_two.setBackgroundColor(resources.getColor(R.color.color_step_answer_button))
+        resetOption()
         var listSplit = list[item].split("/:")
         word_in.text = listSplit[0]
         var rnd_btn = (0..1).random()
@@ -289,28 +272,39 @@ class StepTwoFragment : Fragment() {
         var listSplitTwo = list[rnd_word_for_btn].split("/:")
         when (rnd_btn) {
             0 -> {
-                btn_anser_one.text = listSplit[1]
-                btn_anser_two.text = listSplitTwo[1]
+                txtLayoutOne.text = listSplit[1]
+                txtLayoutTwo.text = listSplitTwo[1]
             }
             1 -> {
-                btn_anser_two.text = listSplit[1]
-                btn_anser_one.text = listSplitTwo[1]
+                txtLayoutTwo.text = listSplit[1]
+                txtLayoutOne.text = listSplitTwo[1]
             }
         }
     }
 
+
     private fun init(view: View) {
-        btn_anser_one = view.findViewById(R.id.step_two_btn_answer)
-        btn_anser_two = view.findViewById(R.id.step_two_btn_answer_two)
-        btn_next = view.findViewById(R.id.step_two_btn_next)
         word_in = view.findViewById(R.id.step_two_word_en)
         voice = view.findViewById(R.id.step_two_voice)
         exit = view.findViewById(R.id.step_two_exit)
         progressBar = view.findViewById(R.id.step_two_progress_bar)
         progressBar.setProgress(CurrentProgress)
         progressBar.max = MaxProgress
+        optionIconOne = view.findViewById(R.id.optionIconOne)
+        optionIconTwo = view.findViewById(R.id.optionIconTwo)
+        layoutAnserOne = view.findViewById(R.id.step_two_layout_answer)
+        layoutAnserTwo = view.findViewById(R.id.step_two_layout_two_answer)
+        txtLayoutOne = view.findViewById(R.id.step_two_txt_answer_one)
+        txtLayoutTwo = view.findViewById(R.id.step_two_txt_answer_two)
 
 
+    }
+
+    private fun resetOption(){
+        layoutAnserOne.setBackgroundResource(R.drawable.round_back_button)
+        layoutAnserTwo.setBackgroundResource(R.drawable.round_back_button)
+        optionIconOne.setImageResource(R.drawable.round_back_circle)
+        optionIconTwo.setImageResource(R.drawable.round_back_circle)
     }
     override fun onDestroy() {
         super.onDestroy()

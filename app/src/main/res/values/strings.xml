@@ -25,10 +25,10 @@
     </string-array>
 
     <string-array name="step_level">
-        <item>Level 1</item>
-        <item>Level 2</item>
-        <item>Level 3</item>
-        <item>Level 4</item>
+        <item>LEVEL 1</item>
+        <item>LEVEL 2</item>
+        <item>LEVEL 3</item>
+        <item>LEVEL 4</item>
     </string-array>
 
 

@@ -1,5 +1,6 @@
 package com.example.wordlauncher
 
+import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
@@ -29,6 +30,10 @@ class SplashScreen : AppCompatActivity() {
         mAuth= FirebaseAuth.getInstance()
         var cUser=mAuth.currentUser
         if(cUser!=null){
+            val sharedPreference = getSharedPreferences("PREFERENCE_NAME", MODE_PRIVATE)
+            var editor = sharedPreference.edit()
+            editor.putInt("them_position", 0)
+
             getDataInFirebase()
         } else{
             intentRegistration()

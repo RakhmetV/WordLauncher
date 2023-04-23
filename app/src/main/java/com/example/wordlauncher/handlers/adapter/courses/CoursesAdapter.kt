@@ -44,9 +44,10 @@ class CoursesAdapter(
                 if (i >= 2) k++
             }
             holder.binding.progressBar.progress = k
+            holder.binding.stepItemProgress.text = "Progress: ${k}/4"
         }else {
             holder.binding.stepId.alpha=0.4F
-            holder.binding.progressBar.isVisible = false
+            //holder.binding.progressBar.isVisible = false
             holder.binding.stepId.isEnabled = false
         }
 

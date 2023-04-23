@@ -26,10 +26,13 @@
     <!--    цвет main activity-->
     <color name="color_main_activity">#F5FFFFFF</color>
 
+    <!--    цвет activity выобра тем-->
+    <color name="color_choice_activity">#EEEEEE</color>
+
     <color name="color_step_answer_button">#F8F8F8</color>
 
 
-    <!--    цвет панели управления кнопокриложения-->
+    <!--    цвет панели управления кнопок приложения-->
     <color name="color_bottom_navigation">#FFFFFF</color>
 
     <!--    цвет панели управления кнопок телефона-->
@@ -40,6 +43,51 @@
 
     <!--    цвет верхней панели(время, уведомления и т.д)-->
     <color name="color_holder_phone">#EE020202</color>
+
+    <!--    цвет разделителя View-->
+    <color name="color_view_bar">#D6D6D6</color>
+
+    <!--    цвет названий тем в достижениях-->
+    <color name="color_achievements_name">#4A4A4A</color>
+
+    <!--    цвет названий тем в профиле-->
+    <color name="color_profile_name">@color/black</color>
+
+    <!--    цвет статистики в профиле-->
+    <color name="color_profile_statistic">#434343</color>
+
+    <!--    цвет фона пазлов в профиле-->
+    <color name="color_profile_puzzle_fone">#FDFDFD</color>
+
+    <!--    цвет заголовка пазлов в профиле-->
+    <color name="color_profile_puzzle_name">#5C4949</color>
+
+    <!--    цвет фона в выборе уровня-->
+    <color name="color_step_level_fone">#ECECEC</color>
+
+    <!--    цвет фона в выборе уровня items-->
+    <color name="color_step_level_item_fone">#FC2E91AF</color>
+
+    <!--    цвет фона заколовка в уровнях-->
+    <color name="color_header_level">#FFFFFF</color>
+
+    <!--    цвет фона в  уровенях-->
+    <color name="color_level_fone">#F0F4F4</color>
+
+    <!--    цвет фона в ресайклер первй уровень-->
+    <color name="color_level_one_rec">#FCFFFFFF</color>
+
+    <!--    цвет фона в ресайклер выбор темы-->
+    <color name="color_choice_item">#FCFFFFFF</color>
+
+
+
+
+
+
+
+    <!--    цвет реверс белый/черный-->
+    <color name="color_revers">#272626</color>
 
 
 

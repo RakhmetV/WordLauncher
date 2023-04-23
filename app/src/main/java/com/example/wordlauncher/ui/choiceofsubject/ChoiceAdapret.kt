@@ -16,12 +16,10 @@ import com.example.wordlauncher.handlers.header.HeaderForSpinner
 
 class ChoiceAdapret(
     var stepListener: MyOnClickListener,
-    var stepListenerTwo: MyOnClickListener,
     var themList: ArrayList<HeaderForSpinner>,
     var pos: Int
 ) : RecyclerView.Adapter<ChoiceAdapret.ChoiceHolder>() {
     private val listener = stepListener
-    private val listenerTwo = stepListenerTwo
 
 
     class ChoiceHolder(item: View) : RecyclerView.ViewHolder(item) {
@@ -30,13 +28,11 @@ class ChoiceAdapret(
             binding.choiceId.setOnClickListener {
                 listener.OnClick(position)
             }
-        }
-
-        fun bindTwo(position: Int, listener: MyOnClickListener) {
             binding.buttonContinue.setOnClickListener {
                 listener.OnClick(position)
             }
         }
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChoiceHolder {
@@ -56,7 +52,6 @@ class ChoiceAdapret(
         }
         holder.binding.choiceItemCondition.text=themList[position].countStep
         holder.bind(position,listener)
-        holder.bindTwo(position,listenerTwo)
 
 
     }

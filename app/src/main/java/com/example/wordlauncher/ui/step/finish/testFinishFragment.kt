@@ -71,76 +71,76 @@ class testFinishFragment : Fragment() {
         var point = ((listSize!!).toDouble() / (listSize!! + mistake!!).toDouble()) * 100
         txt_points.text = "${point.toInt()}"
 
-        if (point<60){
+        if (point < 30) {
+            txt_rating.text = "0"
+            points_user = 0
+        } else if (point < 60) {
             txt_rating.text = "1"
-        }else if(point<85){
+            points_user = 1
+        } else if (point < 85) {
             txt_rating.text = "2"
-        }else{
+            points_user = 2
+        } else {
             txt_rating.text = "3"
+            points_user = 3
         }
 
         val step_lvl_size = resources.getStringArray(R.array.step_level)
+
         if (levels == (step_lvl_size.size - 1)) {
             btn_next_lvl.text = "Finish"
-        }else if ( userChange.progress[themPosition][stepPosition][levels!!] == 0 && points_user<2){
+        } else if ( points_user < 2) {
             btn_next_lvl.text = "Finish"
         }
 
-        btn_next_lvl.setOnClickListener {
-            if (userChange.progress[themPosition][stepPosition][levels!!] == 0 && points_user > 0) {
-                if (levels == (step_lvl_size.size - 1)) {
-                    userChange.progress[themPosition][stepPosition][levels!!] = points_user
-                    if (themPosition != DataCourses.stepDataList(themPosition).size - 1 && points_user>1) {
-                        userChange.progress[themPosition][stepPosition + 1][0] = 0
-                    }
-                } else {
-                    userChange.progress[themPosition][stepPosition][levels!!] = points_user
-                    if (points_user>1) userChange.progress[themPosition][stepPosition][levels!!+1] = 0
-                }
-            } else if (userChange.progress[themPosition][stepPosition][levels!!] < points_user) {
-                userChange.progress[themPosition][stepPosition][levels!!] == points_user
 
-                if (levels == (step_lvl_size.size - 1)) {
-                    userChange.progress[themPosition][stepPosition][levels!!] = points_user
-
-                    if (themPosition != DataCourses.stepDataList(themPosition).size - 1 && points_user>1 && userChange.progress[themPosition][stepPosition + 1][0] == -1) {
-                        userChange.progress[themPosition][stepPosition + 1][0] = 0
-                    }
-                } else {
-                    userChange.progress[themPosition][stepPosition][levels!!] = points_user
-                    if (points_user>1) userChange.progress[themPosition][stepPosition][levels!!+1] = 0
+        ///----------------------Проверка и заполнение тестов
+        if (userChange.progress[themPosition][stepPosition][levels!!] == 0 && points_user > 0) {
+            userChange.progress[themPosition][stepPosition][levels!!] = points_user
+            if (levels == (step_lvl_size.size - 1)) {
+                if (stepPosition != (DataCourses.stepDataList(themPosition).size - 1) && points_user > 1) {
+                    userChange.progress[themPosition][stepPosition + 1][0] = 0
                 }
+            } else {
+
+                if (points_user > 1) userChange.progress[themPosition][stepPosition][levels!! + 1] =
+                    0
             }
+        } else if (userChange.progress[themPosition][stepPosition][levels!!] < points_user) {
+            userChange.progress[themPosition][stepPosition][levels!!] == points_user
 
-            setDataInFirebase(view, levels, step_lvl_size.size, btn_next_lvl.text.toString())
+            if (levels == (step_lvl_size.size - 1)) {
+
+                if (stepPosition != (DataCourses.stepDataList(themPosition).size - 1) && points_user > 1) {
+                    if ( userChange.progress[themPosition][stepPosition + 1][0] == -1){
+                        userChange.progress[themPosition][stepPosition + 1][0] = 0
+                    }
+                }
+            } else {
+                if (points_user > 1) userChange.progress[themPosition][stepPosition][levels!! + 1] =
+                    0
+            }
+        }
+        ///----------------------Проверка и заполнение тестов завершение
+
+        setDataInFirebase() //Запись в Firebase
+
+        btn_next_lvl.setOnClickListener {
+            if (btn_next_lvl.text.toString() != "Finish") {
+                when (levels) {
+                    1 -> Navigation.findNavController(view).navigate(R.id.stepThreeFragment)
+                    2 -> Navigation.findNavController(view).navigate(R.id.stepFiveFragment)
+                    3 -> Navigation.findNavController(view).navigate(R.id.stepLevelFragment)
+                }
+            } else {
+                Navigation.findNavController(view)
+                    .navigate(R.id.stepLevelFragment)
+            }
+            //setDataInFirebase(view, levels, step_lvl_size.size, btn_next_lvl.text.toString())
         }
 
         btn_exit.setOnClickListener {
-            if (userChange.progress[themPosition][stepPosition][levels!!] == 0 && points_user > 0) {
-                if (levels == (step_lvl_size.size - 1)) {
-                    userChange.progress[themPosition][stepPosition][levels!!] = points_user
-                    if (themPosition != DataCourses.stepDataList(themPosition).size - 1 && points_user>1) {
-                        userChange.progress[themPosition][stepPosition + 1][0] = 0
-                    }
-                } else {
-                    userChange.progress[themPosition][stepPosition][levels!!] = points_user
-                    if (points_user>1) userChange.progress[themPosition][stepPosition][levels!!+1] = 0
-                }
-            } else if (userChange.progress[themPosition][stepPosition][levels!!] < points_user) {
-                userChange.progress[themPosition][stepPosition][levels!!] == points_user
-
-                if (levels == (step_lvl_size.size - 1)) {
-                    userChange.progress[themPosition][stepPosition][levels!!] = points_user
-
-                    if (themPosition != DataCourses.stepDataList(themPosition).size - 1 && points_user>1 && userChange.progress[themPosition][stepPosition + 1][0] == -1) {
-                        userChange.progress[themPosition][stepPosition + 1][0] = 0
-                    }
-                } else {
-                    userChange.progress[themPosition][stepPosition][levels!!] = points_user
-                    if (points_user>1) userChange.progress[themPosition][stepPosition][levels!!+1] = 0
-                }
-            }
-            setDataInFirebase(view, -1, step_lvl_size.size, "1")
+            Navigation.findNavController(view).navigate(R.id.stepLevelFragment)
         }
 
         return view
@@ -156,7 +156,7 @@ class testFinishFragment : Fragment() {
 
     }
 
-    fun setDataInFirebase(view: View, level: Int, step_size: Int, btn_txt: String) {
+    fun setDataInFirebase() {
         mAuth = FirebaseAuth.getInstance()
         var idUser = mAuth.uid
         mDataBase = FirebaseDatabase
@@ -167,26 +167,14 @@ class testFinishFragment : Fragment() {
         mDataBase.addListenerForSingleValueEvent(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 if (snapshot.exists()) {
-                    if (level == (step_size - 1)) {
-                        Navigation.findNavController(view).navigate(R.id.stepLevelFragment)
-                    } else if (btn_txt=="Finish"){
-                        Navigation.findNavController(view).navigate(R.id.stepLevelFragment)
-                    }else {
-                        when (level) {
-                            -1 -> Navigation.findNavController(view)
-                                .navigate(R.id.stepLevelFragment)
-                            1 -> Navigation.findNavController(view).navigate(R.id.stepThreeFragment)
-                            2 -> Navigation.findNavController(view).navigate(R.id.stepFiveFragment)
-                            3 -> Navigation.findNavController(view).navigate(R.id.stepLevelFragment)
-                        }
 
-                    }
                 } else {
                     Toast.makeText(
                         requireContext(),
                         "Соединение было прервано.\nПовторите попытку.",
                         Toast.LENGTH_SHORT
                     ).show()
+                    btn_next_lvl.text = "Finish"
                 }
             }
 
@@ -196,6 +184,7 @@ class testFinishFragment : Fragment() {
                     "Соединение было прервано.\nПовторите попытку.",
                     Toast.LENGTH_SHORT
                 ).show()
+                btn_next_lvl.text = "Finish"
             }
 
         })

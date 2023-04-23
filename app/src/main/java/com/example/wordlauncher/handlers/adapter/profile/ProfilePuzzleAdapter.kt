@@ -45,21 +45,21 @@ class ProfilePuzzleAdapter(
 
                 holder.binding.profilePuzzleRecyclerItem.layoutManager =
                     GridLayoutManager(holder.binding.profilePuzzleRecyclerItem.context, 3)
-                holder.binding.profilePuzzleRecyclerItem.adapter = PuzzleAdapter(list[position], listImg)
+                holder.binding.profilePuzzleRecyclerItem.adapter = PuzzleAdapter(list[position], listImg, 6)
             }
             1 -> {
                 holder.binding.puzzleNameItem.text = "Bashkortostan"
 
                 holder.binding.profilePuzzleRecyclerItem.layoutManager =
                     GridLayoutManager(holder.binding.profilePuzzleRecyclerItem.context, 3)
-                holder.binding.profilePuzzleRecyclerItem.adapter = PuzzleAdapter(list[position], listImg)
+                holder.binding.profilePuzzleRecyclerItem.adapter = PuzzleAdapter(list[position], listImg, 9)
             }
             2 -> {
                 holder.binding.puzzleNameItem.text = "Introduction to Petroleum Industry"
 
                 holder.binding.profilePuzzleRecyclerItem.layoutManager =
                     GridLayoutManager(holder.binding.profilePuzzleRecyclerItem.context, 3)
-                holder.binding.profilePuzzleRecyclerItem.adapter = PuzzleAdapter(list[position], listImg)
+                holder.binding.profilePuzzleRecyclerItem.adapter = PuzzleAdapter(list[position], listImg, 7)
             }
         }
 
@@ -75,63 +75,6 @@ class ProfilePuzzleAdapter(
          setImage(holder, list[position], listImg)*/
     }
 
-    /* private fun setImage(holder: ProfilePuzzleHolder, count: Int, listImg: ArrayList<Int>){
-         for (i in 0..count){
-             when(i){
-                 0->{
-                     Log.d("aaaaaaaa","0")
-                     //holder.binding.imgPuzzle1.setImageResource(listImg[i])
-                 }
-                 1->{
-                     Log.d("aaaaaaaa","1")
-                     holder.binding.imgPuzzle1.isVisible=true
-                     holder.binding.imgPuzzle1.setImageResource(listImg[i-1])
-                 }
-                 2->{
-                     Log.d("aaaaaaaa","2")
-                     holder.binding.imgPuzzle2.isVisible=true
-                     holder.binding.imgPuzzle2.setImageResource(listImg[i-1])
-                 }
-                 3->{
-                     Log.d("aaaaaaaa","3")
-                     holder.binding.imgPuzzle3.isVisible=true
-
-                     holder.binding.imgPuzzle3.setImageResource(listImg[i-1])
-                 }
-                 4->{
-                     Log.d("aaaaaaaa","4")
-                     holder.binding.imgPuzzle4.isVisible=true
-                     holder.binding.imgPuzzle4.setImageResource(listImg[i-1])
-                 }
-                 5->{
-                     Log.d("aaaaaaaa","5")
-                     holder.binding.imgPuzzle5.isVisible=true
-                     holder.binding.imgPuzzle5.setImageResource(listImg[i-1])
-                 }
-                 6->{
-                     Log.d("aaaaaaaa","6")
-                     holder.binding.imgPuzzle6.isVisible=true
-                     holder.binding.imgPuzzle6.setImageResource(listImg[i-1])
-                 }
-                 7->{
-                     Log.d("aaaaaaaa","7")
-                     holder.binding.imgPuzzle7.isVisible=true
-                     holder.binding.imgPuzzle7.setImageResource(listImg[i-1])
-                 }
-                 8->{
-                     Log.d("aaaaaaaa","8")
-                     holder.binding.imgPuzzle8.isVisible=true
-
-                     holder.binding.imgPuzzle8.setImageResource(listImg[i-1])
-                 }
-                 9->{
-                     Log.d("aaaaaaaa","9")
-                     holder.binding.imgPuzzle9.isVisible=true
-                     holder.binding.imgPuzzle9.setImageResource(listImg[i])
-                 }
-             }
-         }
-     }*/
     override fun getItemCount(): Int {
         return checkList.size
     }

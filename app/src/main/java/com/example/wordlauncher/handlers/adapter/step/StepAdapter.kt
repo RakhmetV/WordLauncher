@@ -7,7 +7,6 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wordlauncher.R
-import com.example.wordlauncher.databinding.CoursesItemBinding
 import com.example.wordlauncher.databinding.StepItemBinding
 import com.example.wordlauncher.handlers.MyOnClickListener
 import com.example.wordlauncher.handlers.adapter.courses.CoursesAdapter
@@ -48,22 +47,11 @@ class StepAdapter(
             3->holder.binding.stepleveldescrip.text="Step-by-step test"
         }
         if (passingStatus >= 0) {
-            holder.binding.cupOne.isVisible = true
-            holder.binding.cupTwo.isVisible = true
+           /* holder.binding.cupOne.isVisible = true
+            holder.binding.cupTwo.isVisible = true*/
             holder.binding.cupThree.isVisible = true
-            when (passingStatus) {
-                1 -> holder.binding.cupThree.alpha = 1F
-                2 -> {
-                    holder.binding.cupThree.alpha = 1F
-                    holder.binding.cupTwo.alpha = 1F
-                }
-                3 -> {
-                    holder.binding.cupThree.alpha = 1F
-                    holder.binding.cupTwo.alpha = 1F
-                    holder.binding.cupOne.alpha = 1F
-                }
-            }
-
+            holder.binding.cupThree.alpha = 1F
+            holder.binding.pointsCount.text = "$passingStatus"
             holder.bind(position, listener)
         } else {
             holder.binding.stepLvlId.alpha = 0.6F

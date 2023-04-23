@@ -9,10 +9,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.ProgressBar
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.core.view.isVisible
 import androidx.navigation.Navigation
@@ -42,6 +39,8 @@ class StepFiveFragment : Fragment() {
     lateinit var word_in_three: TextView
     lateinit var word_in_four: TextView
     lateinit var word_in_five: TextView
+    lateinit var linearLayoutOne: LinearLayout
+    lateinit var linearLayoutTwo: LinearLayout
     lateinit var exit: ImageView
 
     private var CurrentProgress = 0
@@ -106,23 +105,23 @@ class StepFiveFragment : Fragment() {
     fun setAnserBtn(indx: Int, str: String) {
         when (indx) {
             0 -> {
-                btn_result_one.isVisible = true
+                btn_result_one.alpha = 1f
                 btn_result_one.text = str
             }
             1 -> {
-                btn_result_two.isVisible = true
+                btn_result_two.alpha = 1f
                 btn_result_two.text = str
             }
             2 -> {
-                btn_result_three.isVisible = true
+                btn_result_three.alpha = 1f
                 btn_result_three.text = str
             }
             3 -> {
-                btn_result_four.isVisible = true
+                btn_result_four.alpha = 1f
                 btn_result_four.text = str
             }
             4 -> {
-                btn_result_five.isVisible = true
+                btn_result_five.alpha = 1f
                 btn_result_five.text = str
             }
         }
@@ -131,25 +130,25 @@ class StepFiveFragment : Fragment() {
     fun setBackAnswer(str: String) {
         when (str) {
             btn_anser_one.text.toString() -> {
-                btn_anser_one.isVisible = true
+                btn_anser_one.alpha = 1f
             }
             btn_anser_two.text.toString() -> {
-                btn_anser_two.isVisible = true
+                btn_anser_two.alpha = 1f
             }
             btn_anser_three.text.toString() -> {
-                btn_anser_three.isVisible = true
+                btn_anser_three.alpha = 1f
             }
             btn_anser_four.text.toString() -> {
-                btn_anser_four.isVisible = true
+                btn_anser_four.alpha = 1f
             }
             btn_anser_five.text.toString() -> {
-                btn_anser_five.isVisible = true
+                btn_anser_five.alpha = 1f
             }
             btn_anser_six.text.toString() -> {
-                btn_anser_six.isVisible = true
+                btn_anser_six.alpha = 1f
             }
             btn_anser_seven.text.toString() -> {
-                btn_anser_seven.isVisible = true
+                btn_anser_seven.alpha = 1f
             }
         }
         btn_check.isVisible = false
@@ -172,7 +171,7 @@ class StepFiveFragment : Fragment() {
             }.create().show()
         }
         btn_anser_one.setOnClickListener {
-            if (counterAnser < maxAnser) {
+            if (counterAnser < maxAnser && btn_anser_one.alpha!=0f) {
 
                 for (i in checkBtnAnswer.withIndex()) {
                     if (checkBtnAnswer[i.index] == -1 && i.index < maxAnser) {
@@ -187,12 +186,12 @@ class StepFiveFragment : Fragment() {
                 if (counterAnser == maxAnser) {
                     btn_check.isVisible = true
                 }
-                btn_anser_one.isVisible = false
+                btn_anser_one.alpha = 0f
             }
 
         }
         btn_anser_two.setOnClickListener {
-            if (counterAnser < maxAnser) {
+            if (counterAnser < maxAnser && btn_anser_two.alpha!=0f) {
 
                 for (i in checkBtnAnswer.withIndex()) {
                     if (checkBtnAnswer[i.index] == -1 && i.index < maxAnser) {
@@ -207,11 +206,11 @@ class StepFiveFragment : Fragment() {
                 if (counterAnser == maxAnser) {
                     btn_check.isVisible = true
                 }
-                btn_anser_two.isVisible = false
+                btn_anser_two.alpha = 0f
             }
         }
         btn_anser_three.setOnClickListener {
-            if (counterAnser < maxAnser) {
+            if (counterAnser < maxAnser && btn_anser_three.alpha!=0f) {
 
                 for (i in checkBtnAnswer.withIndex()) {
                     if (checkBtnAnswer[i.index] == -1 && i.index < maxAnser) {
@@ -226,11 +225,11 @@ class StepFiveFragment : Fragment() {
                 if (counterAnser == maxAnser) {
                     btn_check.isVisible = true
                 }
-                btn_anser_three.isVisible = false
+                btn_anser_three.alpha = 0f
             }
         }
         btn_anser_four.setOnClickListener {
-            if (counterAnser < maxAnser) {
+            if (counterAnser < maxAnser && btn_anser_four.alpha!=0f) {
 
                 for (i in checkBtnAnswer.withIndex()) {
                     if (checkBtnAnswer[i.index] == -1 && i.index < maxAnser) {
@@ -245,11 +244,11 @@ class StepFiveFragment : Fragment() {
                 if (counterAnser == maxAnser) {
                     btn_check.isVisible = true
                 }
-                btn_anser_four.isVisible = false
+                btn_anser_four.alpha = 0f
             }
         }
         btn_anser_five.setOnClickListener {
-            if (counterAnser < maxAnser) {
+            if (counterAnser < maxAnser && btn_anser_five.alpha!=0f) {
 
                 for (i in checkBtnAnswer.withIndex()) {
                     if (checkBtnAnswer[i.index] == -1 && i.index < maxAnser) {
@@ -264,11 +263,11 @@ class StepFiveFragment : Fragment() {
                 if (counterAnser == maxAnser) {
                     btn_check.isVisible = true
                 }
-                btn_anser_five.isVisible = false
+                btn_anser_five.alpha = 0f
             }
         }
         btn_anser_six.setOnClickListener {
-            if (counterAnser < maxAnser) {
+            if (counterAnser < maxAnser && btn_anser_six.alpha!=0f) {
 
                 for (i in checkBtnAnswer.withIndex()) {
                     if (checkBtnAnswer[i.index] == -1 && i.index < maxAnser) {
@@ -283,11 +282,11 @@ class StepFiveFragment : Fragment() {
                 if (counterAnser == maxAnser) {
                     btn_check.isVisible = true
                 }
-                btn_anser_six.isVisible = false
+                btn_anser_six.alpha = 0f
             }
         }
         btn_anser_seven.setOnClickListener {
-            if (counterAnser < maxAnser) {
+            if (counterAnser < maxAnser && btn_anser_seven.alpha!=0f) {
 
                 for (i in checkBtnAnswer.withIndex()) {
                     if (checkBtnAnswer[i.index] == -1 && i.index < maxAnser) {
@@ -302,42 +301,57 @@ class StepFiveFragment : Fragment() {
                 if (counterAnser == maxAnser) {
                     btn_check.isVisible = true
                 }
-                btn_anser_seven.isVisible = false
+                btn_anser_seven.alpha = 0f
             }
         }
 
         //--------------------------------------------------------------------------
 
         btn_result_one.setOnClickListener {
-            setBackAnswer(btn_result_one.text.toString())
-            checkBtnAnswer[0] = -1
-            counterAnser--
-            btn_result_one.isVisible = false
+            if (!btnCheckPosition && btn_result_one.alpha!=0f) {
+
+                setBackAnswer(btn_result_one.text.toString())
+                checkBtnAnswer[0] = -1
+                counterAnser--
+                btn_result_one.alpha = 0f
+            }
         }
         btn_result_two.setOnClickListener {
-            setBackAnswer(btn_result_two.text.toString())
-            checkBtnAnswer[1] = -1
-            counterAnser--
-            btn_result_two.isVisible = false
+            if (!btnCheckPosition && btn_result_two.alpha!=0f) {
+
+                setBackAnswer(btn_result_two.text.toString())
+                checkBtnAnswer[1] = -1
+                counterAnser--
+                btn_result_two.alpha = 0f
+            }
         }
         btn_result_three.setOnClickListener {
-            setBackAnswer(btn_result_three.text.toString())
-            checkBtnAnswer[2] = -1
-            counterAnser--
-            btn_result_three.isVisible = false
+            if (!btnCheckPosition && btn_result_three.alpha!=0f) {
+
+                setBackAnswer(btn_result_three.text.toString())
+                checkBtnAnswer[2] = -1
+                counterAnser--
+                btn_result_three.alpha = 0f
+            }
         }
         btn_result_four.setOnClickListener {
-            checkBtnAnswer[3] = -1
-            setBackAnswer(btn_result_four.text.toString())
-            counterAnser--
-            btn_result_four.isVisible = false
+            if (!btnCheckPosition && btn_result_four.alpha!=0f) {
+
+                checkBtnAnswer[3] = -1
+                setBackAnswer(btn_result_four.text.toString())
+                counterAnser--
+                btn_result_four.alpha = 0f
+            }
         }
 
         btn_result_five.setOnClickListener {
-            checkBtnAnswer[3] = -1
-            setBackAnswer(btn_result_five.text.toString())
-            counterAnser--
-            btn_result_five.isVisible = false
+            if (!btnCheckPosition && btn_result_five.alpha!=0f) {
+                checkBtnAnswer[4] = -1
+                setBackAnswer(btn_result_five.text.toString())
+                counterAnser--
+                btn_result_five.alpha = 0f
+            }
+
         }
 
         btn_check.setOnClickListener {
@@ -362,7 +376,7 @@ class StepFiveFragment : Fragment() {
                     workInTest()
                 } else {
                     val bundle = Bundle()
-                    bundle.putInt("mistake", (12 - counterRightAnser))
+                    bundle.putInt("mistake", (9 - counterRightAnser))
                     bundle.putLong("time", startTime)
                     bundle.putInt("levels", 3)
                     bundle.putInt("list_size", counterRightAnser)
@@ -372,6 +386,7 @@ class StepFiveFragment : Fragment() {
         }
 
     }
+
 
     fun checkAnswerInRight(view: View) {
         if (position != MaxProgress-1) btn_check.text = "Next"
@@ -467,11 +482,11 @@ class StepFiveFragment : Fragment() {
         checkBtnAnswer = arrayListOf(-1, -1, -1, -1, -1)
         counterAnser = 0
 
-        btn_result_one.isVisible = false
-        btn_result_two.isVisible = false
-        btn_result_three.isVisible = false
-        btn_result_four.isVisible = false
-        btn_result_five.isVisible = false
+        btn_result_one.alpha = 0f
+        btn_result_two.alpha = 0f
+        btn_result_three.alpha = 0f
+        btn_result_four.alpha = 0f
+        btn_result_five.alpha = 0f
         if (position < 3) {
             //кнопки
             word_in_one.text = listWordStep[position][0].split("/:")[0]
@@ -486,13 +501,13 @@ class StepFiveFragment : Fragment() {
 
             btn_anser_one.text = reshafl[0].split("/:")[1]
             btn_anser_two.text = reshafl[1].split("/:")[1]
-            btn_anser_seven.isVisible = true
+            btn_anser_seven.alpha = 1f
             btn_anser_seven.text = reshafl[2].split("/:")[1]
 
 
-            btn_anser_one.isVisible = true
-            btn_anser_two.isVisible = true
-            btn_anser_seven.isVisible = true
+            btn_anser_one.alpha = 1f
+            btn_anser_two.alpha = 1f
+            btn_anser_seven.alpha = 1f
         } else if (position < 6) {
             maxAnser = 4
             //кнопки
@@ -500,7 +515,7 @@ class StepFiveFragment : Fragment() {
             word_in_two.text = listWordStep[position][1].split("/:")[0]
             word_in_three.text = listWordStep[position][2].split("/:")[0]
             word_in_four.text = listWordStep[position][3].split("/:")[0]
-            word_in_four.isVisible = true
+            word_in_four.alpha = 1f
 
             var reshafl = arrayListOf<String>()
             for (j in listWordStep[position]) {
@@ -512,16 +527,18 @@ class StepFiveFragment : Fragment() {
 
             btn_anser_one.text = reshafl[0].split("/:")[1]
             btn_anser_two.text = reshafl[1].split("/:")[1]
-            btn_anser_three.isVisible = true
+            btn_anser_three.alpha = 1f
             btn_anser_three.text = reshafl[2].split("/:")[1]
-            btn_anser_four.isVisible = true
+            btn_anser_four.alpha = 1f
             btn_anser_four.text = reshafl[3].split("/:")[1]
 
 
-            btn_anser_one.isVisible = true
-            btn_anser_two.isVisible = true
-            btn_anser_three.isVisible = true
-            btn_anser_four.isVisible = true
+            btn_anser_one.alpha = 1f
+            btn_anser_two.alpha = 1f
+            btn_anser_three.alpha = 1f
+            btn_anser_four.alpha = 1f
+            linearLayoutOne.isVisible=false
+            linearLayoutTwo.isVisible=true
         } else if (position < 9) {
             maxAnser = 5
             //кнопки
@@ -530,8 +547,8 @@ class StepFiveFragment : Fragment() {
             word_in_three.text = listWordStep[position][2].split("/:")[0]
             word_in_four.text = listWordStep[position][3].split("/:")[0]
             word_in_five.text = listWordStep[position][4].split("/:")[0]
-            word_in_four.isVisible = true
-            word_in_five.isVisible = true
+            word_in_four.alpha = 1f
+            word_in_five.alpha = 1f
             var reshafl = arrayListOf<String>()
             for (j in listWordStep[position]) {
                 reshafl.add(j)
@@ -542,21 +559,23 @@ class StepFiveFragment : Fragment() {
 
             btn_anser_one.text = reshafl[0].split("/:")[1]
             btn_anser_two.text = reshafl[1].split("/:")[1]
-            btn_anser_three.isVisible = true
+            btn_anser_three.alpha = 1f
             btn_anser_three.text = reshafl[2].split("/:")[1]
-            btn_anser_four.isVisible = true
+            btn_anser_four.alpha = 1f
             btn_anser_four.text = reshafl[3].split("/:")[1]
-            btn_anser_five.isVisible = true
+            btn_anser_five.alpha = 1f
             btn_anser_five.text = reshafl[4].split("/:")[1]
-            btn_anser_six.isVisible = true
+            btn_anser_six.alpha = 1f
             btn_anser_six.text = reshafl[5].split("/:")[1]
 
-            btn_anser_one.isVisible = true
-            btn_anser_two.isVisible = true
-            btn_anser_three.isVisible = true
-            btn_anser_four.isVisible = true
-            btn_anser_five.isVisible = true
-            btn_anser_six.isVisible = true
+            btn_anser_one.alpha = 1f
+            btn_anser_two.alpha = 1f
+            btn_anser_three.alpha = 1f
+            btn_anser_four.alpha = 1f
+            btn_anser_five.alpha = 1f
+            btn_anser_six.alpha = 1f
+            linearLayoutOne.isVisible=false
+            linearLayoutTwo.isVisible=true
         }
 
     }
@@ -601,6 +620,9 @@ class StepFiveFragment : Fragment() {
     }
 
     fun init(view: View) {
+        linearLayoutOne = view.findViewById(R.id.linearLayoutOneBtn)
+        linearLayoutTwo = view.findViewById(R.id.linearLayoutTwoBtn)
+
         btn_anser_one = view.findViewById(R.id.step_five_btn_ans_one)
         btn_anser_two = view.findViewById(R.id.step_five_btn_ans_two)
         btn_anser_three = view.findViewById(R.id.step_five_btn_ans_three)

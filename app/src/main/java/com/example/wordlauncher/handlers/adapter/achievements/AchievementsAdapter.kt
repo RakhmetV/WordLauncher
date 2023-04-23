@@ -54,171 +54,201 @@ class AchievementsAdapter(
         when (position) {
             0 -> {
                 //прохождение первого степа первой темы
-                var max = 4
-                holder.binding.achivProgBar.max = max
-                holder.binding.achivTxtCount.text = "0/1"
-                var count = 0
-                for (i in userChange.progress[0][0]) {
-                    if (i > 1) {
-                        count++
+                if (userChange.achievements[position]<0){
+                    var max = 4
+                    holder.binding.achivProgBar.max = max
+                    holder.binding.achivTxtCount.text = "0/1"
+                    var count = 0
+                    for (i in userChange.progress[0][0]) {
+                        if (i > 1) {
+                            count++
+                        }
                     }
+                    if (count == max) {
+                        Log.d("aaaaa Progress 11111 = ", count.toString())
+                        Log.d("aaaaa MaxProgress 11 = ", max.toString())
+                        holder.binding.achivTxtCount.text = "1/1"
+                        holder.binding.achivProgBar.progress = count
+                    }
+                    checkBtn(holder, count, max, position)
+                    Log.d("aaaaa Progress = ", count.toString())
+                    Log.d("aaaaa MaxProgress = ", max.toString())
                 }
-                if (count == max) {
-                    Log.d("aaaaa Progress 11111 = ", count.toString())
-                    Log.d("aaaaa MaxProgress 11 = ", max.toString())
-                    holder.binding.achivTxtCount.text = "1/1"
-                    holder.binding.achivProgBar.progress = count
-                }
-                checkBtn(holder, count, max, position)
-                Log.d("aaaaa Progress = ", count.toString())
-                Log.d("aaaaa MaxProgress = ", max.toString())
+
 
             }
             3 -> {
                 //прохождение первого степа второй темы
-                var max = 4
-                holder.binding.achivTxtCount.text = "0/1"
-                holder.binding.achivProgBar.max = max
-                var count = 0
-                for (i in userChange.progress[1][0]) {
-                    if (i > 1) {
-                        count++
+                if (userChange.achievements[position]<0){
+
+                    var max = 4
+                    holder.binding.achivTxtCount.text = "0/1"
+                    holder.binding.achivProgBar.max = max
+                    var count = 0
+                    for (i in userChange.progress[1][0]) {
+                        if (i > 1) {
+                            count++
+                        }
                     }
+                    if (count == max) {
+                        holder.binding.achivTxtCount.text = "1/1"
+                        holder.binding.achivProgBar.progress = count
+                    }
+                    checkBtn(holder, count, max, position)
                 }
-                if (count == max) {
-                    holder.binding.achivTxtCount.text = "1/1"
-                    holder.binding.achivProgBar.progress = count
-                }
-                checkBtn(holder, count, max, position)
 
             }
             6 -> {
                 //прохождение первого степа третей темы
-                var max = 4
-                holder.binding.achivTxtCount.text = "0/1"
-                holder.binding.achivProgBar.max = max
-                var count = 0
-                for (i in userChange.progress[2][0]) {
-                    if (i > 1) {
-                        count++
+                if (userChange.achievements[position]<0){
+
+                    var max = 4
+                    holder.binding.achivTxtCount.text = "0/1"
+                    holder.binding.achivProgBar.max = max
+                    var count = 0
+                    for (i in userChange.progress[2][0]) {
+                        if (i > 1) {
+                            count++
+                        }
                     }
+                    if (count == max) {
+                        holder.binding.achivTxtCount.text = "1/1"
+                        holder.binding.achivProgBar.progress = count
+                    }
+                    checkBtn(holder, count, max, position)
                 }
-                if (count == max) {
-                    holder.binding.achivTxtCount.text = "1/1"
-                    holder.binding.achivProgBar.progress = count
-                }
-                checkBtn(holder, count, max, position)
 
             }
             1 -> {
                 //прохождение всех степов первой темы
-                var max = 6
-                holder.binding.achivProgBar.max = max
-                var count = 0
-                for (i in userChange.progress[0]) {
-                    if (i[3] > 1) {
-                        count++
-                        holder.binding.achivProgBar.progress = count
+                if (userChange.achievements[position]<0){
+
+                    var max = 6
+                    holder.binding.achivProgBar.max = max
+                    var count = 0
+                    for (i in userChange.progress[0]) {
+                        if (i[3] > 1) {
+                            count++
+                        }
                     }
+                    holder.binding.achivProgBar.progress = count
+                    holder.binding.achivTxtCount.text = "${count}/6"
+                    checkBtn(holder, count, max, position)
                 }
-                holder.binding.achivTxtCount.text = "${count}/6"
-                checkBtn(holder, count, max, position)
             }
             4 -> {
                 //прохождение всех степов 2 темы
-                var max = 9
-                holder.binding.achivProgBar.max = max
-                var count = 0
-                for (i in userChange.progress[1]) {
-                    if (i[3] > 1) {
-                        count++
-                        holder.binding.achivProgBar.progress = count
+                if (userChange.achievements[position]<0){
+
+                    var max = 9
+                    holder.binding.achivProgBar.max = max
+                    var count = 0
+                    for (i in userChange.progress[1]) {
+                        if (i[3] > 1) {
+                            count++
+                        }
                     }
+                    holder.binding.achivProgBar.progress = count
+                    holder.binding.achivTxtCount.text = "${count}/9"
+                    checkBtn(holder, count, max, position)
                 }
-                holder.binding.achivTxtCount.text = "${count}/9"
-                checkBtn(holder, count, max, position)
             }
             7 -> {
                 //прохождение всех степов 3 темы
-                var max = 7
-                holder.binding.achivProgBar.max = max
-                var count = 0
-                for (i in userChange.progress[2]) {
-                    if (i[3] > 1) {
-                        count++
-                        holder.binding.achivProgBar.progress = count
+                if (userChange.achievements[position]<0){
+
+                    var max = 7
+                    holder.binding.achivProgBar.max = max
+                    var count = 0
+                    for (i in userChange.progress[2]) {
+                        if (i[3] > 1) {
+                            count++
+                        }
                     }
+                    holder.binding.achivProgBar.progress = count
+                    holder.binding.achivTxtCount.text = "${count}/7"
+                    checkBtn(holder, count, max, position)
                 }
-                holder.binding.achivTxtCount.text = "${count}/7"
-                checkBtn(holder, count, max, position)
             }
             2 -> {
                 //сбор всех кубков 1 темы
-                var max = 72
-                holder.binding.achivProgBar.max = max
-                var count = 0
-                for (i in userChange.progress[0]) {
-                    for (j in i) {
-                        if (j > 0) {
-                            count += j
+                if (userChange.achievements[position]<0){
+
+                    var max = 72
+                    holder.binding.achivProgBar.max = max
+                    var count = 0
+                    for (i in userChange.progress[0]) {
+                        for (j in i) {
+                            if (j > 0) {
+                                count += j
+                            }
                         }
                     }
+                    holder.binding.achivProgBar.progress = count
+                    holder.binding.achivTxtCount.text = "${count}/72"
+                    checkBtn(holder, count, max, position)
                 }
-                holder.binding.achivProgBar.progress = count
-                holder.binding.achivTxtCount.text = "${count}/72"
-                checkBtn(holder, count, max, position)
 
 
             }
             5 -> {
                 //сбор всех кубков 2 темы
-                var max = 108
-                holder.binding.achivProgBar.max = max
-                var count = 0
-                for (i in userChange.progress[1]) {
-                    for (j in i) {
-                        if (j > 0) {
-                            count += j
+                if (userChange.achievements[position]<0){
+
+                    var max = 108
+                    holder.binding.achivProgBar.max = max
+                    var count = 0
+                    for (i in userChange.progress[1]) {
+                        for (j in i) {
+                            if (j > 0) {
+                                count += j
+                            }
                         }
                     }
+                    holder.binding.achivProgBar.progress = count
+                    holder.binding.achivTxtCount.text = "${count}/108"
+                    checkBtn(holder, count, max, position)
                 }
-                holder.binding.achivProgBar.progress = count
-                holder.binding.achivTxtCount.text = "${count}/108"
-                checkBtn(holder, count, max, position)
 
             }
             8 -> {
                 //сбор всех кубков 3 темы
-                var max = 84
-                holder.binding.achivProgBar.max = max
-                var count = 0
-                for (i in userChange.progress[2]) {
-                    for (j in i) {
-                        if (j > 0) {
-                            count += j
+                if (userChange.achievements[position]<0){
+
+                    var max = 84
+                    holder.binding.achivProgBar.max = max
+                    var count = 0
+                    for (i in userChange.progress[2]) {
+                        for (j in i) {
+                            if (j > 0) {
+                                count += j
+                            }
                         }
                     }
+                    holder.binding.achivProgBar.progress = count
+                    holder.binding.achivTxtCount.text = "${count}/84"
+                    checkBtn(holder, count, max, position)
                 }
-                holder.binding.achivProgBar.progress = count
-                holder.binding.achivTxtCount.text = "${count}/84"
-                checkBtn(holder, count, max, position)
 
             }
             9 -> {
                 //сбор всех кубков
-                var max = 264
-                holder.binding.achivProgBar.max = max
-                var count = 0
-                for (i in userChange.progress) {
-                    for (j in i) {
-                        for (k in j) {
-                            if (k > 0) count += k
+                if (userChange.achievements[position]<0){
+
+                    var max = 264
+                    holder.binding.achivProgBar.max = max
+                    var count = 0
+                    for (i in userChange.progress) {
+                        for (j in i) {
+                            for (k in j) {
+                                if (k > 0) count += k
+                            }
                         }
                     }
+                    holder.binding.achivProgBar.progress = count
+                    holder.binding.achivTxtCount.text = "${count}/264"
+                    checkBtn(holder, count, max, position)
                 }
-                holder.binding.achivProgBar.progress = count
-                holder.binding.achivTxtCount.text = "${count}/264"
-                checkBtn(holder, count, max, position)
 
             }
 

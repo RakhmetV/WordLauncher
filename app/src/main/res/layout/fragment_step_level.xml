@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".ui.step.StepLevelFragment"
     android:orientation="vertical"
-    android:background="#ECECEC">
+    android:background="@color/color_step_level_fone">
 
     <include layout="@layout/header_step_level"/>
 

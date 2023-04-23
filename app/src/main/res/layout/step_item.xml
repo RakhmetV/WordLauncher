@@ -1,30 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="10dp"
     android:layout_marginStart="10dp"
     android:layout_marginEnd="10dp"
-    android:background="@drawable/ic_step_level_rectangle">
+    android:background="@color/color_step_level_fone">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/stepLvlId"
         android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/ic_step_level_rectangle">
 
         <TextView
             android:id="@+id/steplevelname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="20dp"
             android:text="TextView"
-            android:textColor="@color/black"
+            android:textColor="#FFFFFF"
+            android:fontFamily="sans-serif-light"
+            android:textStyle="bold"
             android:textSize="18dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,48 +34,70 @@
 
         <TextView
             android:id="@+id/stepleveldescrip"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:fontFamily="sans-serif-light"
             android:text="TextView"
+            android:textColor="#F0F6F6F5"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:minLines="2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.035"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/steplevelname" />
 
         <ImageView
-            android:id="@+id/cup_one"
-            android:layout_width="33dp"
-            android:layout_height="41dp"
-            android:alpha="0.5"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="@+id/cup_two"
-            app:layout_constraintStart_toEndOf="@+id/cup_two"
-            app:layout_constraintTop_toTopOf="@+id/cup_two"
-            app:srcCompat="@drawable/ic_achivemenets_gold_24" />
-
-        <ImageView
-            android:id="@+id/cup_two"
-            android:layout_width="33dp"
-            android:layout_height="41dp"
-            android:alpha="0.5"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="@+id/cup_three"
-            app:layout_constraintStart_toEndOf="@+id/cup_three"
-            app:layout_constraintTop_toTopOf="@+id/cup_three"
-            app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/ic_achivemenets_gold_24" />
-
-        <ImageView
             android:id="@+id/cup_three"
-            android:layout_width="33dp"
-            android:layout_height="41dp"
-            android:layout_marginStart="48dp"
+            android:layout_width="50dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="14dp"
+            android:layout_marginBottom="8dp"
             android:alpha="0.5"
-            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/steplevelname"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.506"
-            app:srcCompat="@drawable/ic_achivemenets_gold_24" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stepleveldescrip"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/cub_level" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cup_three"
+            app:layout_constraintEnd_toStartOf="@+id/cup_three"
+            app:layout_constraintTop_toTopOf="@+id/cup_three">
+
+            <TextView
+                android:id="@+id/points_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="#D5D1B3"
+                android:textSize="30dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/3"
+                android:textColor="#A7E1B4"
+                android:textSize="30dp"
+                app:layout_constraintBottom_toBottomOf="@+id/points_count"
+                app:layout_constraintStart_toEndOf="@+id/points_count"
+                app:layout_constraintTop_toTopOf="@+id/points_count"
+                app:layout_constraintVertical_bias="0.0" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

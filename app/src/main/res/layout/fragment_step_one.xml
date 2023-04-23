@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F0F4F4"
+    android:background="@color/color_level_fone"
     tools:context=".ui.step.one.StepOneFragment">
 
 
@@ -18,7 +18,7 @@
                     style="@style/header"
                     android:gravity="center"
                     android:orientation="horizontal"
-                    android:background="#FFFFFF"
+                    android:background="@color/header_courses_color"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
 
@@ -47,7 +47,7 @@
                             android:layout_height="30dp"
                             android:text="Next level"
                             android:gravity="center"
-                            android:textColor="#272626"
+                            android:textColor="@color/color_revers"
                             android:textSize="20dp"
                             android:layout_marginEnd="15dp"
 

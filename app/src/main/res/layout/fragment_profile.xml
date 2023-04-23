@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.profile.ProfileFragment">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -25,6 +26,7 @@
                 android:layout_gravity="center"
                 android:text="Profile"
                 android:textSize="24dp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -44,7 +46,7 @@
                 android:id="@+id/divider5"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="#D6D6D6"
+                android:background="@color/color_view_bar"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -54,13 +56,12 @@
         <ScrollView
             android:id="@+id/profileScroll"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="0dp">
@@ -76,13 +77,15 @@
 
                 <TextView
                     android:id="@+id/profileUserName"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
-                    android:text="TextView"
+                    android:layout_marginEnd="20dp"
                     android:maxWidth="250dp"
-                    android:textColor="@color/black"
+                    android:text="TextView"
+                    android:textColor="@color/color_profile_name"
                     android:textSize="24dp"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/profileImage"
                     app:layout_constraintTop_toTopOf="@+id/profileImage" />
 
@@ -90,8 +93,8 @@
                     android:id="@+id/divider2"
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
-                    android:layout_marginTop="20dp"
-                    android:background="#D6D6D6"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/color_view_bar"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
@@ -102,7 +105,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="8dp"
-                    android:background="#D6D6D6"
+                    android:background="@color/color_view_bar"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
@@ -113,7 +116,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="1dp"
                     android:layout_marginTop="8dp"
-                    android:background="#D6D6D6"
+                    android:background="@color/color_view_bar"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
@@ -123,9 +126,9 @@
                     android:id="@+id/textView9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="8dp"
                     android:text="Achievements"
-                    android:textColor="@color/black"
+                    android:textColor="@color/color_profile_name"
                     android:textSize="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -135,8 +138,8 @@
                     android:id="@+id/profileRecycler"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -144,11 +147,13 @@
 
                 <TextView
                     android:id="@+id/profileEmail"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
                     android:text="TextView"
-                    android:maxWidth="250dp"
+                    android:textSize="18dp"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/profileUserName"
                     app:layout_constraintTop_toBottomOf="@+id/profileUserName" />
 
@@ -158,7 +163,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="Statistic"
-                    android:textColor="@color/black"
+                    android:textColor="@color/color_profile_name"
                     android:textSize="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -166,35 +171,41 @@
 
                 <TextView
                     android:id="@+id/profiletxtxstatrf"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="24dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginTop="8dp"
+                    android:layout_marginEnd="20dp"
                     android:text="TextView"
+                    android:textColor="@color/color_profile_statistic"
                     android:textSize="18dp"
-                    android:textColor="#434343"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txtstat" />
 
                 <TextView
                     android:id="@+id/profiletxtxstatrb"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
+                    android:layout_marginEnd="20dp"
                     android:text="TextView"
+                    android:textColor="@color/color_profile_statistic"
                     android:textSize="18dp"
-                    android:textColor="#434343"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/profiletxtxstatrf"
                     app:layout_constraintTop_toBottomOf="@+id/profiletxtxstatrf" />
 
                 <TextView
                     android:id="@+id/profiletxtxstathy"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="12dp"
+                    android:layout_marginEnd="20dp"
                     android:text="TextView"
+                    android:textColor="@color/color_profile_statistic"
                     android:textSize="18dp"
-                    android:textColor="#434343"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/profiletxtxstatrb"
                     app:layout_constraintTop_toBottomOf="@+id/profiletxtxstatrb" />
 
@@ -204,7 +215,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="Puzzle"
-                    android:textColor="@color/black"
+                    android:textColor="@color/color_profile_name"
                     android:textSize="20dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.498"
@@ -215,7 +226,10 @@
                     android:id="@+id/profile_puzzle_recycler"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
                     android:layout_marginTop="4dp"
+                    android:layout_marginEnd="15dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/Puzzle" />

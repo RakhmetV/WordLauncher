@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ChoiceOfSubject"
     android:orientation="vertical"
-    android:background="#C3DCDCDC">
+    android:background="@color/color_choice_activity">
     <include layout="@layout/header_choice_of_subject"/>
 
     <androidx.recyclerview.widget.RecyclerView

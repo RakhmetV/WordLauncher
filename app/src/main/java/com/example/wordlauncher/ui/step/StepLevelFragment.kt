@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.appcompat.app.AlertDialog
 import androidx.navigation.Navigation
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.wordlauncher.EndActivity
@@ -47,7 +48,8 @@ class StepLevelFragment : Fragment() {
 
 
         var stepList = resources.getStringArray(R.array.step_level)
-        recycler.layoutManager = LinearLayoutManager(context)
+//        recycler.layoutManager = LinearLayoutManager(context)
+        recycler.layoutManager = GridLayoutManager(context, 2)
         recycler.adapter = StepAdapter(object : MyOnClickListener {
             override fun OnClick(position: Int) {
 

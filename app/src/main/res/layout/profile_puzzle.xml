@@ -3,14 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#FDFDFD">
+    android:background="@color/color_profile_puzzle_fone"
+    android:layout_marginBottom="15dp">
 
     <TextView
         android:id="@+id/puzzle_name_item"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:textSize="18dp"
+        android:textSize="20dp"
+        android:textColor="@color/color_profile_puzzle_name"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

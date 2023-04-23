@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+<!--    цвет выбора темы-->
+    <color name="choice_rectangle_color">#FFFFFF</color>
+
+
+ <!--    цвет загаловка в курсах и в активности выбора курсов-->
+    <color name="header_courses_color">#292828</color>
+
+    <!--    цвет кнопок входа и т.д-->
+    <color name="btn_color_read">#D83B3B</color>
+
+    <!--    цвет item у recycler в level-->
+    <color name="color_step_rectangle">#FCBBD4EA</color>
+
+    <!--    цвет item у recycler в courses-->
+    <color name="color_step_rectangle_courses">#67839F</color>
+
+    <!--    цвет main activity-->
+    <color name="color_main_activity">#F5191919</color>
+
+    <!--    цвет activity выобра тем-->
+    <color name="color_choice_activity">#F5191919</color>
+
+    <color name="color_step_answer_button">#F8F8F8</color>
+
+
+    <!--    цвет панели управления кнопок приложения-->
+    <color name="color_bottom_navigation">#3E3D3D</color>
+
+    <!--    цвет панели управления кнопок телефона-->
+    <color name="color_navigation_bar">#E6E6E6</color>
+
+    <!--    цвет нажатой кнопки-->
+    <color name="color_bottom_navigation_selected">#F8B5607B</color>
+
+    <!--    цвет верхней панели(время, уведомления и т.д)-->
+    <color name="color_holder_phone">#EE020202</color>
+
+    <!--    цвет разделителя view-->
+    <color name="color_view_bar">#4C4B4B</color>
+
+    <!--    цвет названий тем в достижениях-->
+    <color name="color_achievements_name">#E3DBDB</color>
+
+    <!--    цвет названий тем в профиле-->
+    <color name="color_profile_name">#EFEEEE</color>
+
+    <!--    цвет статистики в профиле-->
+    <color name="color_profile_statistic">#C2C0C0</color>
+
+    <!--    цвет фона пазлов в профиле-->
+    <color name="color_profile_puzzle_fone">#37373A</color>
+
+    <!--    цвет заголовка пазлов в профиле-->
+    <color name="color_profile_puzzle_name">#D5D3D3</color>
+
+    <!--    цвет фона в выборе уровня-->
+    <color name="color_step_level_fone">#95A5A1</color>
+
+    <!--    цвет фона в выборе уровня items-->
+    <color name="color_step_level_item_fone">#FC507C8A</color>
+
+    <!--    цвет фона заколовка в уровнях-->
+    <color name="color_header_level">#6C6C6C</color>
+
+    <!--    цвет фона в  уровенях-->
+    <color name="color_level_fone">#FC454444</color>
+
+    <!--    цвет фона в ресайклер первй уровень-->
+    <color name="color_level_one_rec">#FC2E2E2E</color>
+
+    <!--    цвет фона в ресайклер выбор темы-->
+    <color name="color_choice_item">#FCB6BDAE</color>
+
+
+
+
+
+
+    <!--    цвет реверс белый/черный-->
+    <color name="color_revers">#F4F4F4</color>
+
+
+
+
+    <color name="color_bottoms_navigation">#1E2B2A</color>
+</resources>

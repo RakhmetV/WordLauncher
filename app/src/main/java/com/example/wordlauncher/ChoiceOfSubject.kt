@@ -38,13 +38,6 @@ class ChoiceOfSubject : AppCompatActivity() {
                     val intent = Intent(applicationContext, MainActivity::class.java)
                     startActivity(intent)
                 }
-            },object : MyOnClickListener {
-                override fun OnClick(position: Int) {
-                    editor.putInt("them_position", position)
-                    editor.commit()
-                    val intent = Intent(applicationContext, MainActivity::class.java)
-                    startActivity(intent)
-                }
             },
             DataCourses.headerClassList,
             sharedPreference.getInt("them_position", 0)

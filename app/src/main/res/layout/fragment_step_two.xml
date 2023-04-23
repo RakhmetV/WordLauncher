@@ -6,110 +6,159 @@
     android:layout_height="match_parent"
     tools:context=".ui.step.two.StepTwoFragment">
 
-   <androidx.constraintlayout.widget.ConstraintLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-       <LinearLayout
-           android:id="@+id/linearLayout"
-           style="@style/header"
-           android:gravity="center"
-           android:orientation="horizontal"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            style="@style/header"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-           <ImageView
-               android:id="@+id/step_two_exit"
-               android:layout_width="30dp"
-               android:layout_height="30dp"
-               android:layout_marginStart="10dp"
-               android:layout_marginEnd="5dp"
-               android:src="@drawable/ic_baseline_arrow_back_24" />
+            <ImageView
+                android:id="@+id/step_two_exit"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:src="@drawable/ic_baseline_arrow_back_24" />
 
-           <ProgressBar
-               android:id="@+id/step_two_progress_bar"
-               style="?android:attr/progressBarStyleHorizontal"
-               android:layout_width="match_parent"
+            <ProgressBar
+                android:id="@+id/step_two_progress_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
 
-               android:layout_height="6dp"
-               android:layout_marginStart="5dp"
-               android:layout_marginEnd="10dp"
-               android:progressDrawable="@drawable/custom_progress_step_level" />
+                android:layout_height="6dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="10dp"
+                android:progressDrawable="@drawable/custom_progress_step_level" />
 
-       </LinearLayout>
+        </LinearLayout>
 
-       <TextView
-           android:id="@+id/step_two_word_en"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_marginStart="80dp"
-           android:layout_marginEnd="80dp"
-           android:gravity="center"
-           android:maxWidth="280dp"
-           android:text="TextView"
-           android:textSize="24sp"
-           app:layout_constraintBottom_toTopOf="@+id/step_two_btn_answer"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintHorizontal_bias="0.497"
-           app:layout_constraintStart_toStartOf="parent"
-           app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/color_view_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
-       <ImageView
-           android:id="@+id/step_two_voice"
-           android:layout_width="35dp"
-           android:layout_height="35dp"
-           android:layout_marginStart="20dp"
-           android:src="@drawable/play_button"
-           app:layout_constraintBottom_toBottomOf="@+id/step_two_word_en"
-           app:layout_constraintStart_toEndOf="@+id/step_two_word_en"
-           app:layout_constraintTop_toTopOf="@+id/step_two_word_en" />
+        <TextView
+            android:id="@+id/step_two_word_en"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="96dp"
+            android:gravity="center"
+            android:text="TextView"
+            android:textColor="@color/color_revers"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2" />
 
-       <Button
-           android:id="@+id/step_two_btn_answer"
-           android:layout_width="0dp"
-           android:layout_height="70dp"
-           android:layout_marginStart="25dp"
-           android:layout_marginEnd="25dp"
-           android:layout_marginBottom="16dp"
-           android:backgroundTint="@color/color_step_answer_button"
-           android:text="Button"
-           android:textColor="@color/black"
-           android:textSize="18dp"
-           app:layout_constraintBottom_toTopOf="@+id/step_two_btn_answer_two"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintHorizontal_bias="0.0"
-           app:layout_constraintStart_toStartOf="parent" />
+        <ImageView
+            android:id="@+id/step_two_voice"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="10dp"
+            android:src="@drawable/ic_baseline_play_circle_outline_24"
+            app:layout_constraintBottom_toBottomOf="@+id/step_two_word_en"
+            app:layout_constraintStart_toEndOf="@+id/step_two_word_en"
+            app:layout_constraintTop_toTopOf="@+id/step_two_word_en" />
 
-       <Button
-           android:id="@+id/step_two_btn_answer_two"
-           android:layout_width="0dp"
-           android:layout_height="70dp"
-           android:layout_marginStart="25dp"
-           android:layout_marginEnd="25dp"
-           android:layout_marginBottom="104dp"
-           android:backgroundTint="@color/color_step_answer_button"
-           android:text="Button"
-           android:textColor="@color/black"
-           android:textSize="18dp"
-           app:layout_constraintBottom_toBottomOf="parent"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintHorizontal_bias="1.0"
-           app:layout_constraintStart_toStartOf="parent" />
 
-       <Button
-           android:id="@+id/step_two_btn_next"
-           android:layout_width="125dp"
-           android:layout_height="55dp"
-           android:layout_marginTop="20dp"
-           android:layout_marginEnd="24dp"
-           android:backgroundTint="#5197D5"
-           android:text="Next"
-           android:textSize="18dp"
-           android:visibility="invisible"
-           app:layout_constraintEnd_toEndOf="parent"
-           app:layout_constraintTop_toBottomOf="@+id/step_two_btn_answer_two" />
+        <RelativeLayout
+            android:id="@+id/step_two_layout_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/round_back_button"
+            app:layout_constraintBottom_toTopOf="@+id/step_two_layout_two_answer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent">
 
-   </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/step_two_txt_answer_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="12sp"
+                android:layout_marginEnd="10sp"
+                android:layout_marginBottom="12sp"
+                android:layout_toStartOf="@+id/optionIconOne"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="22dp" />
+
+            <ImageView
+                android:id="@+id/optionIconOne"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/round_back_circle" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/step_two_layout_two_answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="96dp"
+            android:background="@drawable/round_back_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/step_two_txt_answer_two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:layout_marginTop="12sp"
+                android:layout_marginEnd="10sp"
+                android:layout_marginBottom="12sp"
+                android:layout_toStartOf="@+id/optionIconTwo"
+                android:text="2"
+                android:textColor="@color/white"
+                android:textSize="22dp" />
+
+            <ImageView
+                android:id="@+id/optionIconTwo"
+                android:layout_width="20sp"
+                android:layout_height="20sp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:src="@drawable/round_back_circle" />
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="96dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintGuide_end="96dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

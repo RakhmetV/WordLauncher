@@ -87,55 +87,55 @@ class WordForStep {
                         "bill",
                         "bill",
                         "законопроект",
-                        1
+                        R.raw.bill
                     ),
                     StepWord(
                         "the Supreme Court",
                         "[sȷu:ˈprɪ:m]",
                         "Верховный Суд ",
-                        1
+                        R.raw.russiastep2
                     ),
                     StepWord(
                         "the Constitutional Court",
                         "[ˌkɔnstɪˈtȷu:ʃənəl  kɔːt]",
                         "Конституционный Суд",
-                        1
+                        R.raw.russiastep21
                     ),
                     StepWord(
                         "The Council of Federation",
                         "[ˈkaunsl]",
                         "Совет Федерации ",
-                        1
+                        R.raw.russiastep22
                     ),
                     StepWord(
                         "Chairman",
                         "[ˈtʃɛəmən]",
                         "председатель",
-                        1
+                        R.raw.russiastep23
                     ),
                     StepWord(
                         "Chamber",
                         "[ˈtʃeɪmbə] ",
                         "Палата",
-                        1
+                        R.raw.russiastep24
                     ),
                     StepWord(
                         "the Federal Assembly",
                         "[əˈsemblɪ]",
                         "Федеральное Собрание",
-                        1
+                        R.raw.russiastep25
                     ),
                     StepWord(
                         "deputy prime minister",
                         "[ˈdepȷutɪ]",
                         "вице-премьер",
-                        1
+                        R.raw.russiastep26
                     ),
                     StepWord(
                         "the Supreme Commander-in-Chief of the Armed Forces",
                         "-",
                         "главнокомандующий вооруженных сил ",
-                        1
+                        R.raw.russiastep27
                     )
                 )
                 2->arrayListOf<StepWord>(
@@ -143,55 +143,55 @@ class WordForStep {
                         "elect",
                         "[ɪˈlekt]",
                         "избирать, выбирать",
-                        1
+                        R.raw.russiastep3
                     ),
                     StepWord(
                         "exercise",
                         "['eksəsaɪz]",
                         "осуществлять",
-                        1
+                        R.raw.russiastep31
                     ),
                     StepWord(
                         "appoint",
                         "[ə'pɔɪnt]",
                         "назначать (на должность)",
-                        1
+                        R.raw.russiastep32
                     ),
                     StepWord(
                         "comprise",
                         "[kəmˈpraɪz]",
                         "включать в себя",
-                        1
+                        R.raw.russiastep33
                     ),
                     StepWord(
                         "occupy",
                         "[ˈɔkȷupaɪ]",
                         "занимать место",
-                        1
+                        R.raw.russiastep34
                     ),
                     StepWord(
                         "possess ",
                         "[pəˈzes]",
                         "обладать",
-                        1
+                        R.raw.russiastep35
                     ),
                     StepWord(
                         "impress ",
                         "[ɪmpˈres]",
                         "производить впечатление",
-                        1
+                        R.raw.russiastep36
                     ),
                     StepWord(
                         "be ranked 5th / rank 5 th",
                         "[ræŋk]",
                         "занимать 5-e место",
-                        1
+                        R.raw.russiastep37
                     ),
                     StepWord(
                         "compose",
                         "[kəmˈpəuz]",
                         "составлять",
-                        1
+                        R.raw.russiastep38
                     )
                 )
                 3->arrayListOf<StepWord>(
@@ -199,55 +199,55 @@ class WordForStep {
                         "surface",
                         "[ˈsə:fɪs]",
                         "поверхность",
-                        1
+                        R.raw.russiastep4
                     ),
                     StepWord(
                         "total area",
                         "[ˈɛərɪə]",
                         "общая площадь",
-                        1
+                        R.raw.russiastep41
                     ),
                     StepWord(
                         "variety",
                         "[vəˈraɪətɪ]",
                         "разнообразие",
-                        1
+                        R.raw.russiastep42
                     ),
                     StepWord(
                         "scenery",
                         "[ˈsɪ:nərɪ]",
                         "пейзаж",
-                        1
+                        R.raw.russiastep43
                     ),
                     StepWord(
                         "vegetation",
                         "[ˌvedʒɪˈteɪʃən]",
                         "растительность",
-                        1
+                        R.raw.russiastep44
                     ),
                     StepWord(
                         "plain",
                         "[pleɪn]",
                         "равнина",
-                        1
+                        R.raw.russiastep45
                     ),
                     StepWord(
                         "steppe",
                         "[step]",
                         "степь",
-                        1
+                        R.raw.russiastep46
                     ),
                     StepWord(
                         "tundra",
                         "[ˈtʌndrə]",
                         "тундра",
-                        1
+                        R.raw.russiastep47
                     ),
                     StepWord(
                         "mountain chain",
                         "[ˈmauntɪn tʃeɪn]",
                         "горная цепь",
-                        1
+                        R.raw.russiastep48
                     )
                 )
                 4->arrayListOf<StepWord>(
@@ -255,67 +255,67 @@ class WordForStep {
                         "to border on",
                         "[ˈbɔ:də]",
                         "граничить с",
-                        1
+                        R.raw.russiastep51
                     ),
                     StepWord(
                         "to have borders with",
                         "-",
                         "иметь границы",
-                        1
+                        R.raw.russiastep52
                     ),
                     StepWord(
                         "separate",
                         "['sepəreɪt]",
                         "отделять",
-                        1
+                        R.raw.russiastep53
                     ),
                     StepWord(
                         "span",
                         "[spæn]",
                         "охватывать",
-                        1
+                        R.raw.russiastep54
                     ),
                     StepWord(
                         "vast",
                         "[va:st]",
                         "обширный",
-                        1
+                        R.raw.russiastep55
                     ),
                     StepWord(
                         "temperate",
                         "[ˈtempərɪt]",
                         "умеренный",
-                        1
+                        R.raw.russiastep511
                     ),
                     StepWord(
                         "iron ore",
                         "['aɪən 'ɔ:]",
                         "железная руда",
-                        1
+                        R.raw.russiastep56
                     ),
                     StepWord(
                         "ferrous metal",
                         "[ˈferəs]",
                         "черный металл",
-                        1
+                        R.raw.russiastep57
                     ),
                     StepWord(
                         "non-ferrous  metal",
                         "-",
                         "цветной металл",
-                        1
+                        R.raw.russiastep58
                     ),
                     StepWord(
                         "copper",
                         "['kɔpə]",
                         "медь",
-                        1
+                        R.raw.russiastep59
                     ),
                     StepWord(
-                        "",
-                        "",
-                        "",
-                        1
+                        "cover",
+                        "[ˈkʌvə] ",
+                        "покрывать",
+                        R.raw.russiastep510
                     )
                 )
                 5->arrayListOf<StepWord>(
@@ -323,37 +323,37 @@ class WordForStep {
                         "populous",
                         "[ˈpɔpȷuləs]",
                         "густонаселенный",
-                        1
+                        R.raw.russiastep6
                     ),
                     StepWord(
                         "rich in smth",
                         "-",
                         "богатый (чем-л.)",
-                        1
+                        R.raw.russiastep61
                     ),
                     StepWord(
                         "numerous",
                         "[ˈnȷumərəs]",
                         "многочисленный",
-                        1
+                        R.raw.russiastep62
                     ),
                     StepWord(
                         "vast",
                         "[va:st]",
                         "обширный",
-                        1
+                        R.raw.russiastep63
                     ),
                     StepWord(
                         "anthem",
                         "[ˈænθəm]",
                         "гимн",
-                        1
+                        R.raw.russiastep64
                     ),
                     StepWord(
                         "urban",
                         "[ˈə:bən] ",
                         "городской",
-                        1
+                        R.raw.russiastep65
                     )
                 )
                 else -> {
@@ -450,55 +450,55 @@ class WordForStep {
                         "natural resources",
                         "[ˈnætʃərəl rɪˈsɔ:sɪz]",
                         "природные ресурсы",
-                        1
+                        R.raw.bashkortstep2
                     ),
                     StepWord(
                         "iron-ore",
                         "[aɪən  ɔ:]",
                         "железная руда",
-                        1
+                        R.raw.bashkortstep21
                     ),
                     StepWord(
                         "zinc",
                         "[zɪŋk]",
                         "цинк",
-                        1
+                        R.raw.bashkortstep22
                     ),
                     StepWord(
                         "lead",
                         "[led]",
                         "свинец",
-                        1
+                        R.raw.bashkortstep23
                     ),
                     StepWord(
                         "aluminium",
                         "[ˌælȷəˈmɪnɪəm]",
                         "алюминий",
-                        1
+                        R.raw.bashkortstep24
                     ),
                     StepWord(
                         "chromium",
                         "[ˈkrəumȷəm]",
                         "хром",
-                        1
+                        R.raw.bashkortstep25
                     ),
                     StepWord(
                         "brown coal",
                         "[kəul]",
                         "бурый уголь",
-                        1
+                        R.raw.bashkortstep26
                     ),
                     StepWord(
                         "natural gas",
                         "[ɡæs]",
                         "природный газ",
-                        1
+                        R.raw.bashkortstep27
                     ),
                     StepWord(
                         "manganese",
                         "[ˌmæŋɡəˈnɪ:z]",
                         "марганец",
-                        1
+                        R.raw.bashkortstep28
                     )
                 )
                 2->arrayListOf<StepWord>(
@@ -506,55 +506,55 @@ class WordForStep {
                         "sovereign",
                         "[ˈsɔvrɪn]",
                         "суверенный",
-                        1
+                        R.raw.bashkortstep3
                     ),
                     StepWord(
                         "entity",
                         "[ˈentɪtɪ]",
                         "субъект",
-                        1
+                        R.raw.bashkortstep31
                     ),
                     StepWord(
                         "claim sovereignty",
                         "[kleɪm ˈsɔvrəntɪ]",
                         "провозглашать суверенитет",
-                        1
+                        R.raw.bashkortstep32
                     ),
                     StepWord(
                         "multicultural",
                         "[ˌmʌltɪˈkʌltʃərəl]",
                         "многокультурный",
-                        1
+                        R.raw.bashkortstep33
                     ),
                     StepWord(
                         "multinational",
                         "[ˌmʌltɪˈnæʃənəl]",
                         "многонациональный",
-                        1
+                        R.raw.bashkortstep34
                     ),
                     StepWord(
                         "ethnic",
                         "[ˈeθnɪk]",
                         "этнический",
-                        1
+                        R.raw.bashkortstep35
                     ),
                     StepWord(
                         "autonomy",
                         "[ɔ:ˈtɔnəmɪ]",
                         "автономия",
-                        1
+                        R.raw.bashkortstep36
                     ),
                     StepWord(
                         "enable",
                         "[ɪˈneɪbl]",
                         "давать возможность или право",
-                        1
+                        R.raw.bashkortstep37
                     ),
                     StepWord(
                         "self-sufficient",
                         "[ˌself  səˈfɪʃənt]",
                         "самостоятельный",
-                        1
+                        R.raw.bashkortstep38
                     )
                 )
                 3->arrayListOf<StepWord>(
@@ -562,55 +562,55 @@ class WordForStep {
                         "grain",
                         "[greɪn]",
                         "зерно",
-                        1
+                        R.raw.bashkortstep4
                     ),
                     StepWord(
                         "sugar beet",
                         "[ˈʃuɡə bɪ:t]",
                         "сахарная свекла",
-                        1
+                        R.raw.bashkortstep41
                     ),
                     StepWord(
                         "sunflower seeds",
                         "[sɪ:dz]",
                         "семена подсолнечника",
-                        1
+                        R.raw.bashkortstep42
                     ),
                     StepWord(
                         "horse breeding",
                         "-",
                         "коневодство",
-                        1
+                        R.raw.bashkortstep43
                     ),
                     StepWord(
                         "bee-keeping ",
                         "-",
                         "пчеловодство",
-                        1
+                        R.raw.bashkortstep44
                     ),
                     StepWord(
                         "agricultural",
                         "[ˌæɡrɪˈkʌltʃərəl]",
                         "сельскохозяйственный",
-                        1
+                        R.raw.bashkortstep45
                     ),
                     StepWord(
                         "unique",
                         "[ȷuˈnɪ:k]",
                         "исключительный",
-                        1
+                        R.raw.bashkortstep46
                     ),
                     StepWord(
                         "diverse",
                         "[daɪˈvə:s]",
                         "разнообразный",
-                        1
+                        R.raw.bashkortstep47
                     ),
                     StepWord(
                         "healing",
                         "[ˈhɪ:lɪŋ]",
                         "целебный",
-                        1
+                        R.raw.bashkortstep48
                     )
                 )
                 4->arrayListOf<StepWord>(
@@ -618,49 +618,49 @@ class WordForStep {
                         "oil fountain",
                         "[ˈfauntɪn]",
                         "нефтяной фонтан",
-                        1
+                        R.raw.bashkortstep5
                     ),
                     StepWord(
                         "oil rig",
                         "-",
                         "нефтяная вышка",
-                        1
+                        R.raw.bashkortstep51
                     ),
                     StepWord(
                         "oil deposit",
                         "[dɪˈpɔzɪt]",
                         "нефтяное месторождение",
-                        1
+                        R.raw.bashkortstep52
                     ),
                     StepWord(
                         "oil-extracting region",
                         "[ɪkˈstræktɪŋ ˈrɪ:dʒən]",
                         "нефтедобывающий регион",
-                        1
+                        R.raw.bashkortstep53
                     ),
                     StepWord(
                         "drill a well",
                         "-",
                         "бурить скважину",
-                        1
+                        R.raw.bashkortstep54
                     ),
                     StepWord(
                         "extract oil",
                         "[ɪkˈstrækt]",
                         "добывать нефть",
-                        1
+                        R.raw.bashkortstep55
                     ),
                     StepWord(
                         "refining",
                         "[rɪˈfaɪnɪŋ]",
                         "переработка",
-                        1
+                        R.raw.bashkortstep56
                     ),
                     StepWord(
                         "burst",
                         "[bɜːst]",
                         "прорываться наружу",
-                        1
+                        R.raw.bashkortstep57
                     )
                 )
                 5->arrayListOf<StepWord>(
@@ -668,43 +668,43 @@ class WordForStep {
                         "impressive",
                         "[ɪmˈpresɪv]",
                         "впечатляющий",
-                        1
+                        R.raw.bashkortstep6
                     ),
                     StepWord(
                         "record",
                         "[ˈrekɔ:d]",
                         "результат, итог, запись, отчет",
-                        1
+                        R.raw.bashkortstep61
                     ),
                     StepWord(
                         "considerable",
                         "[kən'sɪd(ə)rəbl]",
                         "значительный",
-                        1
+                        R.raw.bashkortstep62
                     ),
                     StepWord(
                         "exceed",
                         "[ɪkˈsɪ:d]",
                         "превышать",
-                        1
+                        R.raw.bashkortstep63
                     ),
                     StepWord(
                         "inhabit",
                         "[ɪnˈhæbɪt]",
                         "населять",
-                        1
+                        R.raw.bashkortstep64
                     ),
                     StepWord(
                         "experience growth",
                         "[ɪksˈpɪərɪəns grəuθ]",
                         "переживать рост",
-                        1
+                        R.raw.bashkortstep65
                     ),
                     StepWord(
                         "refer to smth",
                         "[rɪˈfə:]",
                         "ссылаться на что-либо",
-                        1
+                        R.raw.bashkortstep66
                     )
                 )
                 6->arrayListOf<StepWord>(
@@ -712,43 +712,43 @@ class WordForStep {
                         "wealth",
                         "[welθ]",
                         "богатство",
-                        1
+                        R.raw.bashkortstep7
                     ),
                     StepWord(
                         "boost",
                         "boost",
                         "ускорять",
-                        1
+                        R.raw.bashkortstep71
                     ),
                     StepWord(
                         "branch of industry",
                         "[brɑ:ntʃ]",
                         "отрасль промышленности",
-                        1
+                        R.raw.bashkortstep72
                     ),
                     StepWord(
                         "capital asset",
                         "[ˈæset]",
                         "основной  капитал",
-                        1
+                        R.raw.bashkortstep73
                     ),
                     StepWord(
                         "capacity",
                         "[kəˈpæsətɪ]",
                         "способность",
-                        1
+                        R.raw.bashkortstep74
                     ),
                     StepWord(
                         "draw finance",
                         "[drɔ: 'faɪnæns]",
                         "привлекать финансы",
-                        1
+                        R.raw.bashkortstep75
                     ),
                     StepWord(
                         "steep growth",
                         "[stɪ:p grəuθ]",
                         "резкий рост",
-                        1
+                        R.raw.bashkortstep76
                     )
                 )
                 7->arrayListOf<StepWord>(
@@ -756,43 +756,43 @@ class WordForStep {
                         "assist with smth",
                         "[əˈsɪst]",
                         "содействовать",
-                        1
+                        R.raw.bashkortstep8
                     ),
                     StepWord(
                         "timber industry",
                         "-",
                         "лесная промышленность",
-                        1
+                        R.raw.bashkortstep81
                     ),
                     StepWord(
                         "woodworking industry",
                         "-",
                         "деревообрабатывающая промышленность",
-                        1
+                        R.raw.bashkortstep82
                     ),
                     StepWord(
                         "discover",
                         "-",
                         "обнаруживать",
-                        1
+                        R.raw.bashkortstep83
                     ),
                     StepWord(
                         "introduction",
                         "[ˌɪntrəˈdʌkʃən]",
                         "внедрение",
-                        1
+                        R.raw.bashkortstep84
                     ),
                     StepWord(
                         "gross output",
                         "-",
                         "валовое производство",
-                        1
+                        R.raw.bashkortstep85
                     ),
                     StepWord(
                         "process",
                         "[ˈprəuses]",
                         "обрабатывать",
-                        1
+                        R.raw.bashkortstep86
                     )
                 )
                 8->arrayListOf<StepWord>(
@@ -800,43 +800,43 @@ class WordForStep {
                         "picturesque",
                         "[ˌpɪktʃəˈresk]",
                         "живописный ",
-                        1
+                        R.raw.bashkortstep9
                     ),
                     StepWord(
                         "resort",
                         "[rɪˈzɔ:t]",
                         "курорт",
-                        1
+                        R.raw.bashkortstep91
                     ),
                     StepWord(
                         "pride oneself on smth",
                         "-",
                         "гордиться чем-либо",
-                        1
+                        R.raw.bashkortstep92
                     ),
                     StepWord(
                         "liberty",
                         "[ˈlɪbətɪ]",
                         "свобода",
-                        1
+                        R.raw.bashkortstep93
                     ),
                     StepWord(
                         "acclaim",
                         "[əˈkleɪm]",
                         "получать признание",
-                        1
+                        R.raw.bashkortstep96
                     ),
                     StepWord(
                         "conviction",
                         "[kənˈvɪkʃən]",
                         "убеждение",
-                        1
+                        R.raw.bashkortstep94
                     ),
                     StepWord(
                         "renowned for smth.",
                         "[rɪˈnaund]",
                         "прославленный чем-либо",
-                        1
+                        R.raw.bashkortstep95
                     )
                 )
                 else -> {
@@ -927,49 +927,49 @@ class WordForStep {
                         "carbon",
                         "['kɑːbən]",
                         "углерод",
-                        1
+                        R.raw.hydrocabstep2
                     ),
                     StepWord(
                         "hydrogen",
                         "['haɪdrəʤən]",
                         "водород",
-                        1
+                        R.raw.hydrocabstep21
                     ),
                     StepWord(
                         "hydrocarbon",
                         "[ˌhaɪdrəu'kɑːbən]",
                         "углеводород",
-                        1
+                        R.raw.hydrocabstep22
                     ),
                     StepWord(
                         "pore",
                         "[pɔː]",
                         "пора",
-                        1
+                        R.raw.hydrocabstep23
                     ),
                     StepWord(
                         "fracture",
                         "['frækʧə]",
                         "разлом",
-                        1
+                        R.raw.hydrocabstep24
                     ),
                     StepWord(
                         "rock",
                         "-",
                         "горная порода",
-                        1
+                        R.raw.hydrocabstep25
                     ),
                     StepWord(
                         "reservoir",
                         "['rezəvwɑː]",
                         "пласт-коллектор",
-                        1
+                        R.raw.hydrocabstep26
                     ),
                     StepWord(
                         "fluid",
                         "['fluːɪd]",
                         "текучая среда",
-                        1
+                        R.raw.hydrocabstep27
                     )
                 )
                 2->arrayListOf<StepWord>(
@@ -977,55 +977,55 @@ class WordForStep {
                         "jet fuel",
                         "[ʤet fjuːəl]",
                         "реактивное топливо",
-                        1
+                        R.raw.hydrocabstep3
                     ),
                     StepWord(
                         "fuel oil",
                         "-",
                         "мазут",
-                        1
+                        R.raw.hydrocabstep31
                     ),
                     StepWord(
                         "pipeline",
                         "['paɪplaɪn]",
                         "трубопровод",
-                        1
+                        R.raw.hydrocabstep32
                     ),
                     StepWord(
                         "refinery",
                         "[rɪ'faɪnərɪ]",
                         "нефтеперерабатывающий завод (НПЗ)",
-                        1
+                        R.raw.hydrocabstep33
                     ),
                     StepWord(
                         "distribution",
                         "[ˌdɪstrɪ'bjuːʃən]",
                         "распределение",
-                        1
+                        R.raw.hydrocabstep34
                     ),
                     StepWord(
                         "gasoline",
                         "['gæsəliːn]",
                         "бензин",
-                        1
+                        R.raw.hydrocabstep35
                     ),
                     StepWord(
                         "gasoline station",
                         "-",
                         "автомобильная заправочная станция (АЗС)",
-                        1
+                        R.raw.hydrocabstep36
                     ),
                     StepWord(
                         "commodity",
                         "[kə'mɔdətɪ]",
                         "товар",
-                        1
+                        R.raw.hydrocabstep37
                     ),
                     StepWord(
                         "process",
                         "['prəuses]",
                         "обрабатывать",
-                        1
+                        R.raw.hydrocabstep38
                     )
                 )
                 3->arrayListOf<StepWord>(
@@ -1033,61 +1033,61 @@ class WordForStep {
                         "surface",
                         "['sɜːfɪs]",
                         "поверхность",
-                        1
+                        R.raw.hydrocabstep4
                     ),
                     StepWord(
                         "float",
                         "[fləut]",
                         "плавать на поверхности",
-                        1
+                        R.raw.hydrocabstep41
                     ),
                     StepWord(
                         "accumulate",
                         "[ə'kjuːmjəleɪt]",
                         "накапливать(ся)",
-                        1
+                        R.raw.hydrocabstep42
                     ),
                     StepWord(
                         "matter",
                         "['mætə]",
                         "вещество",
-                        1
+                        R.raw.hydrocabstep43
                     ),
                     StepWord(
                         "beneath",
                         "[bɪ'niːθ]",
                         "внизу",
-                        1
+                        R.raw.hydrocabstep44
                     ),
                     StepWord(
                         "layer",
                         "['leɪə]",
                         "слой",
-                        1
+                        R.raw.hydrocabstep45
                     ),
                     StepWord(
                         "pressure",
                         "['preʃə]",
                         "давление",
-                        1
+                        R.raw.hydrocabstep46
                     ),
                     StepWord(
                         "liquid",
                         "['lɪkwɪd]",
                         "жидкость",
-                        1
+                        R.raw.hydrocabstep47
                     ),
                     StepWord(
                         "through",
                         "[θruː]",
                         "через",
-                        1
+                        R.raw.hydrocabstep48
                     ),
                     StepWord(
                         "throughout",
                         "[θru'aut]",
                         "везде",
-                        1
+                        R.raw.hydrocabstep49
                     )
                 )
                 4->arrayListOf<StepWord>(
@@ -1095,55 +1095,55 @@ class WordForStep {
                         "value",
                         "['væljuː]",
                         "ценность; важность",
-                        1
+                        R.raw.hydrocabstep5
                     ),
                     StepWord(
                         "constituent",
                         "[kən'stɪtjuənt]",
                         "составная часть",
-                        1
+                        R.raw.hydrocabstep51
                     ),
                     StepWord(
                         "vaporize",
                         "['veɪpəraɪz]",
                         "испарять(ся)",
-                        1
+                        R.raw.hydrocabstep52
                     ),
                     StepWord(
                         "stream",
                         "[striːm]",
                         "поток",
-                        1
+                        R.raw.hydrocabstep53
                     ),
                     StepWord(
                         "pure",
                         "[pjuə]",
                         "беспримесный",
-                        1
+                        R.raw.hydrocabstep54
                     ),
                     StepWord(
                         "manufacturing",
                         "[ˌmænjə'fækʧərɪŋ]",
                         "производство",
-                        1
+                        R.raw.hydrocabstep55
                     ),
                     StepWord(
                         "various",
                         "['vɛərɪəs]",
                         "различный",
-                        1
+                        R.raw.hydrocabstep56
                     ),
                     StepWord(
                         "sophisticated",
                         "[sə'fɪstɪkeɪtɪd]",
                         "сложно устроенный",
-                        1
+                        R.raw.hydrocabstep56
                     ),
                     StepWord(
                         "facility",
                         "[fə'sɪlətɪ]",
                         "сооружение",
-                        1
+                        R.raw.hydrocabstep57
                     )
                 )
                 5->arrayListOf<StepWord>(
@@ -1151,49 +1151,49 @@ class WordForStep {
                         "hardly",
                         "['hɑːdlɪ]",
                         "едва",
-                        1
+                        R.raw.hydrocabstep6
                     ),
                     StepWord(
                         "unit",
                         "['juːnɪt]",
                         "единица (измерения)",
-                        1
+                        R.raw.hydrocabstep61
                     ),
                     StepWord(
                         "remain",
                         "[rɪ'meɪn]",
                         "оставаться ",
-                        1
+                        R.raw.hydrocabstep62
                     ),
                     StepWord(
                         "barrel, bbl.",
                         "['bærəl]",
                         "баррель (159 л)",
-                        1
+                        R.raw.hydrocabstep63
                     ),
                     StepWord(
                         "measure",
                         "['meʒə]",
                         "единица измерения/измерять",
-                        1
+                        R.raw.hydrocabstep64
                     ),
                     StepWord(
                         "obtain",
                         "[əb'teɪn]",
                         "получать",
-                        1
+                        R.raw.hydrocabstep65
                     ),
                     StepWord(
                         "truck",
                         "[trʌk]",
                         "грузовой автомобиль",
-                        1
+                        R.raw.hydrocabstep66
                     ),
                     StepWord(
                         "failure",
                         "['feɪljə]",
                         "авария",
-                        1
+                        R.raw.hydrocabstep67
                     )
                 )
                 6->arrayListOf<StepWord>(
@@ -1201,55 +1201,55 @@ class WordForStep {
                         "accompany",
                         "[ə'kʌmpənɪ]",
                         "сопровождать",
-                        1
+                        R.raw.hydrocabstep7
                     ),
                     StepWord(
                         "accomplish",
                         "[ə'kɔmplɪʃ]",
                         "совершать, выполнять; достигать; завершать",
-                        1
+                        R.raw.hydrocabstep71
                     ),
                     StepWord(
                         "accept",
                         "[ək'sept]",
                         "допускать",
-                        1
+                        R.raw.hydrocabstep72
                     ),
                     StepWord(
                         "comprise",
                         "[kəm'praɪz]",
                         "заключать в себе",
-                        1
+                        R.raw.hydrocabstep73
                     ),
                     StepWord(
                         "virtually",
                         "['vɜːʧuəlɪ]",
                         "фактически",
-                        1
+                        R.raw.hydrocabstep74
                     ),
                     StepWord(
                         "significant",
                         "[sɪg'nɪfɪkənt]",
                         "значительный",
-                        1
+                        R.raw.hydrocabstep75
                     ),
                     StepWord(
                         "primarily",
                         "[praɪ'merəlɪ]",
                         "в основном",
-                        1
+                        R.raw.hydrocabstep76
                     ),
                     StepWord(
                         "except",
                         "[ɪk'sept]",
                         "за исключением",
-                        1
+                        R.raw.hydrocabstep77
                     ),
                     StepWord(
                         "either … or",
                         "['aɪðə   ɔː]",
                         "или … или",
-                        1
+                        R.raw.hydrocabstep78
                     )
                 )
                 else -> {
