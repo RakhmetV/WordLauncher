@@ -8,13 +8,30 @@
     android:layout_marginTop="5dp"
     android:layout_marginBottom="5dp">
 
-    <ImageView
-        android:id="@+id/profileAchivImage"
-        android:layout_width="80dp"
-        android:layout_height="90dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        android:background="@drawable/ic_step_level_rectangle"
+        android:backgroundTint="#F4FFE6">
+
+        <ImageView
+            android:id="@+id/profileAchivImage"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/avatars" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

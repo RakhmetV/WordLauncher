@@ -22,7 +22,7 @@
             <ImageView
                 android:id="@+id/puzzle_item_image"
                 android:layout_width="match_parent"
-                android:layout_height="130dp"
+                android:layout_height="80dp"
                 android:scaleType="fitXY"
 
                 android:src="@drawable/part_puzzle" />

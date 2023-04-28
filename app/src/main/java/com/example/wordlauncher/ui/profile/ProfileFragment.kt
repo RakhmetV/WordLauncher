@@ -20,6 +20,7 @@ import com.example.wordlauncher.data.datacourses.ConstName
 import com.example.wordlauncher.handlers.adapter.achievements.AchievementsAdapter
 import com.example.wordlauncher.handlers.adapter.profile.ProfileAchievementsAdapter
 import com.example.wordlauncher.handlers.adapter.profile.ProfilePuzzleAdapter
+import com.example.wordlauncher.handlers.adapter.profile.ProfileStatisticsAdapter
 import com.example.wordlauncher.ui.courses.userChange
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -36,6 +37,7 @@ class ProfileFragment : Fragment() {
     lateinit var profileImage: ImageView
     lateinit var recycler: RecyclerView
     lateinit var recyclerPuzzle: RecyclerView
+    lateinit var recyclerStatistics: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,6 +72,7 @@ class ProfileFragment : Fragment() {
         recycler.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         recycler.adapter = ProfileAchievementsAdapter(AchevList)
         var puzzleArray = arrayListOf<Int>()
+        var statisticsArray = arrayListOf<Int>()
         var puzzleArrayCheck = arrayListOf<Int>()
         var count1 = 0
 
@@ -79,39 +82,44 @@ class ProfileFragment : Fragment() {
                 count1++
             }
         }
+        statisticsArray.add(count1)
         if (count1!=0){
 
             puzzleArray.add(count1)
             puzzleArrayCheck.add(0)
         }
-        view.findViewById<TextView>(R.id.profiletxtxstatrf).text = "Russian Federation: ${count1}/6"
+       // view.findViewById<TextView>(R.id.profiletxtxstatrf).text = "Russian Federation: ${count1}/6"
         var count2 = 0
         for (i in userChange.progress[1]) {
             if (i[3] > 1) {
                 count2++
             }
         }
+        statisticsArray.add(count2)
         if (count2!=0){
 
             puzzleArray.add(count2)
             puzzleArrayCheck.add(1)
         }
-        view.findViewById<TextView>(R.id.profiletxtxstatrb).text = "Bashkortostan ${count2}/9"
+        //view.findViewById<TextView>(R.id.profiletxtxstatrb).text = "Bashkortostan ${count2}/9"
         var count3 = 0
         for (i in userChange.progress[2]) {
             if (i[3] > 1) {
                 count3++
             }
         }
+        statisticsArray.add(count3)
         if (count3!=0){
 
             puzzleArray.add(count3)
             puzzleArrayCheck.add(2)
         }
-        view.findViewById<TextView>(R.id.profiletxtxstathy).text = "Introduction to Petroleum Industry: ${count3}/7"
+       // view.findViewById<TextView>(R.id.profiletxtxstathy).text = "Introduction to Petroleum Industry: ${count3}/7"
 
         //Пазлы в профиле
-        recyclerPuzzle.layoutManager = LinearLayoutManager(context)
+        recyclerStatistics.layoutManager = LinearLayoutManager(context)
+        recyclerStatistics.adapter = ProfileStatisticsAdapter(puzzleArray)
+        recyclerPuzzle.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
         recyclerPuzzle.adapter = ProfilePuzzleAdapter(puzzleArray, puzzleArrayCheck)
         ProfileAchievements.dataAchiv
         return view
@@ -121,9 +129,9 @@ class ProfileFragment : Fragment() {
         profileImage = view.findViewById(R.id.profileImage)
         Picasso.get().load(auth.currentUser?.photoUrl).into(profileImage)
         view.findViewById<TextView>(R.id.profileUserName).text = auth.currentUser?.displayName
-        view.findViewById<TextView>(R.id.profileEmail).text = auth.currentUser?.email
         recycler = view.findViewById(R.id.profileRecycler)
         recyclerPuzzle = view.findViewById(R.id.profile_puzzle_recycler)
+        recyclerStatistics = view.findViewById(R.id.profile_recycler_statistics)
 
         view.findViewById<ImageView>(R.id.signOutProfile).setOnClickListener {
             Firebase.auth.signOut()

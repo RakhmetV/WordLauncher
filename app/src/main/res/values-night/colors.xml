@@ -89,7 +89,11 @@
     <!--    цвет реверс белый/черный-->
     <color name="color_revers">#F4F4F4</color>
 
+    <!--    цвет фона в меню в  фрофиле-->
+    <color name="color_profile_rectangle">#FC46597E</color>
 
+    <!--    цвет текста в статистике-->
+    <color name="color_profile_statistics">#F8F8F8</color>
 
 
     <color name="color_bottoms_navigation">#1E2B2A</color>

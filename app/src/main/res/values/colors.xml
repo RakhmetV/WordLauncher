@@ -90,6 +90,13 @@
     <color name="color_revers">#272626</color>
 
 
+    <!--    цвет фона в меню в  фрофиле-->
+    <color name="color_profile_rectangle">#FCD7D8DA</color>
+
+    <!--    цвет текста в статистике-->
+    <color name="color_profile_statistics">#FC515960</color>
+
+
 
     <color name="color_bottoms_navigation">#1E2B2A</color>
 </resources>

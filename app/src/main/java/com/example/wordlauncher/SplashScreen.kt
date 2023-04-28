@@ -1,5 +1,6 @@
 package com.example.wordlauncher
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
@@ -24,6 +25,7 @@ class SplashScreen : AppCompatActivity() {
     lateinit var mDataBase: DatabaseReference
     lateinit var txt: TextView
 
+    @SuppressLint("CommitPrefEdits")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

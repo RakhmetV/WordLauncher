@@ -10,12 +10,15 @@ class PuzzleData {
         fun puzzleImgList(position: Int): ArrayList<Int> {
             return when (position) {
                 0 -> arrayListOf(
-                    R.drawable.puzzle_ru5,
-                    R.drawable.puzzle_ru6,
                     R.drawable.puzzle_ru1,
                     R.drawable.puzzle_ru2,
                     R.drawable.puzzle_ru3,
-                    R.drawable.puzzle_ru4
+                    R.drawable.puzzle_ru4,
+                    R.drawable.puzzle_ru5,
+                    R.drawable.puzzle_ru6,
+                    R.drawable.puzzle_ru7,
+                    R.drawable.puzzle_ru8,
+                    R.drawable.puzzle_ru9
                 )
                 1 -> arrayListOf(
                     R.drawable.puzzle_bush1,
