@@ -58,7 +58,7 @@
             android:gravity="center"
             android:text="TextView"
             android:textColor="@color/color_revers"
-            android:textSize="22sp"
+            android:textSize="24dp"
             app:layout_constraintBottom_toTopOf="@+id/guideline4"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
@@ -99,7 +99,7 @@
                 android:layout_marginBottom="12sp"
                 android:layout_toStartOf="@+id/optionIconOne"
                 android:text="1"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="22dp" />
 
             <ImageView
@@ -119,7 +119,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="20dp"
-            android:layout_marginBottom="96dp"
+            android:layout_marginBottom="120dp"
             android:background="@drawable/round_back_button"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -136,7 +136,7 @@
                 android:layout_marginBottom="12sp"
                 android:layout_toStartOf="@+id/optionIconTwo"
                 android:text="2"
-                android:textColor="@color/white"
+                android:textColor="@color/black"
                 android:textSize="22dp" />
 
             <ImageView
@@ -158,6 +158,23 @@
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintGuide_end="96dp" />
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="10dp"
+            android:gravity="center"
+            android:text="Choose the correct translation"
+            android:textColor="@color/black"
+            android:textSize="28dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider2" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

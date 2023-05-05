@@ -29,7 +29,7 @@
     <!--    цвет activity выобра тем-->
     <color name="color_choice_activity">#EEEEEE</color>
 
-    <color name="color_step_answer_button">#F8F8F8</color>
+    <color name="color_step_answer_button">#F8F6F6</color>
 
 
     <!--    цвет панели управления кнопок приложения-->
@@ -48,7 +48,7 @@
     <color name="color_view_bar">#D6D6D6</color>
 
     <!--    цвет названий тем в достижениях-->
-    <color name="color_achievements_name">#4A4A4A</color>
+    <color name="color_achievements_name">#2C2C2C</color>
 
     <!--    цвет названий тем в профиле-->
     <color name="color_profile_name">@color/black</color>
@@ -87,7 +87,7 @@
 
 
     <!--    цвет реверс белый/черный-->
-    <color name="color_revers">#272626</color>
+    <color name="color_revers">#000000</color>
 
 
     <!--    цвет фона в меню в  фрофиле-->
