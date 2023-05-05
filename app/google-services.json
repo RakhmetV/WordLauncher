@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "27202306164-oavtriv7sjg5r2tk39mrikb9fqf0j14n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wordlauncher",
+            "certificate_hash": "0defbced1f6093104041d370e37ef98a569ebc5a"
+          }
+        },
+        {
           "client_id": "27202306164-kcangrmk2dj0npqe3agkqvgpvq4rttic.apps.googleusercontent.com",
           "client_type": 3
         }

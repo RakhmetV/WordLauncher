@@ -21,26 +21,40 @@ import com.example.wordlauncher.data.datastep.WordForStep
 
 class StepFiveFragment : Fragment() {
 
-    lateinit var btn_anser_one: Button
-    lateinit var btn_anser_two: Button
-    lateinit var btn_anser_three: Button
-    lateinit var btn_anser_four: Button
-    lateinit var btn_anser_five: Button
-    lateinit var btn_anser_six: Button
-    lateinit var btn_anser_seven: Button
-    lateinit var btn_result_one: Button
-    lateinit var btn_result_two: Button
-    lateinit var btn_result_three: Button
-    lateinit var btn_result_four: Button
-    lateinit var btn_result_five: Button
+    lateinit var btn_anser_one: RelativeLayout
+    lateinit var btn_anser_two: RelativeLayout
+    lateinit var btn_anser_three: RelativeLayout
+    lateinit var btn_anser_four: RelativeLayout
+    lateinit var btn_anser_five: RelativeLayout
+    lateinit var btn_anser_six: RelativeLayout
+
+    lateinit var btn_anser_one_txt: TextView
+    lateinit var btn_anser_two_txt: TextView
+    lateinit var btn_anser_three_txt: TextView
+    lateinit var btn_anser_four_txt: TextView
+    lateinit var btn_anser_five_txt: TextView
+    lateinit var btn_anser_six_txt: TextView
+
+    lateinit var btn_result_one: RelativeLayout
+    lateinit var btn_result_two: RelativeLayout
+    lateinit var btn_result_three: RelativeLayout
+    lateinit var btn_result_four: RelativeLayout
+    lateinit var btn_result_five: RelativeLayout
+
+
+    lateinit var btn_result_one_txt: TextView
+    lateinit var btn_result_two_txt: TextView
+    lateinit var btn_result_three_txt: TextView
+    lateinit var btn_result_four_txt: TextView
+    lateinit var btn_result_five_txt: TextView
+
+
     lateinit var btn_check: Button
     lateinit var word_in_one: TextView
     lateinit var word_in_two: TextView
     lateinit var word_in_three: TextView
     lateinit var word_in_four: TextView
     lateinit var word_in_five: TextView
-    lateinit var linearLayoutOne: LinearLayout
-    lateinit var linearLayoutTwo: LinearLayout
     lateinit var exit: ImageView
 
     private var CurrentProgress = 0
@@ -53,6 +67,9 @@ class StepFiveFragment : Fragment() {
     var counterAnser = 0
     var counterRightAnser = 0
     var btnCheckPosition = false
+
+    var btn_alpha_answer = 0.2f
+    var btn_alpha_result = 0.4f
 
     var checkBtnAnswer: ArrayList<Int> = arrayListOf(-1, -1, -1, -1, -1)
     var listWord = arrayListOf<String>()
@@ -106,49 +123,46 @@ class StepFiveFragment : Fragment() {
         when (indx) {
             0 -> {
                 btn_result_one.alpha = 1f
-                btn_result_one.text = str
+                btn_result_one_txt.text = str
             }
             1 -> {
                 btn_result_two.alpha = 1f
-                btn_result_two.text = str
+                btn_result_two_txt.text = str
             }
             2 -> {
                 btn_result_three.alpha = 1f
-                btn_result_three.text = str
+                btn_result_three_txt.text = str
             }
             3 -> {
                 btn_result_four.alpha = 1f
-                btn_result_four.text = str
+                btn_result_four_txt.text = str
             }
             4 -> {
                 btn_result_five.alpha = 1f
-                btn_result_five.text = str
+                btn_result_five_txt.text = str
             }
         }
     }
 
     fun setBackAnswer(str: String) {
         when (str) {
-            btn_anser_one.text.toString() -> {
+            btn_anser_one_txt.text.toString() -> {
                 btn_anser_one.alpha = 1f
             }
-            btn_anser_two.text.toString() -> {
+            btn_anser_two_txt.text.toString() -> {
                 btn_anser_two.alpha = 1f
             }
-            btn_anser_three.text.toString() -> {
+            btn_anser_three_txt.text.toString() -> {
                 btn_anser_three.alpha = 1f
             }
-            btn_anser_four.text.toString() -> {
+            btn_anser_four_txt.text.toString() -> {
                 btn_anser_four.alpha = 1f
             }
-            btn_anser_five.text.toString() -> {
+            btn_anser_five_txt.text.toString() -> {
                 btn_anser_five.alpha = 1f
             }
-            btn_anser_six.text.toString() -> {
+            btn_anser_six_txt.text.toString() -> {
                 btn_anser_six.alpha = 1f
-            }
-            btn_anser_seven.text.toString() -> {
-                btn_anser_seven.alpha = 1f
             }
         }
         btn_check.isVisible = false
@@ -165,18 +179,18 @@ class StepFiveFragment : Fragment() {
                     startActivity(intent)
                 }
 
-                setNegativeButton("Cancel"){_, _ ->
+                setNegativeButton("Cancel") { _, _ ->
                 }
                 setCancelable(true)
             }.create().show()
         }
         btn_anser_one.setOnClickListener {
-            if (counterAnser < maxAnser && btn_anser_one.alpha!=0f) {
+            if (counterAnser < maxAnser && btn_anser_one.alpha != btn_alpha_answer) {
 
                 for (i in checkBtnAnswer.withIndex()) {
                     if (checkBtnAnswer[i.index] == -1 && i.index < maxAnser) {
                         checkBtnAnswer[i.index] = 1
-                        setAnserBtn(i.index, btn_anser_one.text.toString())
+                        setAnserBtn(i.index, btn_anser_one_txt.text.toString())
                         break
                     }
                 }
@@ -186,17 +200,17 @@ class StepFiveFragment : Fragment() {
                 if (counterAnser == maxAnser) {
                     btn_check.isVisible = true
                 }
-                btn_anser_one.alpha = 0f
+                btn_anser_one.alpha = btn_alpha_answer
             }
 
         }
         btn_anser_two.setOnClickListener {
-            if (counterAnser < maxAnser && btn_anser_two.alpha!=0f) {
+            if (counterAnser < maxAnser && btn_anser_two.alpha != btn_alpha_answer) {
 
                 for (i in checkBtnAnswer.withIndex()) {
                     if (checkBtnAnswer[i.index] == -1 && i.index < maxAnser) {
                         checkBtnAnswer[i.index] = 1
-                        setAnserBtn(i.index, btn_anser_two.text.toString())
+                        setAnserBtn(i.index, btn_anser_two_txt.text.toString())
                         break
                     }
                 }
@@ -206,16 +220,16 @@ class StepFiveFragment : Fragment() {
                 if (counterAnser == maxAnser) {
                     btn_check.isVisible = true
                 }
-                btn_anser_two.alpha = 0f
+                btn_anser_two.alpha = btn_alpha_answer
             }
         }
         btn_anser_three.setOnClickListener {
-            if (counterAnser < maxAnser && btn_anser_three.alpha!=0f) {
+            if (counterAnser < maxAnser && btn_anser_three.alpha != btn_alpha_answer) {
 
                 for (i in checkBtnAnswer.withIndex()) {
                     if (checkBtnAnswer[i.index] == -1 && i.index < maxAnser) {
                         checkBtnAnswer[i.index] = 1
-                        setAnserBtn(i.index, btn_anser_three.text.toString())
+                        setAnserBtn(i.index, btn_anser_three_txt.text.toString())
                         break
                     }
                 }
@@ -225,16 +239,16 @@ class StepFiveFragment : Fragment() {
                 if (counterAnser == maxAnser) {
                     btn_check.isVisible = true
                 }
-                btn_anser_three.alpha = 0f
+                btn_anser_three.alpha = btn_alpha_answer
             }
         }
         btn_anser_four.setOnClickListener {
-            if (counterAnser < maxAnser && btn_anser_four.alpha!=0f) {
+            if (counterAnser < maxAnser && btn_anser_four.alpha != btn_alpha_answer) {
 
                 for (i in checkBtnAnswer.withIndex()) {
                     if (checkBtnAnswer[i.index] == -1 && i.index < maxAnser) {
                         checkBtnAnswer[i.index] = 1
-                        setAnserBtn(i.index, btn_anser_four.text.toString())
+                        setAnserBtn(i.index, btn_anser_four_txt.text.toString())
                         break
                     }
                 }
@@ -244,16 +258,16 @@ class StepFiveFragment : Fragment() {
                 if (counterAnser == maxAnser) {
                     btn_check.isVisible = true
                 }
-                btn_anser_four.alpha = 0f
+                btn_anser_four.alpha = btn_alpha_answer
             }
         }
         btn_anser_five.setOnClickListener {
-            if (counterAnser < maxAnser && btn_anser_five.alpha!=0f) {
+            if (counterAnser < maxAnser && btn_anser_five.alpha != btn_alpha_answer) {
 
                 for (i in checkBtnAnswer.withIndex()) {
                     if (checkBtnAnswer[i.index] == -1 && i.index < maxAnser) {
                         checkBtnAnswer[i.index] = 1
-                        setAnserBtn(i.index, btn_anser_five.text.toString())
+                        setAnserBtn(i.index, btn_anser_five_txt.text.toString())
                         break
                     }
                 }
@@ -263,16 +277,16 @@ class StepFiveFragment : Fragment() {
                 if (counterAnser == maxAnser) {
                     btn_check.isVisible = true
                 }
-                btn_anser_five.alpha = 0f
+                btn_anser_five.alpha = btn_alpha_answer
             }
         }
         btn_anser_six.setOnClickListener {
-            if (counterAnser < maxAnser && btn_anser_six.alpha!=0f) {
+            if (counterAnser < maxAnser && btn_anser_six.alpha != btn_alpha_answer) {
 
                 for (i in checkBtnAnswer.withIndex()) {
                     if (checkBtnAnswer[i.index] == -1 && i.index < maxAnser) {
                         checkBtnAnswer[i.index] = 1
-                        setAnserBtn(i.index, btn_anser_six.text.toString())
+                        setAnserBtn(i.index, btn_anser_six_txt.text.toString())
                         break
                     }
                 }
@@ -282,74 +296,56 @@ class StepFiveFragment : Fragment() {
                 if (counterAnser == maxAnser) {
                     btn_check.isVisible = true
                 }
-                btn_anser_six.alpha = 0f
+                btn_anser_six.alpha = btn_alpha_answer
             }
         }
-        btn_anser_seven.setOnClickListener {
-            if (counterAnser < maxAnser && btn_anser_seven.alpha!=0f) {
 
-                for (i in checkBtnAnswer.withIndex()) {
-                    if (checkBtnAnswer[i.index] == -1 && i.index < maxAnser) {
-                        checkBtnAnswer[i.index] = 1
-                        setAnserBtn(i.index, btn_anser_seven.text.toString())
-                        break
-                    }
-                }
-
-
-                counterAnser++
-                if (counterAnser == maxAnser) {
-                    btn_check.isVisible = true
-                }
-                btn_anser_seven.alpha = 0f
-            }
-        }
 
         //--------------------------------------------------------------------------
 
         btn_result_one.setOnClickListener {
-            if (!btnCheckPosition && btn_result_one.alpha!=0f) {
+            if (!btnCheckPosition && btn_result_one.alpha != btn_alpha_result ) {
 
-                setBackAnswer(btn_result_one.text.toString())
+                setBackAnswer(btn_result_one_txt.text.toString())
                 checkBtnAnswer[0] = -1
                 counterAnser--
-                btn_result_one.alpha = 0f
+                btn_result_one.alpha = btn_alpha_result
             }
         }
         btn_result_two.setOnClickListener {
-            if (!btnCheckPosition && btn_result_two.alpha!=0f) {
+            if (!btnCheckPosition && btn_result_two.alpha != btn_alpha_result ) {
 
-                setBackAnswer(btn_result_two.text.toString())
+                setBackAnswer(btn_result_two_txt.text.toString())
                 checkBtnAnswer[1] = -1
                 counterAnser--
-                btn_result_two.alpha = 0f
+                btn_result_two.alpha = btn_alpha_result
             }
         }
         btn_result_three.setOnClickListener {
-            if (!btnCheckPosition && btn_result_three.alpha!=0f) {
+            if (!btnCheckPosition && btn_result_three.alpha != btn_alpha_result ) {
 
-                setBackAnswer(btn_result_three.text.toString())
+                setBackAnswer(btn_result_three_txt.text.toString())
                 checkBtnAnswer[2] = -1
                 counterAnser--
-                btn_result_three.alpha = 0f
+                btn_result_three.alpha = btn_alpha_result
             }
         }
         btn_result_four.setOnClickListener {
-            if (!btnCheckPosition && btn_result_four.alpha!=0f) {
+            if (!btnCheckPosition && btn_result_four.alpha != btn_alpha_result) {
 
                 checkBtnAnswer[3] = -1
-                setBackAnswer(btn_result_four.text.toString())
+                setBackAnswer(btn_result_four_txt.text.toString())
                 counterAnser--
-                btn_result_four.alpha = 0f
+                btn_result_four.alpha = btn_alpha_result
             }
         }
 
         btn_result_five.setOnClickListener {
-            if (!btnCheckPosition && btn_result_five.alpha!=0f) {
+            if (!btnCheckPosition && btn_result_five.alpha != btn_alpha_result) {
                 checkBtnAnswer[4] = -1
-                setBackAnswer(btn_result_five.text.toString())
+                setBackAnswer(btn_result_five_txt.text.toString())
                 counterAnser--
-                btn_result_five.alpha = 0f
+                btn_result_five.alpha = btn_alpha_result
             }
 
         }
@@ -362,15 +358,15 @@ class StepFiveFragment : Fragment() {
             } else {
                 btn_check.text = "Check"
                 btnCheckPosition = false
-                if (position != MaxProgress-1) {
+                if (position != MaxProgress - 1) {
                     position++
                     btn_check.isVisible = false
 
-                    btn_result_one.setBackgroundColor(resources.getColor(R.color.color_step_answer_button))
-                    btn_result_two.setBackgroundColor(resources.getColor(R.color.color_step_answer_button))
-                    btn_result_three.setBackgroundColor(resources.getColor(R.color.color_step_answer_button))
-                    btn_result_four.setBackgroundColor(resources.getColor(R.color.color_step_answer_button))
-                    btn_result_five.setBackgroundColor(resources.getColor(R.color.color_step_answer_button))
+                    btn_result_one.setBackgroundResource(R.drawable.step_lvl_btn)
+                    btn_result_two.setBackgroundResource(R.drawable.step_lvl_btn)
+                    btn_result_three.setBackgroundResource(R.drawable.step_lvl_btn)
+                    btn_result_four.setBackgroundResource(R.drawable.step_lvl_btn)
+                    btn_result_five.setBackgroundResource(R.drawable.step_lvl_btn)
 
 
                     workInTest()
@@ -389,89 +385,38 @@ class StepFiveFragment : Fragment() {
 
 
     fun checkAnswerInRight(view: View) {
-        if (position != MaxProgress-1) btn_check.text = "Next"
-        else btn_check.text="Finish"
+        if (position != MaxProgress - 1) btn_check.text = "Next"
+        else btn_check.text = "Finish"
         var rightAnser = 0
-        when (maxAnser) {
-            3 -> {
-                if (listWordStep[position][0].split("/:")[1] == btn_result_one.text.toString()) {
-                    btn_result_one.setBackgroundColor(Color.GREEN)
-                    rightAnser++
-                } else {
-                    btn_result_one.setBackgroundColor(Color.RED)
-                }
-                if (listWordStep[position][1].split("/:")[1] == btn_result_two.text.toString()) {
-                    btn_result_two.setBackgroundColor(Color.GREEN)
-                    rightAnser++
-                } else {
-                    btn_result_two.setBackgroundColor(Color.RED)
-                }
-                if (listWordStep[position][2].split("/:")[1] == btn_result_three.text.toString()) {
-                    btn_result_three.setBackgroundColor(Color.GREEN)
-                    rightAnser++
-                } else {
-                    btn_result_three.setBackgroundColor(Color.RED)
-                }
-
-            }
-            4 -> {
-                if (listWordStep[position][0].split("/:")[1] == btn_result_one.text.toString()) {
-                    btn_result_one.setBackgroundColor(Color.GREEN)
-                    rightAnser++
-                } else {
-                    btn_result_one.setBackgroundColor(Color.RED)
-                }
-                if (listWordStep[position][1].split("/:")[1] == btn_result_two.text.toString()) {
-                    btn_result_two.setBackgroundColor(Color.GREEN)
-                    rightAnser++
-                } else {
-                    btn_result_two.setBackgroundColor(Color.RED)
-                }
-                if (listWordStep[position][2].split("/:")[1] == btn_result_three.text.toString()) {
-                    btn_result_three.setBackgroundColor(Color.GREEN)
-                    rightAnser++
-                } else {
-                    btn_result_three.setBackgroundColor(Color.RED)
-                }
-                if (listWordStep[position][3].split("/:")[1] == btn_result_four.text.toString()) {
-                    btn_result_four.setBackgroundColor(Color.GREEN)
-                    rightAnser++
-                } else {
-                    btn_result_four.setBackgroundColor(Color.RED)
-                }
-            }
-            5 -> {
-                if (listWordStep[position][0].split("/:")[1] == btn_result_one.text.toString()) {
-                    btn_result_one.setBackgroundColor(Color.GREEN)
-                    rightAnser++
-                } else {
-                    btn_result_one.setBackgroundColor(Color.RED)
-                }
-                if (listWordStep[position][1].split("/:")[1] == btn_result_two.text.toString()) {
-                    btn_result_two.setBackgroundColor(Color.GREEN)
-                    rightAnser++
-                } else {
-                    btn_result_two.setBackgroundColor(Color.RED)
-                }
-                if (listWordStep[position][2].split("/:")[1] == btn_result_three.text.toString()) {
-                    btn_result_three.setBackgroundColor(Color.GREEN)
-                    rightAnser++
-                } else {
-                    btn_result_three.setBackgroundColor(Color.RED)
-                }
-                if (listWordStep[position][3].split("/:")[1] == btn_result_four.text.toString()) {
-                    btn_result_four.setBackgroundColor(Color.GREEN)
-                    rightAnser++
-                } else {
-                    btn_result_four.setBackgroundColor(Color.RED)
-                }
-                if (listWordStep[position][4].split("/:")[1] == btn_result_five.text.toString()) {
-                    btn_result_five.setBackgroundColor(Color.GREEN)
-                    rightAnser++
-                } else {
-                    btn_result_five.setBackgroundColor(Color.RED)
-                }
-            }
+        if (listWordStep[position][0].split("/:")[1] == btn_result_one_txt.text.toString()) {
+            btn_result_one.setBackgroundColor(Color.GREEN)
+            rightAnser++
+        } else {
+            btn_result_one.setBackgroundColor(Color.RED)
+        }
+        if (listWordStep[position][1].split("/:")[1] == btn_result_two_txt.text.toString()) {
+            btn_result_two.setBackgroundColor(Color.GREEN)
+            rightAnser++
+        } else {
+            btn_result_two.setBackgroundColor(Color.RED)
+        }
+        if (listWordStep[position][2].split("/:")[1] == btn_result_three_txt.text.toString()) {
+            btn_result_three.setBackgroundColor(Color.GREEN)
+            rightAnser++
+        } else {
+            btn_result_three.setBackgroundColor(Color.RED)
+        }
+        if (listWordStep[position][3].split("/:")[1] == btn_result_four_txt.text.toString()) {
+            btn_result_four.setBackgroundColor(Color.GREEN)
+            rightAnser++
+        } else {
+            btn_result_four.setBackgroundColor(Color.RED)
+        }
+        if (listWordStep[position][4].split("/:")[1] == btn_result_five_txt.text.toString()) {
+            btn_result_five.setBackgroundColor(Color.GREEN)
+            rightAnser++
+        } else {
+            btn_result_five.setBackgroundColor(Color.RED)
         }
 
         if (rightAnser == maxAnser) counterRightAnser++
@@ -482,159 +427,98 @@ class StepFiveFragment : Fragment() {
         checkBtnAnswer = arrayListOf(-1, -1, -1, -1, -1)
         counterAnser = 0
 
-        btn_result_one.alpha = 0f
-        btn_result_two.alpha = 0f
-        btn_result_three.alpha = 0f
-        btn_result_four.alpha = 0f
-        btn_result_five.alpha = 0f
-        if (position < 3) {
-            //кнопки
-            word_in_one.text = listWordStep[position][0].split("/:")[0]
-            word_in_two.text = listWordStep[position][1].split("/:")[0]
-            word_in_three.text = listWordStep[position][2].split("/:")[0]
+        btn_result_one.alpha = btn_alpha_result
+        btn_result_two.alpha = btn_alpha_result
+        btn_result_three.alpha = btn_alpha_result
+        btn_result_four.alpha = btn_alpha_result
+        btn_result_five.alpha = btn_alpha_result
 
-            var reshafl = arrayListOf<String>()
-            for (j in listWordStep[position]) {
-                reshafl.add(j)
-            }
-            reshafl.shuffle()
+        btn_result_one.setBackgroundResource(R.drawable.step_lvl_btn_res)
+        btn_result_two.setBackgroundResource(R.drawable.step_lvl_btn_res)
+        btn_result_three.setBackgroundResource(R.drawable.step_lvl_btn_res)
+        btn_result_four.setBackgroundResource(R.drawable.step_lvl_btn_res)
+        btn_result_five.setBackgroundResource(R.drawable.step_lvl_btn_res)
 
-            btn_anser_one.text = reshafl[0].split("/:")[1]
-            btn_anser_two.text = reshafl[1].split("/:")[1]
-            btn_anser_seven.alpha = 1f
-            btn_anser_seven.text = reshafl[2].split("/:")[1]
-
-
-            btn_anser_one.alpha = 1f
-            btn_anser_two.alpha = 1f
-            btn_anser_seven.alpha = 1f
-        } else if (position < 6) {
-            maxAnser = 4
-            //кнопки
-            word_in_one.text = listWordStep[position][0].split("/:")[0]
-            word_in_two.text = listWordStep[position][1].split("/:")[0]
-            word_in_three.text = listWordStep[position][2].split("/:")[0]
-            word_in_four.text = listWordStep[position][3].split("/:")[0]
-            word_in_four.alpha = 1f
-
-            var reshafl = arrayListOf<String>()
-            for (j in listWordStep[position]) {
-                reshafl.add(j)
-            }
-            reshafl.shuffle()
-
-            btn_anser_seven.text = ""
-
-            btn_anser_one.text = reshafl[0].split("/:")[1]
-            btn_anser_two.text = reshafl[1].split("/:")[1]
-            btn_anser_three.alpha = 1f
-            btn_anser_three.text = reshafl[2].split("/:")[1]
-            btn_anser_four.alpha = 1f
-            btn_anser_four.text = reshafl[3].split("/:")[1]
-
-
-            btn_anser_one.alpha = 1f
-            btn_anser_two.alpha = 1f
-            btn_anser_three.alpha = 1f
-            btn_anser_four.alpha = 1f
-            linearLayoutOne.isVisible=false
-            linearLayoutTwo.isVisible=true
-        } else if (position < 9) {
-            maxAnser = 5
-            //кнопки
-            word_in_one.text = listWordStep[position][0].split("/:")[0]
-            word_in_two.text = listWordStep[position][1].split("/:")[0]
-            word_in_three.text = listWordStep[position][2].split("/:")[0]
-            word_in_four.text = listWordStep[position][3].split("/:")[0]
-            word_in_five.text = listWordStep[position][4].split("/:")[0]
-            word_in_four.alpha = 1f
-            word_in_five.alpha = 1f
-            var reshafl = arrayListOf<String>()
-            for (j in listWordStep[position]) {
-                reshafl.add(j)
-            }
-            reshafl.shuffle()
-
-            btn_anser_seven.text = ""
-
-            btn_anser_one.text = reshafl[0].split("/:")[1]
-            btn_anser_two.text = reshafl[1].split("/:")[1]
-            btn_anser_three.alpha = 1f
-            btn_anser_three.text = reshafl[2].split("/:")[1]
-            btn_anser_four.alpha = 1f
-            btn_anser_four.text = reshafl[3].split("/:")[1]
-            btn_anser_five.alpha = 1f
-            btn_anser_five.text = reshafl[4].split("/:")[1]
-            btn_anser_six.alpha = 1f
-            btn_anser_six.text = reshafl[5].split("/:")[1]
-
-            btn_anser_one.alpha = 1f
-            btn_anser_two.alpha = 1f
-            btn_anser_three.alpha = 1f
-            btn_anser_four.alpha = 1f
-            btn_anser_five.alpha = 1f
-            btn_anser_six.alpha = 1f
-            linearLayoutOne.isVisible=false
-            linearLayoutTwo.isVisible=true
+        maxAnser = 5
+        //кнопки
+        word_in_one.text = listWordStep[position][0].split("/:")[0]
+        word_in_two.text = listWordStep[position][1].split("/:")[0]
+        word_in_three.text = listWordStep[position][2].split("/:")[0]
+        word_in_four.text = listWordStep[position][3].split("/:")[0]
+        word_in_five.text = listWordStep[position][4].split("/:")[0]
+        word_in_four.alpha = 1f
+        word_in_five.alpha = 1f
+        var reshafl = arrayListOf<String>()
+        for (j in listWordStep[position]) {
+            reshafl.add(j)
         }
+        reshafl.shuffle()
+
+        btn_anser_one_txt.text = reshafl[0].split("/:")[1]
+        btn_anser_two_txt.text = reshafl[1].split("/:")[1]
+        btn_anser_three_txt.text = reshafl[2].split("/:")[1]
+        btn_anser_four_txt.text = reshafl[3].split("/:")[1]
+        btn_anser_five_txt.text = reshafl[4].split("/:")[1]
+        btn_anser_six_txt.text = reshafl[5].split("/:")[1]
+
+        btn_anser_one.alpha = 1f
+        btn_anser_two.alpha = 1f
+        btn_anser_three.alpha = 1f
+        btn_anser_four.alpha = 1f
+        btn_anser_five.alpha = 1f
+        btn_anser_six.alpha = 1f
 
     }
 
     fun addWordInTest() {
         for (i in 0..8) {
-            if (i < 3) {
-                listWordStep[i].add(listWord[list_position % listWord.size])
-                list_position++
-                listWordStep[i].add(listWord[list_position % listWord.size])
-                list_position++
-                listWordStep[i].add(listWord[list_position % listWord.size])
-                list_position++
-
-            } else if (i < 6) {
-                listWordStep[i].add(listWord[list_position % listWord.size])
-                list_position++
-                listWordStep[i].add(listWord[list_position % listWord.size])
-                list_position++
-                listWordStep[i].add(listWord[list_position % listWord.size])
-                list_position++
-                listWordStep[i].add(listWord[list_position % listWord.size])
-                list_position++
-
-            } else {
-                listWordStep[i].add(listWord[list_position % listWord.size])
-                list_position++
-                listWordStep[i].add(listWord[list_position % listWord.size])
-                list_position++
-                listWordStep[i].add(listWord[list_position % listWord.size])
-                list_position++
-                listWordStep[i].add(listWord[list_position % listWord.size])
-                list_position++
-                listWordStep[i].add(listWord[list_position % listWord.size])
-                list_position++
-                listWordStep[i].add(listWord[list_position % listWord.size])
-                list_position++
-
-
-            }
+            listWordStep[i].add(listWord[list_position % listWord.size])
+            list_position++
+            listWordStep[i].add(listWord[list_position % listWord.size])
+            list_position++
+            listWordStep[i].add(listWord[list_position % listWord.size])
+            list_position++
+            listWordStep[i].add(listWord[list_position % listWord.size])
+            list_position++
+            listWordStep[i].add(listWord[list_position % listWord.size])
+            list_position++
+            listWordStep[i].add(listWord[list_position % listWord.size])
+            list_position++
         }
     }
 
     fun init(view: View) {
-        linearLayoutOne = view.findViewById(R.id.linearLayoutOneBtn)
-        linearLayoutTwo = view.findViewById(R.id.linearLayoutTwoBtn)
 
         btn_anser_one = view.findViewById(R.id.step_five_btn_ans_one)
         btn_anser_two = view.findViewById(R.id.step_five_btn_ans_two)
         btn_anser_three = view.findViewById(R.id.step_five_btn_ans_three)
         btn_anser_four = view.findViewById(R.id.step_five_btn_ans_four)
         btn_anser_five = view.findViewById(R.id.step_five_btn_ans_five)
-        btn_anser_six = view.findViewById(R.id.step_five_ans_six)
-        btn_anser_seven = view.findViewById(R.id.step_five_ans_seven)
+        btn_anser_six = view.findViewById(R.id.step_five_btn_ans_six)
+
+        btn_anser_one_txt = view.findViewById(R.id.step_five_btn_ans_one_txt)
+        btn_anser_two_txt = view.findViewById(R.id.step_five_btn_ans_two_txt)
+        btn_anser_three_txt = view.findViewById(R.id.step_five_btn_ans_three_txt)
+        btn_anser_four_txt = view.findViewById(R.id.step_five_btn_ans_four_txt)
+        btn_anser_five_txt = view.findViewById(R.id.step_five_btn_ans_five_txt)
+        btn_anser_six_txt = view.findViewById(R.id.step_five_btn_ans_six_txt)
+
+
+
         btn_result_one = view.findViewById(R.id.step_five_btn_res_one)
         btn_result_two = view.findViewById(R.id.step_five_btn_res_two)
         btn_result_three = view.findViewById(R.id.step_five_btn_res_three)
         btn_result_four = view.findViewById(R.id.step_five_btn_res_four)
         btn_result_five = view.findViewById(R.id.step_five_btn_res_five)
+
+        btn_result_one_txt = view.findViewById(R.id.step_five_btn_res_one_txt)
+        btn_result_two_txt = view.findViewById(R.id.step_five_btn_res_two_txt)
+        btn_result_three_txt = view.findViewById(R.id.step_five_btn_res_three_txt)
+        btn_result_four_txt = view.findViewById(R.id.step_five_btn_res_four_txt)
+        btn_result_five_txt = view.findViewById(R.id.step_five_btn_res_five)
+
+
+
         btn_check = view.findViewById(R.id.step_five_btn_check)
         word_in_one = view.findViewById(R.id.step_five_en_one)
         word_in_two = view.findViewById(R.id.step_five_en_two)
