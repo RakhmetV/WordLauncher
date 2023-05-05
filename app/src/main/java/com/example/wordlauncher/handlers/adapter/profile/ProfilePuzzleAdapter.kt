@@ -18,8 +18,7 @@ import com.example.wordlauncher.handlers.MyOnClickListener
 import com.example.wordlauncher.handlers.adapter.profile.puzzle.PuzzleAdapter
 
 class ProfilePuzzleAdapter(
-    var list: ArrayList<Int>,
-    var checkList: ArrayList<Int>
+    var list: ArrayList<Int>
 ) : RecyclerView.Adapter<ProfilePuzzleAdapter.ProfilePuzzleHolder>() {
 
 
@@ -37,9 +36,8 @@ class ProfilePuzzleAdapter(
 
 
     override fun onBindViewHolder(holder: ProfilePuzzleHolder, position: Int) {
-        var position1 = checkList[position]
-        var listImg = puzzleImgList(position1)
-        when (position1) {
+        var listImg = puzzleImgList(position)
+        when (position) {
             0 -> {
                 holder.binding.puzzleNameItem.text = "Russian Federation"
 
@@ -76,6 +74,6 @@ class ProfilePuzzleAdapter(
     }
 
     override fun getItemCount(): Int {
-        return checkList.size
+        return list.size
     }
 }

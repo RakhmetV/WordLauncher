@@ -83,11 +83,7 @@ class ProfileFragment : Fragment() {
             }
         }
         statisticsArray.add(count1)
-        if (count1!=0){
 
-            puzzleArray.add(count1)
-            puzzleArrayCheck.add(0)
-        }
        // view.findViewById<TextView>(R.id.profiletxtxstatrf).text = "Russian Federation: ${count1}/6"
         var count2 = 0
         for (i in userChange.progress[1]) {
@@ -96,11 +92,7 @@ class ProfileFragment : Fragment() {
             }
         }
         statisticsArray.add(count2)
-        if (count2!=0){
 
-            puzzleArray.add(count2)
-            puzzleArrayCheck.add(1)
-        }
         //view.findViewById<TextView>(R.id.profiletxtxstatrb).text = "Bashkortostan ${count2}/9"
         var count3 = 0
         for (i in userChange.progress[2]) {
@@ -109,18 +101,13 @@ class ProfileFragment : Fragment() {
             }
         }
         statisticsArray.add(count3)
-        if (count3!=0){
 
-            puzzleArray.add(count3)
-            puzzleArrayCheck.add(2)
-        }
-       // view.findViewById<TextView>(R.id.profiletxtxstathy).text = "Introduction to Petroleum Industry: ${count3}/7"
 
         //Пазлы в профиле
         recyclerStatistics.layoutManager = LinearLayoutManager(context)
-        recyclerStatistics.adapter = ProfileStatisticsAdapter(puzzleArray)
+        recyclerStatistics.adapter = ProfileStatisticsAdapter(statisticsArray)
         recyclerPuzzle.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        recyclerPuzzle.adapter = ProfilePuzzleAdapter(puzzleArray, puzzleArrayCheck)
+        recyclerPuzzle.adapter = ProfilePuzzleAdapter(statisticsArray)
         ProfileAchievements.dataAchiv
         return view
     }

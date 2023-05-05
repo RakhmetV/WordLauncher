@@ -46,8 +46,11 @@ class AchievementsAdapter(
             holder.binding.achivTxtCount.isVisible = false
             holder.binding.achivProgBar.isVisible = false
             holder.binding.btnAchivSend.isVisible = false
+            holder.binding.achivRecev.isVisible = true
+//            holder.binding.achivId.alpha = 0.7f
 
         } else {
+            holder.binding.achivId.alpha = 0.7f
             holder.binding.achivTxtCount.text = achivList[position].AchievementsCount
 
         }
@@ -64,15 +67,7 @@ class AchievementsAdapter(
                             count++
                         }
                     }
-                    if (count == max) {
-                        Log.d("aaaaa Progress 11111 = ", count.toString())
-                        Log.d("aaaaa MaxProgress 11 = ", max.toString())
-                        holder.binding.achivTxtCount.text = "1/1"
-                        holder.binding.achivProgBar.progress = count
-                    }
                     checkBtn(holder, count, max, position)
-                    Log.d("aaaaa Progress = ", count.toString())
-                    Log.d("aaaaa MaxProgress = ", max.toString())
                 }
 
 
@@ -90,10 +85,6 @@ class AchievementsAdapter(
                             count++
                         }
                     }
-                    if (count == max) {
-                        holder.binding.achivTxtCount.text = "1/1"
-                        holder.binding.achivProgBar.progress = count
-                    }
                     checkBtn(holder, count, max, position)
                 }
 
@@ -110,10 +101,6 @@ class AchievementsAdapter(
                         if (i > 1) {
                             count++
                         }
-                    }
-                    if (count == max) {
-                        holder.binding.achivTxtCount.text = "1/1"
-                        holder.binding.achivProgBar.progress = count
                     }
                     checkBtn(holder, count, max, position)
                 }

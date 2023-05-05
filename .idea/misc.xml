@@ -23,6 +23,8 @@
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/drawable/round_back_button_true.xml" value="0.239" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/drawable/round_back_circle.xml" value="0.239" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/drawable/splash_screen.xml" value="0.353" />
+        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/drawable/step_lvl_btn.xml" value="0.3185" />
+        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/drawable/step_lvl_btn_res.xml" value="0.3185" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout-night/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout-night/fragment_profile.xml" value="0.30012825994014536" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout-w1240dp/activity_login.xml" value="0.23560910307898258" />
@@ -30,7 +32,7 @@
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/achievements_item.xml" value="0.33" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/activity_choice_of_subject.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/activity_end.xml" value="0.36666666666666664" />
-        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/activity_splash_screen.xml" value="0.3109375" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/activity_step.xml" value="0.36666666666666664" />
@@ -39,11 +41,11 @@
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/custom_btn_voice.xml" value="0.365625" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/custom_dialog_puzzle.xml" value="0.33" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/custom_puzzle_item.xml" value="0.365625" />
-        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_achievements.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_achievements.xml" value="0.33" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_courses.xml" value="0.358695652173913" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_home.xml" value="0.358695652173913" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_notifications.xml" value="0.358695652173913" />
-        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_profile.xml" value="0.5" />
+        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_registration.xml" value="0.5" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_sign_in.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_step_five.xml" value="0.33" />
@@ -51,9 +53,9 @@
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_step_level.xml" value="0.35260416666666666" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_step_one.xml" value="0.33" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_step_three.xml" value="0.33" />
-        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_step_two.xml" value="0.33" />
+        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_step_two.xml" value="0.5184094256259205" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/fragment_test_finish.xml" value="0.25" />
-        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/header_choice_of_subject.xml" value="0.5" />
+        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/header_choice_of_subject.xml" value="0.25" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/header_courses.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/header_spinner.xml" value="0.365625" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/header_spinner_item.xml" value="0.365625" />
@@ -63,7 +65,7 @@
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/profile_puzzle.xml" value="0.33" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/profile_puzzle_item.xml" value="0.365625" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/puzzle_item.xml" value="0.3182291666666667" />
-        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/statistics_item.xml" value="0.6735751295336787" />
+        <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/statistics_item.xml" value="0.2544704264099037" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/step_item.xml" value="0.5" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/layout/step_one_item.xml" value="0.33" />
         <entry key="..\:/Users/athei/Documents/My Project/AndroidStudio/WordLauncher/app/src/main/res/menu/bottom_nav_menu.xml" value="0.36666666666666664" />
