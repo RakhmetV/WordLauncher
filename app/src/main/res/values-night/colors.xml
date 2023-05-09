@@ -13,7 +13,7 @@
 
 
  <!--    цвет загаловка в курсах и в активности выбора курсов-->
-    <color name="header_courses_color">#292828</color>
+    <color name="header_courses_color">#333232</color>
 
     <!--    цвет кнопок входа и т.д-->
     <color name="btn_color_read">#D83B3B</color>
@@ -49,7 +49,7 @@
     <color name="color_view_bar">#4C4B4B</color>
 
     <!--    цвет названий тем в достижениях-->
-    <color name="color_achievements_name">#E3DBDB</color>
+    <color name="color_achievements_name">#FFFFFF</color>
 
     <!--    цвет названий тем в профиле-->
     <color name="color_profile_name">#EFEEEE</color>
@@ -61,7 +61,7 @@
     <color name="color_profile_puzzle_fone">#37373A</color>
 
     <!--    цвет заголовка пазлов в профиле-->
-    <color name="color_profile_puzzle_name">#D5D3D3</color>
+    <color name="color_profile_puzzle_name">#373737</color>
 
     <!--    цвет фона в выборе уровня-->
     <color name="color_step_level_fone">#95A5A1</color>
@@ -73,7 +73,7 @@
     <color name="color_header_level">#6C6C6C</color>
 
     <!--    цвет фона в  уровенях-->
-    <color name="color_level_fone">#FC454444</color>
+    <color name="color_level_fone">#FC383846</color>
 
     <!--    цвет фона в ресайклер первй уровень-->
     <color name="color_level_one_rec">#FC2E2E2E</color>
@@ -83,7 +83,8 @@
 
 
 
-
+    <!--    цвет реверс прогресс бар ачивки белый/черный-->
+    <color name="color_revers_achievements_bar">#2E79E8</color>
 
 
     <!--    цвет реверс белый/черный-->
@@ -97,4 +98,14 @@
 
 
     <color name="color_bottoms_navigation">#1E2B2A</color>
+
+
+    <!--    цвет кнопкив уровне 2-->
+    <color name="color_two_lvl_btn">#4D5668</color>
+
+    <!--    цвет кнопкив уровне 2-->
+    <color name="color_two_lvl_btn_shape">#83959E</color>
+
+    <!--    цвет края кнопки в уровне 3-5-->
+    <color name="color_lvl_btn_shape">#FFFFFF</color>
 </resources>

@@ -10,19 +10,8 @@
     android:layout_marginBottom="4dp"
     android:layout_marginTop="6dp"
     android:background="@drawable/ic_step_level_rectangle"
-    android:backgroundTint="#E2E6E2">
+    android:backgroundTint="#2C3C51">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="80dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginBottom="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/achivTxtName"
@@ -47,6 +36,7 @@
         android:fontFamily="sans-serif"
         android:maxWidth="300dp"
         android:text="TextView"
+        android:textColor="#DFDCDC"
         android:textAlignment="viewStart"
         android:textSize="18dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -74,6 +64,7 @@
         android:textAlignment="center"
         android:textSize="18dp"
         android:textStyle="bold"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/achivProgBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/achivProgBar" />
@@ -95,11 +86,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="15dp"
-        android:visibility="invisible"
-        android:textSize="18dp"
-        android:textColor="#202020"
         android:text="received"
+        android:textColor="#AEABAB"
+        android:textSize="18dp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="@+id/achivTxtName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/achivTxtName" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="80dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

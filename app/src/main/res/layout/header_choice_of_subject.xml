@@ -12,7 +12,7 @@
         android:text="Module selection"
         android:textSize="24dp"
         android:textStyle="bold"
-        android:textColor="#191919"
+        android:textColor="@color/color_revers"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

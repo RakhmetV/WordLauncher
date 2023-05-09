@@ -310,6 +310,7 @@ class StepFiveFragment : Fragment() {
                 checkBtnAnswer[0] = -1
                 counterAnser--
                 btn_result_one.alpha = btn_alpha_result
+                btn_result_one_txt.text=""
             }
         }
         btn_result_two.setOnClickListener {
@@ -319,6 +320,7 @@ class StepFiveFragment : Fragment() {
                 checkBtnAnswer[1] = -1
                 counterAnser--
                 btn_result_two.alpha = btn_alpha_result
+                btn_result_two_txt.text=""
             }
         }
         btn_result_three.setOnClickListener {
@@ -328,6 +330,7 @@ class StepFiveFragment : Fragment() {
                 checkBtnAnswer[2] = -1
                 counterAnser--
                 btn_result_three.alpha = btn_alpha_result
+                btn_result_three_txt.text=""
             }
         }
         btn_result_four.setOnClickListener {
@@ -337,6 +340,7 @@ class StepFiveFragment : Fragment() {
                 setBackAnswer(btn_result_four_txt.text.toString())
                 counterAnser--
                 btn_result_four.alpha = btn_alpha_result
+                btn_result_four_txt.text=""
             }
         }
 
@@ -346,6 +350,7 @@ class StepFiveFragment : Fragment() {
                 setBackAnswer(btn_result_five_txt.text.toString())
                 counterAnser--
                 btn_result_five.alpha = btn_alpha_result
+                btn_result_five_txt.text=""
             }
 
         }
@@ -433,6 +438,12 @@ class StepFiveFragment : Fragment() {
         btn_result_four.alpha = btn_alpha_result
         btn_result_five.alpha = btn_alpha_result
 
+        btn_result_one_txt.text=""
+        btn_result_two_txt.text=""
+        btn_result_three_txt.text=""
+        btn_result_four_txt.text=""
+        btn_result_five_txt.text=""
+
         btn_result_one.setBackgroundResource(R.drawable.step_lvl_btn_res)
         btn_result_two.setBackgroundResource(R.drawable.step_lvl_btn_res)
         btn_result_three.setBackgroundResource(R.drawable.step_lvl_btn_res)
@@ -515,7 +526,7 @@ class StepFiveFragment : Fragment() {
         btn_result_two_txt = view.findViewById(R.id.step_five_btn_res_two_txt)
         btn_result_three_txt = view.findViewById(R.id.step_five_btn_res_three_txt)
         btn_result_four_txt = view.findViewById(R.id.step_five_btn_res_four_txt)
-        btn_result_five_txt = view.findViewById(R.id.step_five_btn_res_five)
+        btn_result_five_txt = view.findViewById(R.id.step_five_btn_res_five_txt)
 
 
 

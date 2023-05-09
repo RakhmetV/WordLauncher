@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/color_level_fone"
     tools:context=".ui.step.five.StepFiveFragment">
 <ScrollView
     android:layout_width="match_parent"
@@ -95,7 +96,7 @@
                 android:layout_marginBottom="12dp"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="16dp"  />
 
 
         </RelativeLayout>
@@ -140,7 +141,7 @@
                 android:layout_marginBottom="12dp"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="16dp"  />
 
 
         </RelativeLayout>
@@ -184,7 +185,7 @@
                 android:layout_marginBottom="12dp"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="16dp"  />
 
 
         </RelativeLayout>
@@ -227,7 +228,7 @@
                 android:layout_marginBottom="12dp"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="16dp"  />
 
 
         </RelativeLayout>
@@ -270,7 +271,7 @@
                 android:layout_marginBottom="12dp"
                 android:gravity="center"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="16dp"  />
 
 
         </RelativeLayout>
@@ -327,7 +328,7 @@
                 android:gravity="center"
                 android:text="Button"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="16dp"  />
 
 
         </RelativeLayout>
@@ -357,7 +358,7 @@
                 android:gravity="center"
                 android:text="Button"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="16dp"  />
 
 
         </RelativeLayout>
@@ -388,7 +389,7 @@
                 android:gravity="center"
                 android:text="Button"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="16dp" />
 
 
         </RelativeLayout>
@@ -418,7 +419,7 @@
                 android:gravity="center"
                 android:text="Button"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="16dp" />
 
 
         </RelativeLayout>
@@ -449,7 +450,7 @@
                 android:gravity="center"
                 android:text="Button"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="16dp"  />
 
 
         </RelativeLayout>
@@ -479,7 +480,7 @@
                 android:gravity="center"
                 android:text="Button"
                 android:textColor="@color/black"
-                android:textSize="20dp" />
+                android:textSize="16dp"  />
 
 
         </RelativeLayout>

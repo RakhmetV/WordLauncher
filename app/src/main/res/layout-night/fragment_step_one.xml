@@ -79,7 +79,7 @@
             android:layout_marginTop="8dp"
             android:gravity="center"
             android:text="Let's learn smth new!"
-            android:textColor="#FC000000"
+            android:textColor="#FCFFFFFF"
             android:textSize="28dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -87,6 +87,5 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 
 </FrameLayout>
